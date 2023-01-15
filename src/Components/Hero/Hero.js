@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Hero.css";
- import Heroe from './herobg.png'
+
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import Model from "Components/Popup/Model";
 import Lottie from 'react-lottie';
