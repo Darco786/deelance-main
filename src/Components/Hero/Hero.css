@@ -120,4 +120,11 @@
     padding: 1% 8%;
     font-size: 14px;
   }
+  .hero-ss{
+    gap: 24px;
+    text-align: center;
+  }
+  .hero-ss a{
+    font-size: 21px;
+  }
 }

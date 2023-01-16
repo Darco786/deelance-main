@@ -123,6 +123,9 @@
   display: none;
 }
 @media (max-width: 768px) {
+  .features{
+    margin-top: 119%;
+  }
   .desktop-feat {
     display: none;
   }

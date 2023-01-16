@@ -365,8 +365,19 @@
   }
   
   @media (max-width: 768px) {
+    .main-page{
+      position: absolute;
+        left: 4%;
+        top: 66%;
+    }
     .main-page {
       height: 100%;
+    }
+    .bar-info{
+      text-align: center;
+    }
+    .count-down{
+      font-size: 14px;
     }
   
     .head-cta {

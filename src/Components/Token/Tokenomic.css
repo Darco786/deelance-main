@@ -72,14 +72,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-    text-align: initial
+    text-align: center
   }
 
   .to-3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-    text-align: initial;
+    text-align: center;
   }
   .to-1 p {
     font-family: "Mulish";
@@ -88,6 +88,7 @@
     font-size: 10px;
     line-height: 24px;
     color: #fff;
+    margin-bottom: 1px;
   }
 
   .to-2 p {
@@ -97,6 +98,7 @@
     font-size: 10px;
     line-height: 24px;
     color: #fff;
+    margin-bottom: 1px;
   }
   .to-3 p {
     font-family: "Mulish";
@@ -105,6 +107,7 @@
     font-size: 10px;
     line-height: 24px;
     color: #fff;
+    margin-bottom: 1px;
   }
   .token-head h1 {
     font-size: 39px;
@@ -114,5 +117,15 @@
     margin-left: -22px;
     height: 100%;
     padding: 0px;
+  }
+  .ml-6{
+    margin-left: 6px;
+  }
+
+  .ml-8{
+    margin-left: 8px
+  }
+  .ml-48{
+    margin-left: 43px;
   }
 }

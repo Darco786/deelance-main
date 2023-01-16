@@ -64,8 +64,8 @@ function Tokenomic() {
               <div className='to-1'>
                 <p>Team - 10% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602964" alt=""/> </p>
                 <p>Reserved/Ecosystem - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652603018" alt=""/></p>
-                <p>Cex - 16% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602977" alt=""/></p>
-                <p>Advisor/Partnership - 6% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602962" alt=""/></p>
+                <p className='ml-6'>Cex - 16% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602977" alt=""/></p>
+                <p className='ml-6'>Advisor/Partnership - 6% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602962" alt=""/></p>
 
               </div>
               
@@ -90,8 +90,8 @@ function Tokenomic() {
               <div className='to-3 '>
                 <p>Rewards / Airdrop - 2%  <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602987" alt=""/>  </p>
                 <p>Liquidity - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602973" alt=""/> </p>
-                <p>Presale - 33% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> </p>
-                <p>Private - 3% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> </p>
+                <p className='ml-48'>Presale - 33% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> </p>
+                <p className='ml-8'>Private - 3% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> </p>
 
               </div>
               
