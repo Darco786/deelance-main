@@ -5,6 +5,7 @@ import {AiOutlineArrowRight} from 'react-icons/ai'
 import Model from "Components/Popup/Model";
 import Lottie from 'react-lottie';
 import Hero_lot from './bg'
+import PresaleMain from "Components/Presale/Presale_main";
 function Hero() {
   const [isModal, setIsModal] = useState(false);
   const defaultOptions = {
@@ -25,14 +26,6 @@ function Hero() {
                 Creating <span className="green"> Web3 Space </span>For Better
                 World To <span className="green">Work Together</span>
               </h1>
-
-              <p className="hero-sp-p">
-                Deelance is a freelancing and Recruitment platform based on
-                Web3. Deelance is one such decentralized platform that is
-                redefining how freelancers connect with potential employers and
-                buyers
-              </p>
-           
               <div className="hero-btn">
                 <button href="/" className="hero-btn-1" onClick={() => setIsModal(true)}>
                Sign Up  <AiOutlineArrowRight/>
@@ -41,6 +34,7 @@ function Hero() {
                 Buy Now
                 </button>
               </div>
+              
             </div>
             <div className="col-md-6 text-center align-items-center">
               {/* <img
@@ -59,6 +53,9 @@ function Hero() {
         <div className="pop-up-sign">
           {isModal && <Model setIsModal={setIsModal} />}
         </div>
+        <div className="presale-hero-box">
+<PresaleMain/>
+              </div>
       </section>
     </>
   );
