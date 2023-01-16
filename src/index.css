@@ -152,3 +152,26 @@ box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
     width: 88% !important;
   }
 }
+
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111827; 
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}

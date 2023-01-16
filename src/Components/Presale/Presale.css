@@ -36,8 +36,13 @@
   
     border-radius: 40.6547px;
     height: 0.4rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   
+  }
+  .bar-info{
+    text-align: right;
+    margin-bottom: 0;
+    color: #fff;
   }
   
   .fill-bar {
@@ -88,7 +93,7 @@
     color: #00e86d;
     font-weight: 800;
     font-size: 22px;
-    line-height: 110.9%;
+    line-height: 10px;
     text-align: center;
     text-transform: capitalize;
     padding-top: 8px;
@@ -151,14 +156,16 @@
     height: 2rem;
     position: absolute;
     margin-top: -22px;
-    left: 30%;
+    left: 42%;
+    width: auto;
   }
   
   .bullet-1 {
     position: absolute;
     margin-top: -19px;
-    left: 31.7%;
+    left: 47.7%;
     height: 1.7rem;
+    width: auto;
   }
   
   .fire2 {
@@ -166,6 +173,7 @@
     position: absolute;
     margin-top: -11px;
     right: 48%;
+    width: auto;
   }
   
   .blt-2 {
@@ -173,13 +181,14 @@
     margin-top: -9px;
     right: 46%;
     height: 1.7rem;
+    width: auto;
   }
   
   .head-title h3 {
     font-style: normal;
     font-weight: 700;
-    font-size: 27px;
-    line-height: 109.9%;
+    font-size: 24px;
+    line-height:27px;
     text-align: center;
     text-transform: capitalize;
     color: #ffffff;

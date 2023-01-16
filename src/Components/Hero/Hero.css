@@ -1,7 +1,7 @@
 .hero {
   padding-top: 4%;
   height: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 8%;
 }
 .hero-img {
   height: auto;
@@ -47,7 +47,7 @@
   box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
   border-radius: 4px;
 
-  padding: 1.8% 7%;
+  padding: 1.1% 7%;
   font-size: 18px;
   font-weight: 600;
   color: rgb(0, 0, 0);
