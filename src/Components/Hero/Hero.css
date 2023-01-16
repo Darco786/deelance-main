@@ -1,7 +1,7 @@
 .hero {
   padding-top: 4%;
-  height: 100%;
-  padding-bottom: 8%;
+  height: 100vh;
+  scroll-snap-align: center;
 }
 .hero-img {
   height: auto;
@@ -10,6 +10,15 @@
   position: relative;
   z-index: -2;
 
+}
+.hero-ss{
+  display: flex;
+    float: right;
+    gap: 30px;
+
+}
+.hero-ss a{
+  font-size: 24px;
 }
 .hero h1 {
   font-weight: 600;

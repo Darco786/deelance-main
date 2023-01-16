@@ -1,6 +1,7 @@
 .features {
-  padding-top: 3.5%;
+
   padding-bottom: 5%;
+  scroll-snap-align: center;
 }
 .feat-header {
   padding-bottom: 3%;

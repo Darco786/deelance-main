@@ -6,7 +6,8 @@
 body{
   background-color: #111827 !important;
   font-family: 'Avenir Next LT Pro', sans-serif !important;
-                                                
+  scroll-behavior: smooth !important;
+  scroll-snap-type: y mandatory !important;
 }
 .side-about{
   position: absolute;
@@ -19,7 +20,9 @@ img{
   width: 100%;
   
 }
-
+section{
+  scroll-snap-align: center;
+}
 
 /*academy*/
 
