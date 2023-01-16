@@ -50,8 +50,7 @@ function Hero() {
               /> */}
               <Lottie 
 	    options={defaultOptions}
-        height={500}
-        width={700}
+        className='loti-1'
       />
             </div>
           </div>

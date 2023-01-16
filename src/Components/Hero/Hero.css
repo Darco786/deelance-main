@@ -72,6 +72,10 @@
   border: 0.5px solid #ffffff00;
   color: rgb(0, 0, 0);
 }
+.loti-1{
+  height:500px;
+  width:700px;
+}
 
 @media (max-width: 768px) {
   .hero h1 {
