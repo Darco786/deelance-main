@@ -3,7 +3,7 @@ import './Presale.css'
 function Presale_main() {
   return (
     <section className="main-page">
-    <div className="container">
+    <div className="">
 
       <div className="row justify-content-center presale-section"  >
        

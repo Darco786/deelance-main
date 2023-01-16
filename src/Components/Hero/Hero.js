@@ -42,7 +42,9 @@ function Hero() {
                 Buy Now
                 </button>
               </div>
-              
+              <div className="presale-hero-box">
+<PresaleMain/>
+              </div>
             </div>
             <div className="col-md-6 text-center align-items-center">
             
@@ -104,14 +106,13 @@ function Hero() {
             </div>
             
           </div>
+        
         </div>
 
         <div className="pop-up-sign">
           {isModal && <Model setIsModal={setIsModal} />}
         </div>
-        <div className="presale-hero-box">
-<PresaleMain/>
-              </div>
+        
       </section>
     </>
   );
