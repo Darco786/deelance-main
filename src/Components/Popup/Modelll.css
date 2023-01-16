@@ -134,13 +134,15 @@
 
 
 .formWrapper form button {
-  background: #ff1616;
+  background: #00e069;
   border: 0.1875rem solid #ffffff;
   backdrop-filter: blur(0.6875rem);
   border-radius: 0.875rem;
   padding: 0.625rem 4rem;
   margin: 0 auto;
   margin-top: 2rem;
+  color: #0a0908;
+  font-weight: 700;
 }
 .formWrapper form a {
   background: #ff1616;

@@ -72,7 +72,7 @@ function Model({ setIsModal }) {
                   placeholder="Email :"
                   name="email"
                 />
-                <label for="cars">Choose a option:</label>
+                <label for="signup" className="white">Choose a option:</label>
                 <select id="option" name="option">
                   <option value="Freelancer" name="freelancer">Freelancer</option>
                   <option value="Employer" name="employer">Employer</option>
@@ -82,7 +82,7 @@ function Model({ setIsModal }) {
                 <div className="btn-modal">
                   <button
                     type="submit"
-                    className="fs-26px white weight-5 pointer"
+                    className="fs-26px  weight-5 pointer"
                   >
                     Request early access
                   </button>
