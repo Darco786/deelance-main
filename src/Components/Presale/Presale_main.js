@@ -38,7 +38,7 @@ function Presale_main() {
             </div>
           
           </div>
-          <p className='white count-down'><span className='green'>24</span> HOURS, <span className='green'>38</span> MINUTES, <span className='green'>0</span> SECONDS Remaining</p>
+          <p className='white count-down text-center'><span className='green'>24</span> HOURS, <span className='green'>38</span> MINUTES, <span className='green'>0</span> SECONDS Remaining</p>
         </div>
        
      
