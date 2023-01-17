@@ -48,11 +48,13 @@ function Hero() {
               </div>
             </div>
             <div className="col-md-6 text-center align-items-center">
-            
-              <Lottie 
+            <div className="2nd-img">
+            <Lottie 
 	    options={defaultOptions}
         className='loti-1'
       />
+            </div>
+       
        <div className="hero-ss">
                 <a
                   href="https://twitter.com/deelance_com"
