@@ -1,5 +1,6 @@
 .main-page{
   position: absolute;
+  width: 600px;
 }
 .over-box {
     background: linear-gradient(#000, #000) padding-box,
@@ -366,6 +367,7 @@
     .main-page{
       position:unset;
         margin-top: 40px;
+        width: 100%;
     }
     .main-page {
       height: 100%;
