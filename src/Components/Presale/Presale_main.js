@@ -28,7 +28,7 @@ function Presale_main() {
                 <h3>PreSale Sale</h3>
                 <span className="span-btn">$250 min / $20,000 max</span>
                 <p>Deelance Official Contracts</p>
-                <p>How To Claim</p>
+                <p className='green'>How To Buy</p>
               </div>
               <div className="price-box text-center">
                 <h1>
