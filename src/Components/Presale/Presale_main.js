@@ -28,11 +28,13 @@ function Presale_main() {
                 <h3>PreSale Sale</h3>
                 <span className="span-btn">$250 min / $20,000 max</span>
                 <p>Deelance Official Contracts</p>
+                <p>How To Claim</p>
               </div>
               <div className="price-box text-center">
                 <h1>
                   $ 0.018 <span className="sp-white">/$DLANCE</span>
                 </h1>
+                
               </div>
 
               {showComp?<form>
@@ -66,7 +68,7 @@ function Presale_main() {
               
               {showComp?  <div className="text-center align-items-center d-flex jsa ">
             
-            <a href='/' className="p1-btn">Buy with ETH</a>
+            <a href='/' className="p1-btn">Buy Now</a>
             <a href="/" className="p1-btn">Buy with Card</a>
       
 

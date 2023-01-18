@@ -116,6 +116,7 @@
     text-decoration-line: underline;
     text-transform: capitalize;
     color: #949494;
+    margin-bottom: 2px;
   }
   
   .p1-btn {
@@ -225,8 +226,9 @@
   
   .jsa {
     justify-content: space-around;
-    padding-top: 20px;
-    padding-bottom: 7px;
+    padding-bottom: 0px;
+    padding-top: 12px;
+    gap: 30px;
   }
   
   .jsa2 {
@@ -363,7 +365,7 @@
   .form-row {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 20px;
+    gap: 30px;
   }
   
   .private-head h3 {
@@ -384,12 +386,14 @@
     border-radius: 6px;
     border: none !important;
     color: #B2B2B2;
+    width: 238px;
   }
   
   label {
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
+    color: rgb(219, 219, 219);
   }
   
   @media (max-width:768px) {

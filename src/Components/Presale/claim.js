@@ -32,11 +32,7 @@ function Claim() {
                     <div class="form-row">
                       <div class="form-group ">
                         <label for="inputnumber">Select Currency:</label>
-                        {/* <input
-                          type="number"
-                          class="form-control"
-                          placeholder="ETH"
-                        /> */}
+                       
                         <select class="form-control">
                           <option>ETH</option>
                           <option>USDT</option>
@@ -55,7 +51,7 @@ function Claim() {
 
               <div className="text-center align-items-center d-flex jsa ">
             
-                  <a href='/' className="p1-btn">Buy with ETH</a>
+                  <a href='/' className="p1-btn">Buy Now</a>
                   <a href="/">Buy with Card</a>
             
 
