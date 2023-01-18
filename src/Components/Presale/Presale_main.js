@@ -46,7 +46,7 @@ function Presale_main() {
                           class="form-control"
                           placeholder="ETH"
                         /> */}
-                        <select class="form-control">
+                        <select class="form-control form-select">
                           <option>ETH</option>
                           <option>USDT</option>
                         </select>

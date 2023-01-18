@@ -382,9 +382,9 @@
   }
   
   .form-control {
-    background: #242A38;
+    background-color: #0d0d0d7a;
     border-radius: 6px;
-    border: none !important;
+    /* border: none !important; */
     color: #B2B2B2;
     width: 238px;
   }
@@ -422,6 +422,18 @@
       position:unset;
         margin-top: 40px;
         width: 100%;
+    }
+    .jsa {
+      gap: 12px;
+      justify-content: space-around;
+      padding-bottom: 0;
+      padding-top: 10px;
+    }
+    .form-row {
+      grid-gap: 30px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(1,auto);
     }
     .main-page {
       height: 100%;
