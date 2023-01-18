@@ -360,7 +360,59 @@
   .pop-box p {
     color: #10fe50;
   }
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+  }
   
+  .private-head h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .private-head p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #B2B2B2;
+  }
+  
+  .form-control {
+    background: #242A38;
+    border-radius: 6px;
+    border: none !important;
+    color: #B2B2B2;
+  }
+  
+  label {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  @media (max-width:768px) {
+    .private-head h3 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  
+    .private-head p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 14px;
+      color: #B2B2B2;
+    }
+  
+    label {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 28px;
+    }
+  
+  }
   @media (max-width: 768px) {
     .main-page{
       position:unset;

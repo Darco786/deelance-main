@@ -1,12 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Presale.css'
-function Presale_main() {
-  const [showComp,setShowComp]=useState(false)
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setShowComp(!showComp);
-  };
+function Claim() {
   return (
     <section className="main-page">
     <div className="">
@@ -34,8 +28,7 @@ function Presale_main() {
                   $ 0.018 <span className="sp-white">/$DLANCE</span>
                 </h1>
               </div>
-
-              {showComp?<form>
+              <form>
                     <div class="form-row">
                       <div class="form-group ">
                         <label for="inputnumber">Select Currency:</label>
@@ -59,26 +52,14 @@ function Presale_main() {
                       </div>
                     </div>
                   </form>
-           :
-           <div>
-            
-           </div>}
-              
-              {showComp?  <div className="text-center align-items-center d-flex jsa ">
-            
-            <a href='/' className="p1-btn">Buy with ETH</a>
-            <a href="/" className="p1-btn">Buy with Card</a>
-      
 
-        </div> : 
-         <div className="text-center align-items-center d-flex jsa ">
+              <div className="text-center align-items-center d-flex jsa ">
             
-         <a href='/' className="p1-btn" onClick={handleClick}>Connect Wallet</a>
-   
+                  <a href='/' className="p1-btn">Buy with ETH</a>
+                  <a href="/">Buy with Card</a>
+            
 
-     </div>}
-
-             
+              </div>
             </div>
           
           </div>
@@ -92,4 +73,4 @@ function Presale_main() {
   )
 }
 
-export default Presale_main
+export default Claim
