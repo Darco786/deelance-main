@@ -4,11 +4,9 @@
   scroll-snap-align: center;
 }
 .hero-img {
-  height: auto;
+ 
   width: auto;
-  margin-top: -33%;
-  position: relative;
-  z-index: -2;
+ 
 
 }
 .hero-ss{
