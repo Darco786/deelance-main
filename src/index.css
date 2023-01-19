@@ -8,6 +8,7 @@ body{
   font-family: 'Avenir Next LT Pro', sans-serif !important;
   scroll-behavior: smooth !important;
   scroll-snap-type: y mandatory !important;
+  overflow-x: hidden;
 }
 .side-about{
   position: absolute;

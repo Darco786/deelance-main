@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 // import Toast from "./Toast";
 import "./Modelll.css";
-// import OutsideClickDetector from "hooks/OutsideClickDetector";
+import OutsideClickDetector from "hooks/OutsideClickDetector";
 import  { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 // import { FaTelegram } from "react-icons/fa";
@@ -24,17 +24,18 @@ function Model({ setIsModal }) {
       });
   };
 
-  // const [showToast, setShowToast] = useState(false);
-  // const toastRef = OutsideClickDetector(() => setShowToast(false));
+  const [showToast, setShowToast] = useState(false);
+  const toastRef = OutsideClickDetector(() => setShowToast(false));
 
   return (
+ 
     <div className="modalBackground">
-      <div className="modalContainer">
+      <div className="modalContainer" Ref={toastRef}>
         {/* <Toast
         title="Your Response has been submitted"
         state={showToast}
         stateSetter={setShowToast}
-        toastRef={toastRef}
+        
       /> */}
         <div className="titleCloseBtn">
           <button
@@ -93,6 +94,7 @@ function Model({ setIsModal }) {
         </div>
       </div>
     </div>
+   
   );
 }
 
