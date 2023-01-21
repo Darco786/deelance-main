@@ -81,7 +81,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/" target='_blank' rel="noreferrer">
+                <a className="linked-in" href="https://www.linkedin.com/in/roberto-cinque/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
