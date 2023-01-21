@@ -1,23 +1,18 @@
-import { useEffect, useState } from 'react';
 import "./About.css";
-
 import {AiOutlineCheckCircle,AiOutlineArrowRight} from 'react-icons/ai'
+import Lottie from 'react-lottie';
+import Meta from './about.json'
+
 
 function About() {
-  const [scrolled, setScrolled] = useState(0);
-
-  useEffect (() => {
-    window.addEventListener("scroll", scrollProgress);
-    
-    return () => window.removeEventListener("scroll", scrollProgress);
-    },[])
-    const scrollProgress = () => {
-    const scrollpx = document.documentElement.scrollTop;
-const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-const scrollLen = Math.ceil(scrollpx / winHeightPx * 23)
-setScrolled(scrollLen)
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Meta,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
     }
-    
+  };
    
   return (
     <section className="about">
@@ -26,11 +21,16 @@ setScrolled(scrollLen)
           <div className="row">
             <div className="col-md-6">
               <div className="text-center">
-                <img
+                {/* <img
                   src={`https://ik.imagekit.io/cforcrypto/image_${scrolled.toString().padStart (4, '0')}.png`}
                   alt=""
                   className="about-img-1"
-                />
+                /> */}
+                    <Lottie 
+	    options={defaultOptions}
+        className='loti-1'
+        width='auto'
+      />
               </div>
             </div>
 
