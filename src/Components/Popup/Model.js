@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-// import Toast from "./Toast";
+import Toast from "./Toast";
 import "./Modelll.css";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import  { useRef } from 'react';
@@ -15,7 +15,7 @@ function Model({ setIsModal }) {
     emailjs.sendForm('service_2gb6skl', 'template_62uujcv', form.current, 'B9w0v-pm5DquLkrPw')
       .then((result) => {
         e.preventDefault();
-        // setShowToast(true);
+        setShowToast(true);
           console.log(result.text);
           form.current.reset();
 
@@ -31,12 +31,12 @@ function Model({ setIsModal }) {
  
     <div className="modalBackground">
       <div className="modalContainer" Ref={toastRef}>
-        {/* <Toast
+        <Toast
         title="Your Response has been submitted"
         state={showToast}
         stateSetter={setShowToast}
         
-      /> */}
+      />
         <div className="titleCloseBtn">
           <button
             onClick={() => {
@@ -66,15 +66,17 @@ function Model({ setIsModal }) {
                   className="fs-26px white weight-3"
                   placeholder="Full Name :"
                   name="full_name"
+                  required
                 />
                 <input
                   type="email"
                   className="fs-26px white weight-3"
                   placeholder="Email :"
                   name="email"
+                  required
                 />
                 <label for="signup" className="white">Choose a option:</label>
-                <select id="option" name="option">
+                <select id="option" name="option" required >
                   <option value="Freelancer" name="freelancer">Freelancer</option>
                   <option value="Employer" name="employer">Employer</option>
                   <option value="Jobseeker" name="Jobseeker">Jobseeker</option>
