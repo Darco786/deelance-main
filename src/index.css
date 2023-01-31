@@ -158,8 +158,8 @@ box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
 }
 
 ::-webkit-scrollbar {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 5px;
 }
 
 /* Track */
