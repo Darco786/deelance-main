@@ -278,7 +278,7 @@
     line-height: 40px;
   
     padding-bottom: 1%;
-  
+  color: #fff;
     padding-top: 1%;
     text-transform: capitalize;
   }
@@ -288,6 +288,7 @@
     font-size: 30px;
     line-height: 40px;
     text-transform: capitalize;
+    color: #fff;
   }
   
   .cta-head-1 {

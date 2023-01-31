@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Academy from 'Pages/Academy';
+import HowBuy from 'Pages/HowBuy';
 import JobPortal from 'Pages/JobPortal';
 import NftMarket from 'Pages/NftMarket';
 import Privacy from 'Pages/Privacy';
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/terms" element={<Terms/>}/>
           <Route exact path="/risk" element={<Risk/>}/>
           <Route exact path="/rewards" element={<Reward/>}/>
+          <Route exact path="/how-to-buy" element={<HowBuy/>}/>
         
         </Routes>
     </Router>

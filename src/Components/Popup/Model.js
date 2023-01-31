@@ -12,7 +12,8 @@ function Model({ setIsModal }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_2gb6skl', 'template_62uujcv', form.current, 'B9w0v-pm5DquLkrPw')
+    // emailjs.sendForm('service_2gb6skl', 'template_62uujcv', form.current, 'B9w0v-pm5DquLkrPw')
+    emailjs.sendForm('service_zeapxa2', 'template_0dm8dnd', form.current, 'Jjh1PVkv4mQ9dUVXf')
       .then((result) => {
         e.preventDefault();
         setShowToast(true);
@@ -79,9 +80,9 @@ function Model({ setIsModal }) {
                   required
                 />
                 <label for="signup" className="white">Choose a option:</label>
-                <select id="option" name="option"  >
-                  <option value="Freelancer" name="freelancer">Freelancer</option>
-                  <option value="Employer" name="employer">Employer</option>
+                <select id="option">
+                  <option value="freelancer" id="freelancer" name="freelancer">Freelancer</option>
+                  <option value="employer" id="employer" name="employer">Employer</option>
                   <option value="Jobseeker" name="Jobseeker">Jobseeker</option>
                 </select>
 
