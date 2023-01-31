@@ -26,6 +26,9 @@ function Model({ setIsModal }) {
 
   const [showToast, setShowToast] = useState(false);
   const toastRef = OutsideClickDetector(() => setShowToast(false));
+  const popTost =OutsideClickDetector(()=>{
+    setShowToast(false)
+  })
 
   return (
  
@@ -76,7 +79,7 @@ function Model({ setIsModal }) {
                   required
                 />
                 <label for="signup" className="white">Choose a option:</label>
-                <select id="option" name="option" required >
+                <select id="option" name="option"  >
                   <option value="Freelancer" name="freelancer">Freelancer</option>
                   <option value="Employer" name="employer">Employer</option>
                   <option value="Jobseeker" name="Jobseeker">Jobseeker</option>
