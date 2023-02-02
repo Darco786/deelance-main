@@ -4,6 +4,7 @@ import UserContext from "../../UserContext";
 import './Presale.css'
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
+import ProgressBar from 'Components/Common/ProgressBar';
 
 function Presale_main() {
   const [showComp,setShowComp]=useState(false);
@@ -110,14 +111,11 @@ function Presale_main() {
       <div className="row justify-content-center presale-section"  >
        
         <div className="col-md-12">
-          <div className="head-bar">
-            <div className="fill-bar">
-
-            </div>
-            <img src="https://ik.imagekit.io/cforcrypto/fire.webp" alt="" className="fire-1" />
-            <img src="https://ik.imagekit.io/cforcrypto/Group_64.png" alt="" className="bullet-1" />
+      
+          <div>
+            <ProgressBar/>
           </div>
-          <p className='bar-info'>progress(<span className='green'> $0</span> / $700,000 )</p>
+        
           <div className="pre-box-1">
             <div className="pre-box-2">
               <div className="head-title text-center">
@@ -135,6 +133,11 @@ function Presale_main() {
 
               {showComp?
               <form>
+                <div className=''>
+                  <h2 className='pre-head'>You Already Bought</h2>
+                  <p className='pre-head' style={{marginBottom:'20px'}}>0 $dlance</p>
+
+                </div>
                     <div class="form-row">
                       <div class="form-group ">
                         <label for="inputnumber">Select Currency:</label>

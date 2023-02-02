@@ -17,11 +17,13 @@ const ProgressBar = () => {
 
     return (
         <>
-            <div className="bar">
-                <div className="sub-bar" style={{ width: (total ? ((total - inSale) / total) : 0) + "%" }}></div>
+            <div className="head-bar">
+                <div className="fill-bar" style={{ width: (total ? ((total - inSale) / total) : 0) + "%" }}></div>
+                <img src="https://ik.imagekit.io/cforcrypto/fire.webp" alt="" className="fire-1" />
+            <img src="https://ik.imagekit.io/cforcrypto/Group_64.png" alt="" className="bullet-1" />
             </div>
-            <p className="progress-1">
-                Progress <span className="pr-num">{total ? Math.floor(100 * (total - inSale) / total) : 0}%</span>({(total - inSale).toLocaleString()}/{total.toLocaleString()})
+            <p className="bar-info">
+                Progress <span className="green">{total ? Math.floor(100 * (total - inSale) / total) : 0}%</span>({(total - inSale).toLocaleString()}/{total.toLocaleString()})
             </p>
         </>
     )
