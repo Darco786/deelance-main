@@ -156,14 +156,14 @@
     height: 2rem;
     position: absolute;
     margin-top: -22px;
-    left: -4%;
+    left: 42%;
     width: auto;
   }
   
   .bullet-1 {
     position: absolute;
     margin-top: -19px;
-    left: 0%;
+    left: 47.7%;
     height: 1.7rem;
     width: auto;
   }
@@ -172,10 +172,20 @@
     height: 2rem;
     position: absolute;
     margin-top: -11px;
-    right: -2%;
+    right: 48%;
     width: auto;
   }
-  
+  .pre-head-2 h2{
+    font-size: 16px;
+    line-height: 12px;
+    color: #fff;
+  }
+
+  .pre-head-2 span{
+    font-size: 16px;
+    line-height: 12px;
+    color: #fff;
+  }
   .blt-2 {
     position: absolute;
     margin-top: -9px;
@@ -183,12 +193,7 @@
     height: 1.7rem;
     width: auto;
   }
-  .pre-head{
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 13px;
-    color: #fff;
-  }
+  
   .head-title h3 {
     font-style: normal;
     font-weight: 700;

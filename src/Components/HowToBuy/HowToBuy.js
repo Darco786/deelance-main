@@ -9,7 +9,7 @@ function HowToBuy() {
         
         ?</h2>
 
-       <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png" alt="" height='auto' width='auto'/>
+       <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png" alt="" style={{height:'100%',width:'auto'}}/>
       </div>
       <div className="row justify-content-center align-items-center">
         <div className="col-md-1"></div>

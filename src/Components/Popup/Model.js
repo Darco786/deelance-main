@@ -79,28 +79,13 @@ function Model({ setIsModal }) {
                   name="email"
                   required
                 />
-                <label for="signup" className="white">Choose a option:</label>
-                {/* <select id="option">
-                  <option value="freelancer" id="freelancer" name="freelancer">Freelancer</option>
-                  <option value="employer" id="employer" name="employer">Employer</option>
+                <label  className="white">Choose an option:</label>
+                <select id="option" name="selected">
+                  <option value="free_l" id="free_l" name="free_l">Freelancer</option>
+                  <option value="employer" id="employer" name="empl_l">Employer</option>
                   <option value="Jobseeker" name="Jobseeker">Jobseeker</option>
-                </select> */}
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="" id=""/>
-                  <label class="form-check-label" for="">
-                    Freelancer
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="" id="" />
-                  <label class="form-check-label" for="">
-                    Jobseeker
-                  </label>
-                </div>
-                <div>
-                  <input type="radio" name="" value="hire"/>
-                </div>
-                
+                </select>
+           
 
                 <div className="btn-modal">
                   <button
