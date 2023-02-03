@@ -135,7 +135,7 @@ function Presale_main() {
   }, [account])
 
   const buyNFT = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (!account) {
       return
@@ -165,6 +165,7 @@ function Presale_main() {
       const tx_result = await transaction.wait()
       alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`)
       console.log("transaction", tx_result.transactionHash)
+      window.location.reload();
     } catch (error) {
       alert("Error occured during transaction. Please check the browser console.\n" + error.reason)
       console.error("Transaction Error:", error.reason)
