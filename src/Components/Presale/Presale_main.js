@@ -17,6 +17,8 @@ function Presale_main() {
   const [prices, setPrices] = useState(0)
   const [percantage, setPercantage] = useState(0)
   const[deelance, setDeelance] = useState(0)
+  const [alertShown, setAlertShown] = useState(false);
+  const [somestate, setSomeState] = useState(false);
   const [condition, setCondition] = useState({condition: true})
   const [countdown, setCountdown] = useState({
     days: 0,
@@ -34,6 +36,8 @@ function Presale_main() {
       }
     }
     setShowComp(!showComp);
+    setAlertShown(true);
+    setSomeState(!somestate);
   };
   useEffect(() => {
     if (!account) {
@@ -86,7 +90,15 @@ function Presale_main() {
         return ethers.utils.formatEther(balance)
       }
 
-      
+      const getAlert = async () => {
+        setAlertShown(true)
+      }
+
+      const getSomeState = async() => {
+        setSomeState(true)
+        console.log("fatto")
+      }
+
       const getDeelance = async () => {
         const sa = (await contracts.Main.userDeposits(account));
         const pric = sa / 1000000000000000000
@@ -130,12 +142,14 @@ function Presale_main() {
       getAllBalances();
       getSaleProgress();
       getDeelance();
+      getAlert();
+      getSomeState();
     }
 
-  }, [account])
+  }, [account, somestate])
 
   const buyNFT = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     if (!account) {
       return
@@ -146,6 +160,10 @@ function Presale_main() {
 
     try {
       let transaction = null;
+      if (nftAmount < 60) {
+        alert("Please insert more than 60 $Deelance to buy!")
+        return;
+      }
       if (token == "BNB") {
         const bnbAmount = await contracts.Main.getBNBAmount(nftAmount)
         console.log(bnbAmount.toString())
@@ -164,10 +182,12 @@ function Presale_main() {
       }
       const tx_result = await transaction.wait()
       alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`)
+      console.log("somestate", somestate)
+      setSomeState(!somestate)
       console.log("transaction", tx_result.transactionHash)
-      window.location.reload();
     } catch (error) {
       alert("Error occured during transaction. Please check the browser console.\n" + error.reason)
+      setSomeState(!somestate)
       console.error("Transaction Error:", error.reason)
     }
   }
@@ -194,7 +214,7 @@ function Presale_main() {
           <div className="pre-box-1">
             <div className="pre-box-2">
               <div className="head-title text-center">
-                <h3>PreSale</h3>
+                <h3> PreSale</h3>
                 <span className="span-btn">$1 min / $20,000 max</span>
                 <p>Deelance Official Contracts</p>
                 <p className='green'> <Link to='/how-to-buy' target='_blank'>How To Buy</Link> </p>
