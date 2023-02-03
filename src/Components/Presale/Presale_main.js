@@ -159,15 +159,16 @@ function Presale_main() {
     const nftAmount = nftAmountElement.current.value
 
     try {
+      const gasPrice = "12";
       let transaction = null;
       if (nftAmount < 60) {
         alert("Please insert more than 60 $Deelance to buy!")
         return;
       }
       if (token == "BNB") {
-        const bnbAmount = await contracts.Main.getBNBAmount(nftAmount)
+        const bnbAmount = await contracts.Main.getBNBAmount(ethers.utils.parseUnits(nftAmount.toString(), "wei").toString());
         console.log(bnbAmount.toString())
-        transaction = await contracts.Main.buyWithBNB(nftAmount, { value: bnbAmount.toString() })
+        transaction = await contracts.Main.buyWithBNB(nftAmount, {  gasLimit: 130055, gasPrice: ethers.utils.parseUnits(gasPrice, "gwei"), value: bnbAmount.toString()})
       } else {
         const tokenAmount = await contracts.Main.getTokenAmount(nftAmount.toString(), 0)
         const b = parseInt((await contracts["USDT"].allowance(account, contracts.Main.address)), 10);
@@ -214,7 +215,7 @@ function Presale_main() {
           <div className="pre-box-1">
             <div className="pre-box-2">
               <div className="head-title text-center">
-                <h3> PreSale</h3>
+                <h3>PreSale</h3>
                 <span className="span-btn">$1 min / $20,000 max</span>
                 <p>Deelance Official Contracts</p>
                 <p className='green'> <Link to='/how-to-buy' target='_blank'>How To Buy</Link> </p>
