@@ -27,9 +27,9 @@ function Model({ setIsModal }) {
 
   const [showToast, setShowToast] = useState(false);
   const toastRef = OutsideClickDetector(() => setShowToast(false));
-  const popTost =OutsideClickDetector(()=>{
-    setShowToast(false)
-  })
+  // const popTost =OutsideClickDetector(()=>{
+  //   setShowToast(false)
+  // })
 
   return (
  

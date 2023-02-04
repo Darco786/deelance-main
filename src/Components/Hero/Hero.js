@@ -9,10 +9,10 @@ import {
   FaDiscord,
   FaInstagram,
 } from "react-icons/fa";
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import { AiOutlineArrowRight } from "react-icons/ai";
 import Model from "Components/Popup/Model";
-import Lottie from 'react-lottie';
-import Hero_lot from './bg'
+import Lottie from "react-lottie";
+import Hero_lot from "./bg";
 import PresaleMain from "Components/Presale/Presale_main";
 function Hero() {
   const [isModal, setIsModal] = useState(false);
@@ -21,8 +21,8 @@ function Hero() {
     autoplay: true,
     animationData: Hero_lot,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
   return (
     <>
@@ -34,28 +34,32 @@ function Hero() {
                 Creating <span className="green"> Web3 Space </span>For Better
                 World To <span className="green">Work Together</span>
               </h1>
-              <p className="hero-sp-p">Deelance is a freelancing and Recruitment platform based on Web3. Deelance is one such decentralized platform that is redefining how freelancers connect with potential employers and buyers</p>
+              <p className="hero-sp-p">
+                Deelance is a freelancing and Recruitment platform based on
+                Web3. Deelance is one such decentralized platform that is
+                redefining how freelancers connect with potential employers and
+                buyers
+              </p>
               <div className="hero-btn">
-                <button href="/" className="hero-btn-1" onClick={() => setIsModal(true)}>
-               Sign Up  <AiOutlineArrowRight/>
+                <button
+                  href="/"
+                  className="hero-btn-1"
+                  onClick={() => setIsModal(true)}
+                >
+                  Sign Up <AiOutlineArrowRight />
                 </button>
-                <button className="hero-btn-2" >
-                Buy Now
-                </button>
+                <button className="hero-btn-2">Buy Now</button>
               </div>
               <div className="presale-hero-box">
-<PresaleMain/>
+                <PresaleMain />
               </div>
             </div>
             <div className="col-md-6 text-center align-items-center">
-            <div className="2nd-img">
-            <Lottie 
-	    options={defaultOptions}
-        className='loti-1'
-      />
-            </div>
-       
-       <div className="hero-ss">
+              <div className="2nd-img">
+                <Lottie options={defaultOptions} className="loti-1" />
+              </div>
+
+              <div className="hero-ss">
                 <a
                   href="https://twitter.com/deelance_com"
                   target="_blank"
@@ -107,15 +111,12 @@ function Hero() {
                 </a>
               </div>
             </div>
-            
           </div>
-        
         </div>
 
         <div className="pop-up-sign">
           {isModal && <Model setIsModal={setIsModal} />}
         </div>
-        
       </section>
     </>
   );
