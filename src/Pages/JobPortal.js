@@ -1,3 +1,4 @@
+import Warning from 'Components/Common/Warning'
 import Footer from 'Components/Footer/Footer'
 import Jobs from 'Components/Jobs/Jobs'
 import Navbar from 'Components/Navbar/Navbar'
@@ -11,7 +12,7 @@ function JobPortal() {
         <Navbar/>
         <Jobs/>
        
- 
+ <Warning/>
     <Footer/>
     </>
   )
