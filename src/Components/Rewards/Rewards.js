@@ -108,15 +108,10 @@ function Rewards() {
             </div>
           </div>
         </div>
-        <div className="warning-box">
-          <h2>
-            Cryptocurrency may be unregulated in your jurisdiction. The value of
-            cryptocurrencies may go down as well as up. Profits may be subject
-            to capital gains or other taxes applicable in your jurisdiction.
-          </h2>
-        </div>
+ 
       </div>
     </section>
+    
   );
 }
 

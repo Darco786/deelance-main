@@ -3,6 +3,7 @@ import Navbar from 'Components/Navbar/Navbar'
 import { Helmet } from "react-helmet";
 import Team from 'Components/Team/Team'
 import React from 'react'
+import Warning from 'Components/Common/Warning';
 
 function TeamPage() {
   return (
@@ -13,7 +14,7 @@ function TeamPage() {
       <Navbar/>
         <Team/>
        
-
+<Warning/>
    <Footer/>
     </>
     

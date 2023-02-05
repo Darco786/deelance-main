@@ -1,3 +1,4 @@
+import Warning from 'Components/Common/Warning'
 import CookieConcent from 'Components/CookieConcent'
 import Footer from 'Components/Footer/Footer'
 import HowToBuy from 'Components/HowToBuy/HowToBuy'
@@ -10,6 +11,7 @@ function HowBuy() {
  
     <Navbar/>
     <HowToBuy/>
+    <Warning/>
     <Footer/>
     <CookieConcent/>
    </>

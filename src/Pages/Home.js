@@ -10,6 +10,7 @@ import Tokenomic from 'Components/Token/Tokenomic'
 import Raod from 'Components/Roadmap/Raod'
 import { Helmet } from "react-helmet";
 import CookieConcent from 'Components/CookieConcent'
+import Warning from 'Components/Common/Warning'
 
 
 function Home() {
@@ -46,7 +47,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
     <Tokenomic/>
     <Raod/>
    
-    
+    <Warning/>
     <Footer/>
     <CookieConcent/>
     </>

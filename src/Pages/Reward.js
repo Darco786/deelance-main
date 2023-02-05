@@ -1,3 +1,4 @@
+import Warning from 'Components/Common/Warning'
 import Footer from 'Components/Footer/Footer'
 import Navbar from 'Components/Navbar/Navbar'
 import Rewards from 'Components/Rewards/Rewards'
@@ -10,7 +11,7 @@ function Reward() {
        <Navbar/>
         <Rewards/>
 
-
+<Warning/>
     <Footer/>
     </>
   )
