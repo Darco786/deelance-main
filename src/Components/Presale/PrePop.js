@@ -22,7 +22,7 @@ function PrePop({ setIsModal }) {
               <div className="d-flex pre-step-1">
                 <h3>Step-1: You Pay</h3>
                 <div className="select-coin">
-                  <select id="option">
+                  <select id="option" style={{background:'#00e069'}}>
                     <option value="ETH">ETH</option>
                     <option value="USDT">USDT</option>
                   </select>
@@ -33,7 +33,7 @@ function PrePop({ setIsModal }) {
                   <input
                     type="number"
                     className="fs-26px  weight-3 in-put-pre"
-                    placeholder="your balance"
+                    placeholder="0.00"
                     name="full_name"
                     required
                   />
@@ -50,8 +50,8 @@ function PrePop({ setIsModal }) {
               <div className="">
                 <input
                   type="number"
-                  className="fs-26px  weight-3 in-put-pre "
-                  placeholder="0.00 :"
+                  className="fs-26px  weight-3 in-put-pre wt-100 "
+                  placeholder="0.00"
                   name="full_name"
                   required
                 />
@@ -59,7 +59,7 @@ function PrePop({ setIsModal }) {
               </div>
               <div className="mt-auto">
                 
-              <button type="submit" className="fs-26px  text-center hero-btn-2 weight-5 pointer">
+              <button type="submit" className="pre-pop-btn">
                   Buy Now
                 </button>
               </div>

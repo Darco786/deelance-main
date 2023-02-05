@@ -9,6 +9,7 @@ import WhyUs from '../Components/WhyUs/WhyUs'
 import Tokenomic from 'Components/Token/Tokenomic'
 import Raod from 'Components/Roadmap/Raod'
 import { Helmet } from "react-helmet";
+import CookieConcent from 'Components/CookieConcent'
 
 
 function Home() {
@@ -47,6 +48,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
    
     
     <Footer/>
+    <CookieConcent/>
     </>
   )
 }

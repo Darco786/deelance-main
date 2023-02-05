@@ -311,11 +311,11 @@ function Presale_main() {
 
                 {showComp ? (
                   <div className="text-center align-items-center d-flex jsa ">
-                    <a href="/" className="p1-btn" onClick={buyNFT}>
+                    <a href="/" className="p1-btn" onClick={handleModal} >
                       Buy Now
                     </a>
 
-                    <a href="/" className="p1-btn" onClick={handleModal}>
+                    <a href="/" className="p1-btn"  onClick={buyNFT}>
                       Buy with Card
                     </a>
                   </div>
