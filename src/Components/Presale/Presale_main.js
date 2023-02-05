@@ -221,6 +221,7 @@ function Presale_main() {
     setIsModal(true)
   }
   return (
+    <>
     <section className="main-page">
       <div className="">
         <div className="row justify-content-center presale-section">
@@ -338,11 +339,13 @@ function Presale_main() {
           </div>
         </div>
       </div>
-
-      <div className="pop-up-sign">
-        {isModal && <PrePop setIsModal={setIsModal} />}
-      </div>
+      <div className="pop-up-sign2">
+    {isModal && <PrePop setIsModal={setIsModal} />}
+  </div>
+     
     </section>
+    
+  </>
   );
 }
 

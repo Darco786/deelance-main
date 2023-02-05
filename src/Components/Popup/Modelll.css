@@ -2,6 +2,11 @@
   position: absolute;
   top: calc(100% - 47.2rem);
 }
+.pop-up-sign2{
+  position: absolute;
+  top: calc(100% - 50.2rem);
+  left: -4%;
+}
 
 
 .modalBackground {
@@ -12,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px);
     z-index: 2;
   }
   
@@ -36,12 +42,12 @@
     border: 2px solid rgba(34, 255, 22, 0.658);
     border-radius: 12px;
     backdrop-filter: blur(2.1875rem);
-    background-color: #090c2687;
+    background-color: #090c26f7;
     display: flex;
     flex-direction: column;
-    padding: 25px;
-    margin-right: 61%;
-    margin-top: -15.2%;
+    padding: 35px;
+    margin-right: 10%;
+    margin-top: 6.8%;
     z-index: 2;
   }
 
