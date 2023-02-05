@@ -358,6 +358,7 @@
   transition: all 0.2s ease;
   box-shadow: 0 0 5px #00e66c !important;
   background-color: #090d28 !important;
+  color: #ffdf !important;
 }
 
 #rcc-decline-button{
