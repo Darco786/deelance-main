@@ -41,7 +41,7 @@ const { t } = useTranslation();
     // change the language
     const handleChange = e => { 
         setLang(e.target.value);
-        let loc = "http://localhost:3000/";
+        let loc = "/";
         window.location.replace(loc + "?lng=" + e.target.value);
     }
 

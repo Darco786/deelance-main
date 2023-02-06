@@ -34,7 +34,7 @@ function Hero() {
           <div className="row justify-content-center">
             <div className="col-md-6">
               <h1>
-                {t('Creating')} <span className="green"> {t('Web3_Space')} </span>{t('For_Better')} <span className="green">{t('Work_together')}</span>
+                {t('Creating')} <span className="green"> {t('Web3_Space')} </span>{t('For_Better')} <span className="green">{t('Work _together')}</span>
               </h1>
               <p className="hero-sp-p">
                 {t('hero_details')}
