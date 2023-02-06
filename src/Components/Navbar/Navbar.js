@@ -6,12 +6,25 @@ import {FaAngleDown} from 'react-icons/fa'
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import useMediaQuery from "hooks/useMediaQuery";
 import Model from 'Components/Popup/Model';
+import { useTranslation } from 'react-i18next'
+
+const languages = [
+  { value: '', text: "Default" },
+  { value: 'en', text: "English" },
+  { value: 'ar', text: "Arabic" },
+  { value: 'ru', text: "russian" },
+  { value: 'ja', text: "japan" },
+
+]
+
+
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   // const [isOpen, setIsOpen] =useState(false)
   const [isModal,setIsModal]=useState(false)
   const [isHover, setIsHover] = useState(false);
+
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
 
   const dropdownRef = OutsideClickDetector(() => {
@@ -20,7 +33,17 @@ function Navbar() {
   const dropdownToggler = () => {
     setIsHover((val) => !val);
   };
-
+const { t } = useTranslation(); 
+  
+    const [lang, setLang] = useState('en');
+  
+    // This function put query that helps to 
+    // change the language
+    const handleChange = e => { 
+        setLang(e.target.value);
+        let loc = "http://localhost:3000/";
+        window.location.replace(loc + "?lng=" + e.target.value);
+    }
 
   return (
     <>
@@ -45,7 +68,7 @@ function Navbar() {
         >
           <ul>
           <li>
-              <NavLink to="/" >Home</NavLink>
+              <NavLink to="/" >{t('main_msg')}</NavLink>
             </li>
             <li className="drop-btn"  ref={dropdownRef}>
               <a href="#drop" className="dp" 
@@ -56,7 +79,7 @@ function Navbar() {
                 isBellow1024px ? null : setIsHover(false)
               }
               onClick={() => dropdownToggler()}
-              >About us <FaAngleDown/></a>
+              >{t('about')}<FaAngleDown/></a>
               <div className={isHover?'dropdown-active':"dropdown"}
                onMouseEnter={() =>
                 isBellow1024px ? null : setIsHover(true)
@@ -68,7 +91,7 @@ function Navbar() {
               <a href="/">About </a>
             </li>
             <li>
-              <NavLink to="/team">Team</NavLink>
+              <NavLink to="/team">{t('team')}</NavLink>
             </li>
            
            <li>
@@ -94,6 +117,17 @@ function Navbar() {
             <li>
               <a href="#team" className="explore-btn" onClick={()=>setIsModal(true)}>Sign Up</a>
             </li>
+            <li>
+            <select value={lang} onChange={handleChange}>
+                {languages.map(item => {
+                    return (<option key={item.value} 
+                    value={item.value}>{item.text}</option>);
+                })}
+            </select>
+            </li>
+
+
+          
           </ul>
         </div>
         {/* hamburget menu start  */}

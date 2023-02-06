@@ -14,6 +14,7 @@ import Model from "Components/Popup/Model";
 import Lottie from "react-lottie";
 import Hero_lot from "./bg";
 import PresaleMain from "Components/Presale/Presale_main";
+import { useTranslation } from 'react-i18next'
 function Hero() {
   const [isModal, setIsModal] = useState(false);
   const defaultOptions = {
@@ -24,6 +25,8 @@ function Hero() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  const { t } = useTranslation(); 
   return (
     <>
       <section className="hero">
@@ -31,7 +34,7 @@ function Hero() {
           <div className="row justify-content-center">
             <div className="col-md-6">
               <h1>
-                Creating <span className="green"> Web3 Space </span>For Better
+                {t('Creating')} <span className="green"> {t('Web3_Space')} </span>For Better
                 World To <span className="green">Work Together</span>
               </h1>
               <p className="hero-sp-p">
