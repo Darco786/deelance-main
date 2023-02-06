@@ -37,7 +37,7 @@
   }
 
   .modalContainer-2{
-    width: auto;
+    width: 590px;
     height: auto;
     border: 2px solid rgba(34, 255, 22, 0.658);
     border-radius: 12px;
@@ -45,9 +45,8 @@
     background-color: #090c26f7;
     display: flex;
     flex-direction: column;
-    padding: 35px;
-    margin-right: 10%;
-    margin-top: 6.8%;
+    padding: 20px;
+   
     z-index: 2;
   }
 
@@ -73,16 +72,21 @@
     border: 1px solid #000000;
     width: 100%;
     padding: 6px;
+    height: 28px;
+  }
+  .dee-coin{
+    padding-right: 4px;
   }
   .btn-max{
-    background: #00e86d;
-    border: 1px solid #000000;
+    background: #00e86c00;
+    border: 1px solid #6AE57B;
+border-radius: 4px;
     
   
     padding: 0% 1%;
-    /* font-size: 18px;
-    font-weight: 600; */
-    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
     /* margin-right: 2%; */
   }
   .titleCloseBtn {
@@ -102,13 +106,13 @@
     font-weight: 600;
   }
   .pre-pop-btn{
-    width: 100%;
+   
     margin-top: 20px;
     margin-bottom: 5px;
     background-color: #00e86d;
     color: #000000;
-    cursor: pointer;
     font-weight: 600;
+    padding: 0.5% 6%;
     font-size: 18px;
   }
   .pop-head h1{
@@ -195,9 +199,11 @@
   border-bottom: 1px solid #fff;
 }
 .pre-step-1{
-  justify-content: space-between;
+ align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  flex-direction: row;
+  gap: 14px;
 }
 
 .formWrapper header {
