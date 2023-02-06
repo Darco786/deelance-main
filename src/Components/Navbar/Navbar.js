@@ -9,7 +9,7 @@ import Model from 'Components/Popup/Model';
 import { useTranslation } from 'react-i18next'
 
 const languages = [
-  { value: '', text: "Default" },
+  { value: 'en', text: "Default" },
   { value: 'en', text: "English" },
   { value: 'ar', text: "Arabic" },
   { value: 'ru', text: "russian" },
