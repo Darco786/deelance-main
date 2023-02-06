@@ -38,10 +38,7 @@ function Hero() {
                 World To <span className="green">Work Together</span>
               </h1>
               <p className="hero-sp-p">
-                Deelance is a freelancing and Recruitment platform based on
-                Web3. Deelance is one such decentralized platform that is
-                redefining how freelancers connect with potential employers and
-                buyers
+                {t('hero_details')}
               </p>
               <div className="hero-btn">
                 <button
