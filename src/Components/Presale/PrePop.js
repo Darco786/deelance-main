@@ -141,6 +141,7 @@ function PrePop({ setIsModal }) {
     } else {
       maxa.current.value = Math.max(balances["USDT"]);
     }
+    handleFirstInputChange({target: {value: maxa.current.value}});
   };
 
   const handleFirstInputChange = async (event) => {

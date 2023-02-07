@@ -19,6 +19,7 @@ function Presale_main() {
   const [prices, setPrices] = useState(0);
   const [percantage, setPercantage] = useState(0);
   const [deelance, setDeelance] = useState(0);
+  const [round, setRound] = useState(0);
   const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
   const [condition, setCondition] = useState({ condition: true });
@@ -48,12 +49,12 @@ function Presale_main() {
         USDC: 0,
         BUSD: 0,
       });
-      setTotal("20000000");
+      setTotal("0");
       setPercantage("0");
 
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-15T00:00:00");
+        const futureDate = new Date("2023-02-09T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -68,9 +69,10 @@ function Presale_main() {
         }
       }, 1000);
     } else {
+      
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-15T00:00:00");
+        const futureDate = new Date("2023-02-09T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -106,14 +108,17 @@ function Presale_main() {
       };
 
       const getSaleProgress = async () => {
-        const myString = "0.018";
-        const a = Number(myString).toFixed(2);
-        const sa = (await contracts.Main.inSale()).toNumber();
-        const xa = (await contracts.Main.hardcapSize()).toNumber();
+        const pri = await contracts.Main.salePrice();
+        const myString = ethers.utils.formatEther(pri);
+        const a = Number(myString).toFixed(3);
+        const sa = ethers.utils.formatEther(await contracts.Main.inSaleUSDvalue())
+        const xa = (await contracts.Main.hardcapsizeUSD())
+        const round = await contracts.Main.currentStep();
+        setRound(round);
         setPrices(a);
         setInSale(sa);
         setTotal(xa);
-        setPercantage(((xa - sa) / xa) * 100);
+        setPercantage(((((xa - sa) / xa) * 100)).toFixed(2));
       };
 
       const getTokenBalances = async (token) => {
@@ -248,14 +253,14 @@ function Presale_main() {
               Progress {percantage}% (
               <span className="green">
                 {" "}
-                $ {(prices * (total - inSale)).toLocaleString("en-US")}{" "}
+                $ {((total - inSale)).toLocaleString("en-US")}{" "}
               </span>{" "}
               / $ {total.toLocaleString("en-US")} )
             </p>
             <div className="pre-box-1">
               <div className="pre-box-2">
                 <div className="head-title text-center">
-                  <h3>PreSale</h3>
+                  <h3>PreSale - Round {round.toString()}</h3>
                   <span className="span-btn">$1 min / $20,000 max</span>
                   <p>Deelance Official Contracts</p>
                   <p className="green">
@@ -267,7 +272,7 @@ function Presale_main() {
                 </div>
                 <div className="price-box text-center">
                   <h1>
-                    $ 0.018 <span className="sp-white">/$DLANCE</span>
+                    ${prices.toLocaleString("en-US")} <span className="sp-white">/$DLANCE</span>
                   </h1>
                 </div>
 
