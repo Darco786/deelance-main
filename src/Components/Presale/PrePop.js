@@ -203,7 +203,7 @@ function PrePop({ setIsModal }) {
                   <form className="dee-bal">
                     <input
                       type="number"
-                      className="fs-26px  weight-3 in-put-pre"
+                      className="fs-26px white  weight-3 in-put-pre"
                       placeholder="0.00"
                       onChange={handleFirstInputChange}
                       ref={maxa}
@@ -223,7 +223,7 @@ function PrePop({ setIsModal }) {
                 <div className="">
                   <input
                     type="number"
-                    className="fs-26px  weight-3 in-put-pre wt-100 "
+                    className="fs-26px white  weight-3 in-put-pre wt-100 "
                     placeholder="0.00"
                     value={secondInputValue}
                     ref={nftAmountElement}
