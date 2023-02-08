@@ -12,6 +12,7 @@ function PrePop({ setIsModal }) {
   const [showComp, setShowComp] = useState(false);
   const tokenElement = useRef({ value: "" });
   const nftAmountElement = useRef();
+  const [somestate, setSomeState] = useState(false);
   const [selectedToken, setSelectedToken] = useState("BNB");
   const maxa = useRef();
   const [secondInputValue, setSecondInputValue] = useState(0);
@@ -24,6 +25,7 @@ function PrePop({ setIsModal }) {
       }
     }
     setShowComp(!showComp);
+    setSomeState(!somestate);
   };
   useEffect(() => {
     if (!account) {
@@ -41,6 +43,10 @@ function PrePop({ setIsModal }) {
         return ethers.utils.formatEther(balance);
       };
 
+      const getSomeState = async () => {
+        setSomeState(true);
+        console.log("fatto");
+      };
       const getTokenBalances = async (token) => {
         console.log(token, " getting balance");
         const balance = await contracts[token].balanceOf(account);
@@ -63,6 +69,7 @@ function PrePop({ setIsModal }) {
       };
 
       getAllBalances();
+      getSomeState();
     }
   }, [account]);
 
@@ -120,12 +127,14 @@ function PrePop({ setIsModal }) {
       const tx_result = await transaction.wait();
       alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`);
       console.log("transaction", tx_result.transactionHash);
+      setSomeState(!somestate);
     } catch (error) {
       alert(
         "Error occured during transaction. Please check the browser console.\n" +
           error.reason
       );
       console.error("Transaction Error:", error.reason);
+      setSomeState(!somestate);
     }
   };
 
@@ -203,7 +212,7 @@ function PrePop({ setIsModal }) {
                   <form className="dee-bal">
                     <input
                       type="number"
-                      className="fs-26px white  weight-3 in-put-pre"
+                      className="fs-26px  weight-3 in-put-pre"
                       placeholder="0.00"
                       onChange={handleFirstInputChange}
                       ref={maxa}
@@ -223,7 +232,7 @@ function PrePop({ setIsModal }) {
                 <div className="">
                   <input
                     type="number"
-                    className="fs-26px white  weight-3 in-put-pre wt-100 "
+                    className="fs-26px  weight-3 in-put-pre wt-100 "
                     placeholder="0.00"
                     value={secondInputValue}
                     ref={nftAmountElement}

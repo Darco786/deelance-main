@@ -1,4 +1,4 @@
-export const BigNFTABI =[
+export const BigNFTABI = [
   {
     "inputs": [],
     "stateMutability": "nonpayable",
@@ -413,6 +413,19 @@ export const BigNFTABI =[
   },
   {
     "inputs": [],
+    "name": "nextPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "owner",
     "outputs": [
       {
@@ -548,19 +561,6 @@ export const BigNFTABI =[
       }
     ],
     "name": "startClaim",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "stepIndex",
-        "type": "uint256"
-      }
-    ],
-    "name": "startStep",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
