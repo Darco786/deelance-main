@@ -10,6 +10,7 @@ import TeamPage from 'Pages/TeamPage';
 import Terms from 'Pages/Terms';
 import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
 import Home from './Pages/Home'
+import NotFound from './Pages/404Page'
 import { ethers } from 'ethers';
 import { useState } from 'react';
 import Web3Modal from 'web3modal';
@@ -88,6 +89,7 @@ function App() {
           <Route exact path="/risk" element={<Risk/>}/>
           <Route exact path="/rewards" element={<Reward/>}/>
           <Route exact path="/how-to-buy" element={<HowBuy/>}/>
+          <Route exact path="*" element={<NotFound/>}/>
         
         </Routes>
     </Router>

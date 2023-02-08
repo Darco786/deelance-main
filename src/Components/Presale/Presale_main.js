@@ -228,7 +228,7 @@ function Presale_main() {
       return;
     }
     const started = await contracts.Main.claimStart();
-    const have = await contracts.Main.hasClaimed();
+    const have = await contracts.Main.hasClaimed(account);
     if (started == 0) {
       alert("Claim has not started")
       return;
