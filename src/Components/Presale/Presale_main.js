@@ -221,6 +221,32 @@ function Presale_main() {
     }
   };
 
+  const claimNFT = async (e) => {
+    e.preventDefault();
+    
+    if (!account) {
+      return;
+    }
+    const started = await contracts.Main.claimStart();
+    const have = await contracts.Main.hasClaimed();
+    if (started == 0) {
+      alert("Claim has not started")
+      return;
+    } else {
+      if (have) {
+        alert("You have already claimed your DeeLance Tokens - Check your wallet!")
+      return;
+      } else {
+        const transaction = await contracts.Main.claim();
+        const tx_result = await transaction.wait();
+        alert(`Successfully Claimed! TX: ${tx_result.transactionHash}`);
+        console.log("somestate", somestate);
+        setSomeState(!somestate);
+        console.log("transaction", tx_result.transactionHash);
+      }
+    }
+  };
+
   const handleModal = async (e) =>{
     e.preventDefault();
     setIsModal(true)
@@ -323,6 +349,10 @@ function Presale_main() {
 
                     <a href="/" className="p1-btn"  onClick={buyNFT}>
                       Buy with Card
+                    </a>
+
+                    <a href="/" className="p1-btn"  onClick={claimNFT}>
+                      Claim
                     </a>
                   </div>
                 ) : (
