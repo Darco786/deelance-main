@@ -6,8 +6,8 @@ function notFound() {
   return (
     <>
     <Navbar/>
-<section>
-notFound
+<section className='not-page'>
+<img src='https://ik.imagekit.io/cforcrypto/Dework/404-error.png' alt='404'/>
 </section>
 
     <Footer/>

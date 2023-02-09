@@ -36,6 +36,18 @@ section{
   padding-top: 4%;
   padding-bottom: 4%;
 }
+.not-page{
+  padding-top: 30px;
+  padding-bottom: 60px;
+  text-align: center;
+  align-items: center;
+
+}
+
+.not-page img{
+  height: auto;
+  width: 50%;
+}
 .ad-btn-active{
   background: linear-gradient(93.52deg, #00A652 0.78%, #006A34 102.15%, #58FFAA 102.16%);
   border: 0.5px solid #FFFFFF;
