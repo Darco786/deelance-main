@@ -365,11 +365,12 @@ function Presale_main() {
               </div>
             </div>
             <p className="white count-down text-center">
-              <span className="green">{countdown.days}</span> DAYS,{" "}
+              Live in 
+              <span className="green"> {countdown.days}</span> DAYS,{" "}
               <span className="green">{countdown.hours}</span> HOURS,{" "}
               <span className="green">{countdown.minutes}</span> MINUTES,{" "}
               <span className="green">{countdown.seconds}</span> SECONDS
-              Remaining
+             
             </p>
           </div>
         </div>
