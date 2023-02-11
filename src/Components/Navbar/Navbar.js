@@ -9,7 +9,7 @@ import useMediaQuery from "hooks/useMediaQuery";
 import { useTranslation } from 'react-i18next'
 
 const languages = [
- 
+  { value: 'en', text: "english" },
   { value: 'en', text: "English" },
   { value: 'ar', text: "Arabic" },
   { value: 'ru', text: "russian" },
