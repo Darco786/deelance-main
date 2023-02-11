@@ -5,10 +5,12 @@ import "./Presale.css";
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
 import PrePop from "./PrePop";
+import OnRamp from "./onRamp";
 
 function Presale_main() {
   const [showComp, setShowComp] = useState(false);
   const [isModal, setIsModal] = useState(false);
+  const [isModal2, setIsModal2] = useState(false);
   const { connectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ BNB: 0 });
@@ -251,6 +253,10 @@ function Presale_main() {
     e.preventDefault();
     setIsModal(true)
   }
+  const handleModal2 = async (e) =>{
+    e.preventDefault();
+    setIsModal2(true)
+  }
   return (
     <>
     <section className="main-page">
@@ -347,7 +353,7 @@ function Presale_main() {
                       Buy Now
                     </a>
 
-                    <a href="/" className="p1-btn"  onClick={buyNFT}>
+                    <a href="/" className="p1-btn"  onClick={handleModal2}>
                       Buy with Card
                     </a>
 
@@ -377,6 +383,10 @@ function Presale_main() {
       </div>
       <div className="pop-up-sign2">
     {isModal && <PrePop setIsModal={setIsModal} />}
+  </div>
+
+  <div className="pop-up-sign2">
+    {isModal2 && <OnRamp setIsModal2={setIsModal2} />}
   </div>
      
     </section>
