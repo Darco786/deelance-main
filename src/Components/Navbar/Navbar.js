@@ -5,11 +5,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import {FaAngleDown} from 'react-icons/fa'
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import useMediaQuery from "hooks/useMediaQuery";
-import Model from 'Components/Popup/Model';
+
 import { useTranslation } from 'react-i18next'
 
 const languages = [
-  { value: 'en', text: "Default" },
+ 
   { value: 'en', text: "English" },
   { value: 'ar', text: "Arabic" },
   { value: 'ru', text: "russian" },
@@ -22,7 +22,7 @@ const languages = [
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   // const [isOpen, setIsOpen] =useState(false)
-  const [isModal,setIsModal]=useState(false)
+
   const [isHover, setIsHover] = useState(false);
 
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
@@ -114,11 +114,9 @@ const { t } = useTranslation();
               <NavLink to="/academy" >Academy</NavLink>
             </li>
             
+           
             <li>
-              <a href="#team" className="explore-btn" onClick={()=>setIsModal(true)}>Sign Up</a>
-            </li>
-            <li>
-            <select value={lang} onChange={handleChange}>
+            <select value={lang} onChange={handleChange} className="explore-btn">
                 {languages.map(item => {
                     return (<option key={item.value} 
                     value={item.value}>{item.text}</option>);
@@ -137,9 +135,7 @@ const { t } = useTranslation();
           </a>
         </div>
       </nav>
-      <div className='pop-up-sign' >
-      {isModal && <Model setIsModal={setIsModal} />}
-      </div>
+      
     </>
   );
 }
