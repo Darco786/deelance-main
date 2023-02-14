@@ -1,56 +1,10 @@
 import React from 'react'
 import './Tokenomic.css'
 import {AiOutlineArrowRight} from 'react-icons/ai'
-// import ReactApexChart from 'react-apexcharts';
+
 
 function Tokenomic() {
-// const [state ,setState]=useState(
 
-//   {
-          
-//     series: [10, 15, 16, 6, 2,15,33,3],
-//     options: {
-//       chart: {
-//         width: 380,
-//         type: 'polarArea'
-//       },
-//       labels: ['Rose A', 'Rose B', 'Rose C', 'Rose D', 'Rose E'],
-//       fill: {
-//         opacity: 1
-//       },
-//       stroke: {
-//         width: 1,
-//         colors: undefined
-//       },
-//       yaxis: {
-//         show: false
-//       },
-//       legend: {
-//         position: 'bottom'
-//       },
-//       plotOptions: {
-//         polarArea: {
-//           rings: {
-//             strokeWidth: 0
-//           },
-//           spokes: {
-//             strokeWidth: 0
-//           },
-//         }
-//       },
-//       theme: {
-//         monochrome: {
-//           enabled: true,
-//           shadeTo: 'light',
-//           shadeIntensity: 0.6
-//         }
-//       }
-//     },
-  
-  
-
-// }
-// )
   return (
     <section className='token'>
         <div className='container justify-content-center text-center'>

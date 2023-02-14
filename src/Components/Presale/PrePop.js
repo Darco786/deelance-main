@@ -1,32 +1,32 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+
 import UserContext from "../../UserContext";
 import "./Presale.css";
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
 
 function PrePop({ setIsModal }) {
-  const { connectWallet, provider, contracts, account } =
+  const { provider, contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ BNB: 0 });
-  const [showComp, setShowComp] = useState(false);
+  // const [showComp, setShowComp] = useState(false);
   const tokenElement = useRef({ value: "" });
   const nftAmountElement = useRef();
   const [somestate, setSomeState] = useState(false);
   const [selectedToken, setSelectedToken] = useState("BNB");
   const maxa = useRef();
   const [secondInputValue, setSecondInputValue] = useState(0);
-  const handleClick = async (e) => {
-    e.preventDefault();
-    if (!account) {
-      const success = await connectWallet();
-      if (!success) {
-        alert("please connect to wallet");
-      }
-    }
-    setShowComp(!showComp);
-    setSomeState(!somestate);
-  };
+  // const handleClick = async (e) => {
+  //   e.preventDefault();
+  //   if (!account) {
+  //     const success = await connectWallet();
+  //     if (!success) {
+  //       alert("please connect to wallet");
+  //     }
+  //   }
+  //   setShowComp(!showComp);
+  //   setSomeState(!somestate);
+  // };
   useEffect(() => {
     if (!account) {
       setBalances({
@@ -92,7 +92,7 @@ function PrePop({ setIsModal }) {
         alert("Please insert more than 1$ to buy!");
         return;
       }
-      if (token == "BNB") {
+      if (token === "BNB") {
         const bnbAmount = await contracts.Main.getBNBAmount(
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
@@ -103,10 +103,10 @@ function PrePop({ setIsModal }) {
           value: bnbAmount.toString(),
         });
       } else {
-        const tokenAmount = await contracts.Main.getTokenAmount(
-          nftAmount.toString(),
-          0
-        );
+        // const tokenAmount = await contracts.Main.getTokenAmount(
+        //   nftAmount.toString(),
+        //   0
+        // );
         const b = parseInt(
           await contracts["USDT"].allowance(account, contracts.Main.address),
           10

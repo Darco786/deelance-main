@@ -39,6 +39,7 @@ function Presale_main() {
         alert("please connect to wallet");
       }
     }
+    
     setShowComp(!showComp);
     setAlertShown(true);
     setSomeState(!somestate);
@@ -174,7 +175,7 @@ function Presale_main() {
         alert("Please insert more than 60 $Deelance to buy!");
         return;
       }
-      if (token == "BNB") {
+      if (token === "BNB") {
         const bnbAmount = await contracts.Main.getBNBAmount(
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
@@ -248,7 +249,7 @@ function Presale_main() {
       }
     }
   };
-
+console.log(balances,alertShown,condition,buyNFT,)
   const handleModal = async (e) =>{
     e.preventDefault();
     setIsModal(true)
