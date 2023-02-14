@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
-
+import NavLogo from '../../assets/main-logo.svg'
 function Footer() {
   return (
     <>
@@ -21,7 +21,7 @@ function Footer() {
               <div className="footer-logo">
                 <NavLink to="/">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/icons/logo-white_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672518832954"
+                    src={NavLogo}
                     alt="foot-logo"
                   />
                 </NavLink>

@@ -1,7 +1,51 @@
 import React from 'react'
 import './Jobs.css'
+import Lottie from "react-lottie";
+import Loca from './geol.json'
+import Cumm from './cumm.json'
+import Sea from './sea.json'
+import Star from './star.json'
+
+import JobImg from '../../assets/assets/images/job.png'
 
 function Jobs() {
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: Loca,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice",
+        },
+      };
+
+      const defaultOptions2 = {
+        loop: true,
+        autoplay: true,
+        animationData: Cumm,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice",
+        },
+      };
+
+
+      const defaultOptions3 = {
+        loop: true,
+        autoplay: true,
+        animationData: Sea,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice",
+        },
+      };
+
+
+      const defaultOptions4 = {
+        loop: true,
+        autoplay: true,
+        animationData: Star,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice",
+        },
+      };
   return (
     <>
     <section className='jobs'>
@@ -15,26 +59,26 @@ function Jobs() {
             <div className='row align-items-center text-center'>
                 <div className='col-md-3 col-6'>
                     <div className='job-box'>
-                        <img src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/gps-navigator-with-pin-location_1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669980919657" alt=""/>
+                    <Lottie options={defaultOptions} className="loti-1" />
                         <p>GEO LOCATION SEARCH</p>
                         
                     </div>
                 </div>
                 <div className='col-md-3 col-6'>
                 <div className='job-box-2'>
-                <img src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/online-meeting__1__1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669980920630" alt=""/>
+                <Lottie options={defaultOptions2} className="loti-1" />
                         <p>EASY TO MANAGE JOBS</p>
                         </div>
                     </div>
                     <div className='col-md-3 col-6'>
                     <div className='job-box-3'>
-                    <img src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/businessman-achieving-business-vision_1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669980921112" alt=""/>
+                    <Lottie options={defaultOptions4} className="loti-1" height={262} />
                         <p>TOP CAREERS</p>
                         </div>
                     </div>
                     <div className='col-md-3 col-6'>
                     <div className='job-box-4'>
-                    <img src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/multitasking-person_1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669980920923" alt=""/>
+                    <Lottie options={defaultOptions3} className="loti-1" height={262} />
                         <p>SEARCH EXPERTS</p>
                         </div>
                     </div>
@@ -50,7 +94,7 @@ function Jobs() {
         </div>
         </section>
         <section style={{marginTop:'1%'}}>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/findJob_-_updated_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669980843877" alt=""/>
+            <img src={JobImg} alt=""/>
         </section>
         <section style={{paddingBottom:'3%',background:'#1b1c1e'}}>
             </section>
