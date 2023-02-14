@@ -682,6 +682,7 @@ export const BigNFTABI = [
     "type": "function"
   }
 ]
+
 export const BEP20ABI = [
 	{
 		"anonymous": false,

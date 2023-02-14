@@ -5,12 +5,10 @@ import "./Presale.css";
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
 import PrePop from "./PrePop";
-import OnRamp from "./onRamp";
 
 function Presale_main() {
   const [showComp, setShowComp] = useState(false);
   const [isModal, setIsModal] = useState(false);
-  const [isModal2, setIsModal2] = useState(false);
   const { connectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ BNB: 0 });
@@ -24,6 +22,7 @@ function Presale_main() {
   const [round, setRound] = useState(0);
   const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
+  const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
   const [countdown, setCountdown] = useState({
     days: 0,
@@ -39,7 +38,7 @@ function Presale_main() {
         alert("please connect to wallet");
       }
     }
-    
+    setClaimDisabled(true);
     setShowComp(!showComp);
     setAlertShown(true);
     setSomeState(!somestate);
@@ -110,6 +109,16 @@ function Presale_main() {
         setDeelance(pric);
       };
 
+      const getClaimStatus = async () => {
+        const sa = await contracts.Main.claimStart();
+        if (sa == 0) {
+        setClaimDisabled(true);
+        } else {
+          setClaimDisabled(false);
+        }
+      };
+
+
       const getSaleProgress = async () => {
         const pri = await contracts.Main.salePrice();
         const myString = ethers.utils.formatEther(pri);
@@ -155,6 +164,7 @@ function Presale_main() {
       getDeelance();
       getAlert();
       getSomeState();
+      getClaimStatus();
     }
   }, [account, somestate]);
 
@@ -175,7 +185,7 @@ function Presale_main() {
         alert("Please insert more than 60 $Deelance to buy!");
         return;
       }
-      if (token === "BNB") {
+      if (token == "BNB") {
         const bnbAmount = await contracts.Main.getBNBAmount(
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
@@ -249,14 +259,10 @@ function Presale_main() {
       }
     }
   };
-console.log(balances,alertShown,condition,buyNFT,)
+
   const handleModal = async (e) =>{
     e.preventDefault();
     setIsModal(true)
-  }
-  const handleModal2 = async (e) =>{
-    e.preventDefault();
-    setIsModal2(true)
   }
   return (
     <>
@@ -354,13 +360,13 @@ console.log(balances,alertShown,condition,buyNFT,)
                       Buy Now
                     </a>
 
-                    <a href="/" className="p1-btn"  onClick={handleModal2}>
+                    <a href="/" className="p1-btn"  onClick={buyNFT}>
                       Buy with Card
                     </a>
 
-                    <a href="/" className="p1-btn"  onClick={claimNFT}>
-                      Claim
-                    </a>
+                   <a href="/" className="p1-btn" onClick={claimNFT} disabled={claimDisabled ? true : false}>
+  Claim
+</a>
                   </div>
                 ) : (
                   <div className="text-center align-items-center d-flex jsa ">
@@ -372,22 +378,17 @@ console.log(balances,alertShown,condition,buyNFT,)
               </div>
             </div>
             <p className="white count-down text-center">
-              Live in 
-              <span className="green"> {countdown.days}</span> DAYS,{" "}
+              <span className="green">{countdown.days}</span> DAYS,{" "}
               <span className="green">{countdown.hours}</span> HOURS,{" "}
               <span className="green">{countdown.minutes}</span> MINUTES,{" "}
               <span className="green">{countdown.seconds}</span> SECONDS
-             
+              Remaining
             </p>
           </div>
         </div>
       </div>
       <div className="pop-up-sign2">
     {isModal && <PrePop setIsModal={setIsModal} />}
-  </div>
-
-  <div className="pop-up-sign2">
-    {isModal2 && <OnRamp setIsModal2={setIsModal2} />}
   </div>
      
     </section>
