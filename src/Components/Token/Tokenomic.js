@@ -1,6 +1,7 @@
 import React from 'react'
 import './Tokenomic.css'
 import {AiOutlineArrowRight} from 'react-icons/ai'
+import TokenImg from '../../assets/token.svg'
 
 
 function Tokenomic() {
@@ -26,7 +27,7 @@ function Tokenomic() {
             </div>
 
             <div className='col-md-4 text-center'>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152779.png" alt="" className='token-img'/>
+            <img src={TokenImg} alt="" className='token-img'/>
             {/* <ReactApexChart options={state.options} series={state.series} type="polarArea" width={600} /> */}
             <div style={{margin:'auto'}} className='main-sub-btn'>
             <a href="#team" className="demo-btn">BUY NOW  <AiOutlineArrowRight/></a>
