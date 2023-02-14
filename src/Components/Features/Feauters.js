@@ -1,6 +1,14 @@
 import React from "react";
 import "./Features.css";
+import Dash from '../../assets/dash.svg'
+import Buss from '../../assets/feature/buss.svg'
+import Dollar from '../../assets/feature/doll.svg'
+import Escrow from '../../assets/feature/owner.svg'
+import Owner from '../../assets/feature/buss.svg'
+import Pay  from '../../assets/feature/pay.svg'
+import Trans  from '../../assets/feature/trans.svg'
 import MobFeauters from "./MobFeauters";
+
 
 
 function Feauters() {
@@ -10,7 +18,7 @@ function Feauters() {
         <div className="feat-header">
        
           <h1>Key <span className="green">Features</span></h1>
-          <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
+          <img src={Dash} alt=""/>
         </div>
       </div>
       <MobFeauters/>
@@ -22,7 +30,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_11-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695067"
+                  src={Buss}
                   alt=""
                 />
               </div>
@@ -42,7 +50,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_12-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695065"
+                  src={Trans}
                   alt=""
                 />
               </div>
@@ -62,7 +70,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_13-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695075"
+                  src={Escrow}
                   alt=""
                 />
               </div>
@@ -84,7 +92,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_16-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695045"
+                  src={Owner}
                   alt=""
                 />
               </div>
@@ -104,7 +112,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_15-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695083"
+                  src={Dollar}
                   alt=""
                 />
               </div>
@@ -123,7 +131,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_14-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695073"
+                  src={Pay}
                   alt=""
                 />
               </div>
