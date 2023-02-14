@@ -1,6 +1,15 @@
 import React from "react";
 import "./Team.css";
 import { FaLinkedin } from "react-icons/fa";
+import Addy from '../../assets/team/addy.png'
+import Deeba from '../../assets/team/deeba.png'
+import Don from '../../assets/team/don.png'
+import Guru from '../../assets/team/gurpreet.png'
+import ROBERTO from '../../assets/team/roberto.png'
+import Noor from '../../assets/team/noor.png'
+import Jhosi from '../../assets/team/jhosi.png'
+import Jagjeet from '../../assets/team/jagjeet.png'
+import Shoiab from '../../assets/team/suhaib.png'
 
 function Team() {
   return (
@@ -29,7 +38,7 @@ function Team() {
                 </div>
                 <div className="text-center box-img">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/Team/8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682469"
+                    src={Jhosi}
                     alt=""
                   />
                   <h2>SURESH JOSHI</h2>
@@ -59,7 +68,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682414"
+                  src={Jagjeet}
                   alt=""
                 />
                 <h2>JAGJEET JENA</h2>
@@ -87,7 +96,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682450"
+                  src={ROBERTO}
                   alt=""
                 />
                 <h2>ROBERTO</h2>
@@ -116,7 +125,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682366"
+                  src={Shoiab}
                   alt=""
                 />
                 <h2>SHOAIB</h2>
@@ -145,7 +154,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682417"
+                  src={Deeba}
                   alt=""
                 />
                 <h2>DEBBA</h2>
@@ -172,7 +181,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682478"
+                  src={Addy}
                   alt=""
                 />
                 <h2>ADNAN A RAHI</h2>
@@ -198,7 +207,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682400"
+                  src={Don}
                   alt=""
                 />
                 <h2>DOMMETI</h2>
@@ -229,7 +238,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/10.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682424"
+                  src={Guru}
                   alt=""
                 />
                 <h2>GURPREET SINGH</h2>
@@ -255,7 +264,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682420"
+                  src={Noor}
                   alt=""
                 />
                 <h2>NOOR ALAM</h2>
