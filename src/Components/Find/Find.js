@@ -1,11 +1,7 @@
 import React from "react";
 import "./Find.css";
-import Lottie from 'react-lottie';
-import Meta from './metav.json'
-
-
-
-
+import Lottie from "react-lottie";
+import Meta from "./metav.json";
 
 function Find() {
   const defaultOptions = {
@@ -13,44 +9,48 @@ function Find() {
     autoplay: true,
     animationData: Meta,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
   return (
     <section className="find">
-    
       <div className="bg-dework">
         <div className="container">
-        <div className="row justify-content-center align-items-center ">
-          <div className="col-md-6">
-            <div className="meta-1">
-              <h1>Find Freelancer In <span className="green">Metaverse</span> </h1>
-              <p>Deelance ” is a project that creates unique contents on Metaverse technology that is a huge trend around the world. Its aim is to move people to another dimension within the digital universe. </p>
-              <p> Metaverse - where buyers can interact with freelancers in the office space and have a discussion</p>
+          <div className="row justify-content-center align-items-center ">
+            <div className="col-md-6">
+              <div className="meta-1">
+                <h1>
+                  Find Freelancer In <span className="green">Metaverse</span>{" "}
+                </h1>
+                <p>
+                  Deelance ” is a project that creates unique contents on
+                  Metaverse technology that is a huge trend around the world.
+                  Its aim is to move people to another dimension within the
+                  digital universe.{" "}
+                </p>
+                <p>
+                  {" "}
+                  Metaverse - where buyers can interact with freelancers in the
+                  office space and have a discussion
+                </p>
+              </div>
+              <div className="gp-2">
+                <a href="/" className="demo-btn">
+                  DEMO
+                </a>
+              </div>
             </div>
-            <div className="gp-2">
-            <a href="/" className="demo-btn">
-              DEMO
-
-            </a>
-
+            <div className="col-md-6">
+              <div className="text-center meta-img">
+                {/* <img src="https://ik.imagekit.io/cforcrypto/Dework/merged.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672669567704" alt=""/> */}
+                <Lottie
+                  options={defaultOptions}
+                  className="loti-1"
+                  width="auto"
+                />
+              </div>
             </div>
-          
-
           </div>
-          <div className="col-md-6">
-            <div className="text-center meta-img">
-              {/* <img src="https://ik.imagekit.io/cforcrypto/Dework/merged.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672669567704" alt=""/> */}
-              <Lottie 
-	    options={defaultOptions}
-        className='loti-1'
-        width='auto'
-      />
-            </div>
-
-          </div>
-
-        </div>
         </div>
       </div>
     </section>
