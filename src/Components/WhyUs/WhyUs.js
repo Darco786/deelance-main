@@ -1,15 +1,12 @@
 import React from "react";
 import MobWhyus from "./MobWhyus";
-<<<<<<< HEAD
 import {AiOutlineCheckCircle} from 'react-icons/ai'
 import {MdOutlineCancel} from 'react-icons/md'
 import Dash from '../../assets/dash.svg'
 import Dee from '../../assets/main-logo.svg'
-=======
-import { AiOutlineCheckCircle } from "react-icons/ai";
-import { MdOutlineCancel } from "react-icons/md";
-
->>>>>>> 1184036a3835943523c41792df489dc671d3d58f
+import Fiver from '../../assets/fiver.png'
+import Freelance from '../../assets/freela.png'
+import Upwork from '../../assets/Upwork.png'
 import "./Why.css";
 
 function WhyUs() {
@@ -21,28 +18,15 @@ function WhyUs() {
           <h1>
             Why <span className="green">Deelance</span>{" "}
           </h1>
-<<<<<<< HEAD
           <img src={Dash} alt=""/>
-=======
-          <img
-            src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599"
-            alt=""
-          />
->>>>>>> 1184036a3835943523c41792df489dc671d3d58f
         </div>
 
         <div className="why-us-box ">
           <table className="table">
             <thead>
               <tr>
-                <th scope="col" className="b-right ht-101">
-                  {" "}
-                </th>
-                <th
-                  scope="col"
-                  className="b-right"
-                  style={{ background: "#111827" }}
-                >
+                <th scope="col" className="b-right ht-101"> </th>
+                <th scope="col" className="b-right" style={{background:'#111827'}}>
                   <div className="content-2">
                     <img
                       src={Dee}
@@ -50,10 +34,10 @@ function WhyUs() {
                     />
                   </div>
                 </th>
-                <th scope="col">
+                <th scope="col" >
                   <div className="content-2">
                     <img
-                      src="https://ik.imagekit.io/cforcrypto/Dework/Group.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672314856661"
+                      src={Freelance}
                       alt=""
                     />
                   </div>
@@ -61,7 +45,7 @@ function WhyUs() {
                 <th scope="col">
                   <div className="content-2">
                     <img
-                      src="https://ik.imagekit.io/cforcrypto/Dework/Upwork_logo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672338028457"
+                      src={Upwork}
                       alt=""
                     />
                   </div>
@@ -69,7 +53,7 @@ function WhyUs() {
                 <th scope="col">
                   <div className="content-2">
                     <img
-                      src="https://ik.imagekit.io/cforcrypto/Dework/Fiverr_New_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672314856553"
+                      src={Fiver}
                       alt=""
                     />
                   </div>
@@ -101,60 +85,48 @@ function WhyUs() {
                 </th>
                 <td className="text-center b-right t-head-2">Crypto/Instant</td>
                 <td className="text-center t-head-2">
-                  Min Payout $100
+                  Min Payout $100 
                   <p className="t-head-2">(2.75% Fee For Withdrawal For </p>
-                  <p className="t-head-2">Currency Conversion)</p>
+                  <p className="t-head-2">Currency
+                  Conversion)</p>
                 </td>
                 <td className="text-center t-head-2">
-                  Min Payout $100
-                  <p className="t-head-2"> (5% Fee For Withdrawal For </p>
-                  <p className="t-head-2">Currency Conversion)</p>
+                  Min Payout $100 
+                 <p className="t-head-2"> (5% Fee For Withdrawal For </p>
+                  <p className="t-head-2">Currency
+                  Conversion)</p>
                 </td>
                 <td className="text-center t-head-2">
-                  Min Payout $100
-                  <p className="t-head-2"> (5% Fee For Withdrawal For </p>
-                  <p className="t-head-2">Currency Conversion)</p>
+                  Min Payout $100 
+                  <p className="t-head-2">  (5% Fee For Withdrawal For </p>
+                  <p className="t-head-2">Currency
+                  Conversion)</p>
+                
                 </td>
               </tr>
               <tr>
                 <th scope="row" className="b-right">
                   <p className="t-head">Decentralized</p>
-                </th>
-                <td className="green text-center b-right">
-                  <AiOutlineCheckCircle />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
+                  </th>
+                <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p className="t-head">Content Ownership</p>
-                </th>
-                <td className="green text-center b-right">
-                  <AiOutlineCheckCircle />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
+                 <p className="t-head">Content Ownership</p>
+                 </th>
+                <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head"> Efficient Escrow</p>
-                </th>
-                <td className="text-center b-right t-head">Yes</td>
+                <p className="t-head"> Efficient Escrow</p>
+                 </th>
+                <td className="text-center b-right t-head" >Yes</td>
                 <td className="text-center t-head">No/Partial</td>
                 <td className="text-center t-head">No/Partial</td>
                 <td className="text-center t-head">No/Partial</td>
@@ -162,73 +134,41 @@ function WhyUs() {
 
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p className="t-head">No Limit On Task Size</p>
-                </th>
-                <td className="green text-center b-right">
-                  <AiOutlineCheckCircle />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
+                <p className="t-head">No Limit On Task Size</p>
+                  </th>
+                <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
 
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head">Scalable Dispute System</p>
-                </th>
-                <td className="green text-center b-right">
-                  <AiOutlineCheckCircle />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
+                <p className="t-head">Scalable Dispute System</p>
+                  </th>
+                <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
 
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p className="t-head">NFT / Metaverse</p>
-                </th>
-                <td className="green text-center b-right">
-                  <AiOutlineCheckCircle />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
+                <p className="t-head">NFT / Metaverse</p>
+                 </th>
+                <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head">Staff Recruitment</p>
-                </th>
-                <td className="green text-center b-right">
-                  <AiOutlineCheckCircle />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
-                <td className="text-center cross">
-                  <MdOutlineCancel />
-                </td>
+                <p className="t-head">Staff Recruitment</p>
+                 </th>
+                <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
             </tbody>
           </table>
