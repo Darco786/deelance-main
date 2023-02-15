@@ -1,56 +1,11 @@
 import React from 'react'
 import './Tokenomic.css'
 import {AiOutlineArrowRight} from 'react-icons/ai'
-// import ReactApexChart from 'react-apexcharts';
+import TokenImg from '../../assets/token.svg'
+
 
 function Tokenomic() {
-// const [state ,setState]=useState(
 
-//   {
-          
-//     series: [10, 15, 16, 6, 2,15,33,3],
-//     options: {
-//       chart: {
-//         width: 380,
-//         type: 'polarArea'
-//       },
-//       labels: ['Rose A', 'Rose B', 'Rose C', 'Rose D', 'Rose E'],
-//       fill: {
-//         opacity: 1
-//       },
-//       stroke: {
-//         width: 1,
-//         colors: undefined
-//       },
-//       yaxis: {
-//         show: false
-//       },
-//       legend: {
-//         position: 'bottom'
-//       },
-//       plotOptions: {
-//         polarArea: {
-//           rings: {
-//             strokeWidth: 0
-//           },
-//           spokes: {
-//             strokeWidth: 0
-//           },
-//         }
-//       },
-//       theme: {
-//         monochrome: {
-//           enabled: true,
-//           shadeTo: 'light',
-//           shadeIntensity: 0.6
-//         }
-//       }
-//     },
-  
-  
-
-// }
-// )
   return (
     <section className='token'>
         <div className='container justify-content-center text-center'>
@@ -72,7 +27,7 @@ function Tokenomic() {
             </div>
 
             <div className='col-md-4 text-center'>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152779.png" alt="" className='token-img'/>
+            <img src={TokenImg} alt="" className='token-img'/>
             {/* <ReactApexChart options={state.options} series={state.series} type="polarArea" width={600} /> */}
             <div style={{margin:'auto'}} className='main-sub-btn'>
             <a href="#team" className="demo-btn">BUY NOW  <AiOutlineArrowRight/></a>

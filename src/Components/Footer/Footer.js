@@ -99,7 +99,7 @@ function Footer() {
                   <FaMedium />
                 </a>
                 <a
-                  href="https://t.me/deelancer"
+                  href="https://t.me/deelance_com"
                   target="_blank"
                   rel="noreferrer"
                 >

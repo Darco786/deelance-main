@@ -1,6 +1,9 @@
 import "./Road.css";
 import { GoPrimitiveDot } from "react-icons/go";
+import DashImg from '../../assets/dash.svg';
 import RoadMobile from "./RoadMobile";
+import RoadLine from '../../assets/backline.svg'
+import DotLine from '../../assets/dot1.svg'
 
 export default function Raod() {
   return (
@@ -9,11 +12,11 @@ export default function Raod() {
         <div className="container">
           <div className="road-head text-center">
             <h1 className="green">ROADMAP</h1>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
+            <img src={DashImg} alt=""/>
           </div>
           <div className="road-slide">
             <img
-              src="https://ik.imagekit.io/cforcrypto/Dework/Mask_group.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394255186"
+              src={RoadLine}
               alt=""
             />
           </div>
@@ -23,7 +26,7 @@ export default function Raod() {
           <div className="box-road-1">
             <div className="text-center rb-img">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />
@@ -53,7 +56,7 @@ export default function Raod() {
           <div className="box-road-2">
             <div className="text-center rb-img">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />
@@ -87,7 +90,7 @@ export default function Raod() {
           <div className="box-road-3">
             <div className="text-center rb-img">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />
@@ -121,7 +124,7 @@ export default function Raod() {
           <div className="box-road-4">
             <div className="text-center rb-img">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />

@@ -78,7 +78,7 @@ function Jobs() {
                     </div>
                     <div className='col-md-3 col-6'>
                     <div className='job-box-4'>
-                    <Lottie options={defaultOptions3} className="loti-1" height={262} />
+                    <Lottie options={defaultOptions3} className="loti-1"  />
                         <p>SEARCH EXPERTS</p>
                         </div>
                     </div>

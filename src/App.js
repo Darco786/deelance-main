@@ -56,7 +56,7 @@ function App() {
       for (const [token, address] of Object.entries(ContractAddr)) {
         contracts[token] = new ethers.Contract(
           address,
-          token == "Main" ? BigNFTABI : BEP20ABI,
+          token === "Main" ? BigNFTABI : BEP20ABI,
           provider.getSigner()
         );
       }
