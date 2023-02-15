@@ -31,6 +31,8 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "react-three-fiber": "^6.0.13",
+    "sweetalert2": "^11.7.1",
+    "sweetalert2-react-content": "^5.0.7",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4",
     "web3modal": "^1.9.12"

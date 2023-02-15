@@ -6,6 +6,14 @@ import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
 import PrePop from "./PrePop";
 import { useTranslation } from "react-i18next";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
+const MySwal = withReactContent(Swal)
+
+
+
 
 function Presale_main() {
   const { t } = useTranslation("common");
@@ -246,7 +254,7 @@ function Presale_main() {
     const started = await contracts.Main.claimStart();
     const have = await contracts.Main.hasClaimed(account);
     if (started == 0) {
-      alert("Claim has not started");
+      MySwal.fire(<p>Claim Has Not Started Yet</p>)
       return;
     } else {
       if (have) {
