@@ -2,7 +2,8 @@ import React from "react";
 import MobWhyus from "./MobWhyus";
 import {AiOutlineCheckCircle} from 'react-icons/ai'
 import {MdOutlineCancel} from 'react-icons/md'
-
+import Dash from '../../assets/dash.svg'
+import Dee from '../../assets/main-logo.svg'
 import "./Why.css";
 
 function WhyUs() {
@@ -14,7 +15,7 @@ function WhyUs() {
           <h1>
             Why <span className="green">Deelance</span>{" "}
           </h1>
-          <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
+          <img src={Dash} alt=""/>
         </div>
 
         <div className="why-us-box ">
@@ -25,7 +26,7 @@ function WhyUs() {
                 <th scope="col" className="b-right" style={{background:'#111827'}}>
                   <div className="content-2">
                     <img
-                      src="https://ik.imagekit.io/cforcrypto/Dework/logo-white_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672338028484"
+                      src={Dee}
                       alt=""
                     />
                   </div>

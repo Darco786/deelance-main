@@ -2,6 +2,15 @@ import React from 'react'
 import './Tokenomic.css'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import TokenImg from '../../assets/token.svg'
+import Blue from '../../assets/feature/cir/blue.png'
+import Dblue from '../../assets/feature/cir/dblue.png'
+import Green from '../../assets/feature/cir/green.png'
+import Lblue from '../../assets/feature/cir/lblue.png'
+import Lpur from '../../assets/feature/cir/lpur.png'
+import Org from '../../assets/feature/cir/org.png'
+import Pink from '../../assets/feature/cir/pink.png'
+import Pur from '../../assets/feature/cir/pur.png'
+import Dash from '../../assets/dash.svg'
 
 
 function Tokenomic() {
@@ -11,16 +20,16 @@ function Tokenomic() {
         <div className='container justify-content-center text-center'>
           <div className='token-head text-center'>
             <h1>Tokenomics</h1>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png" alt=""/>
+            <img src={Dash} alt=""/>
           </div>
           <div className='row align-items-center'>
 
             <div className='col-md-4'>
               <div className='to-1'>
-                <p>Team - 10% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602964" alt=""/> </p>
-                <p>Reserved/Ecosystem - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652603018" alt=""/></p>
-                <p className='ml-6'>Cex - 16% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602977" alt=""/></p>
-                <p className='ml-6'>Advisor/Partnership - 6% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602962" alt=""/></p>
+                <p>Team - 10% <img src={Org} alt=""/> </p>
+                <p>Reserved/Ecosystem - 15% <img src={Lpur} alt=""/></p>
+                <p className='ml-6'>Cex - 16% <img src={Pur} alt=""/></p>
+                <p className='ml-6'>Advisor/Partnership - 6% <img src={Green} alt=""/></p>
 
               </div>
               
@@ -36,17 +45,17 @@ function Tokenomic() {
 
               <div className='col-md-4'>
               <div className='to-2 '>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602987" alt=""/> Rewards / Airdrop - 2%  </p>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602973" alt=""/> Liquidity - 15%</p>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> Presale - 33%</p>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> Private - 3%</p>
+                <p><img src={Lblue} alt=""/> Rewards / Airdrop - 2%  </p>
+                <p><img src={Pink} alt=""/> Liquidity - 15%</p>
+                <p><img src={Dblue} alt=""/> Presale - 33%</p>
+                <p><img src={Blue} alt=""/> Private - 3%</p>
 
               </div>
               <div className='to-3 '>
-                <p>Rewards / Airdrop - 2%  <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602987" alt=""/>  </p>
-                <p>Liquidity - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602973" alt=""/> </p>
-                <p className='ml-48'>Presale - 33% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> </p>
-                <p className='ml-8'>Private - 3% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> </p>
+                <p>Rewards / Airdrop - 2%  <img src={Lblue} alt=""/>  </p>
+                <p>Liquidity - 15% <img src={Pink} alt=""/> </p>
+                <p className='ml-48'>Presale - 33% <img src={Dblue} alt=""/> </p>
+                <p className='ml-8'>Private - 3% <img src={Blue} alt=""/> </p>
 
               </div>
               
