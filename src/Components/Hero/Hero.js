@@ -14,7 +14,7 @@ import Model from "Components/Popup/Model";
 import Lottie from "react-lottie";
 import Hero_lot from "./bg";
 import PresaleMain from "Components/Presale/Presale_main";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 function Hero() {
   const [isModal, setIsModal] = useState(false);
   const defaultOptions = {
@@ -26,7 +26,7 @@ function Hero() {
     },
   };
 
-  const { t } = useTranslation(); 
+  const { t } = useTranslation("common");
   return (
     <>
       <section className="hero">
@@ -34,20 +34,21 @@ function Hero() {
           <div className="row justify-content-center">
             <div className="col-md-6">
               <h1>
-                {t('Creating')} <span className="green"> {t('Web3_Space')} </span>{t('For_Better')} <span className="green">{t('Work _together')}</span>
+                {t("hero.title.creating")}{" "}
+                <span className="green"> {t("hero.title.web3_space")} </span>
+                {t("hero.title.For_Better")}{" "}
+                <span className="green">{t("hero.title.work_together")}</span>
               </h1>
-              <p className="hero-sp-p">
-                {t('hero_details')}
-              </p>
+              <p className="hero-sp-p">{t("hero.hero_details")}</p>
               <div className="hero-btn">
                 <button
                   href="/"
                   className="hero-btn-1"
                   onClick={() => setIsModal(true)}
                 >
-                  Sign Up <AiOutlineArrowRight />
+                  {t("buttons.sign_up")} <AiOutlineArrowRight />
                 </button>
-                <button className="hero-btn-2">Buy Now</button>
+                <button className="hero-btn-2">{t("buttons.buy_now")}</button>
               </div>
               <div className="presale-hero-box">
                 <PresaleMain />

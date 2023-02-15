@@ -1,19 +1,20 @@
 import "./About.css";
-import {AiOutlineCheckCircle,AiOutlineArrowRight} from 'react-icons/ai'
-import Lottie from 'react-lottie';
-import Meta from './about.json'
-
+import { AiOutlineCheckCircle, AiOutlineArrowRight } from "react-icons/ai";
+import Lottie from "react-lottie";
+import Meta from "./about.json";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const { t } = useTranslation("common");
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: Meta,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
-   
+
   return (
     <section className="about">
       <div className="container">
@@ -26,43 +27,51 @@ function About() {
                   alt=""
                   className="about-img-1"
                 /> */}
-                    <Lottie 
-	    options={defaultOptions}
-        className='loti-1'
-        width='auto'
-      />
+                <Lottie
+                  options={defaultOptions}
+                  className="loti-1"
+                  width="auto"
+                />
               </div>
             </div>
 
             <div className="col-md-6">
               <div className="head-about-txt">
                 <h1>
-                  About <span className="green">Us</span>
+                  {t("about_us.about")}{" "}
+                  <span className="green">{t("about_us.us")}</span>
                 </h1>
               </div>
               <div className="about-details">
-                <p>
-                  Deelance is a freelancing and Recruitment platform based on
-                  Web3. Deelance is one such decentralized platform that is
-                  redefining how freelancers connect with potential employers
-                  and buyers.
-                </p>
+                <p>{t("about_us.description")}</p>
               </div>
               <div className="list-box">
-                <h3 className="green"><AiOutlineCheckCircle/> Fully Decentralized</h3>
-                <p>World’s first fully decentralized freelance network</p>
+                {new Array(3).fill("").map((_, i) => (
+                  <>
+                    <h3 className="green">
+                      <AiOutlineCheckCircle /> {t(`about_us.points.${i}.title`)}
+                    </h3>
+                    <p>{t(`about_us.points.${i}.description`)}</p>
+                  </>
+                ))}
 
-                <h3 className="green"><AiOutlineCheckCircle/> 2% Commission </h3>
+                {/* <h3 className="green">
+                  <AiOutlineCheckCircle /> 2% Commission{" "}
+                </h3>
                 <p>Only 2% Commission lowest In the Industry</p>
 
-                <h3 className="green"><AiOutlineCheckCircle/> Instant Withdrawal</h3>
-                <p>Unlimited ownership Instant Withdrawal recruitment platform</p>
-
+                <h3 className="green">
+                  <AiOutlineCheckCircle /> Instant Withdrawal
+                </h3>
+                <p>
+                  Unlimited ownership Instant Withdrawal recruitment platform
+                </p> */}
               </div>
               <div className="gp-1">
-              <a href="/" className="demo-btn">Buy Now <AiOutlineArrowRight/></a>
+                <a href="/" className="demo-btn">
+                  {t("buttons.buy_now")} <AiOutlineArrowRight />
+                </a>
               </div>
-            
             </div>
           </div>
         </div>
