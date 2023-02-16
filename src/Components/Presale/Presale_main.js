@@ -5,6 +5,7 @@ import "./Presale.css";
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
 import PrePop from "./PrePop";
+import OnRamp from './onRamp'
 import { useTranslation } from "react-i18next";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
@@ -20,6 +21,7 @@ function Presale_main() {
 
   const [showComp, setShowComp] = useState(false);
   const [isModal, setIsModal] = useState(false);
+  const [isModal2, setIsModal2] = useState(false);
   const { connectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ BNB: 0 });
@@ -41,6 +43,7 @@ function Presale_main() {
     minutes: 0,
     seconds: 0,
   });
+
   const handleClick = async (e) => {
     e.preventDefault();
     if (!account) {
@@ -278,6 +281,10 @@ function Presale_main() {
     e.preventDefault();
     setIsModal(true);
   };
+  const buyCard = async (e) => {
+    e.preventDefault();
+    setIsModal2(true);
+  };
   return (
     <>
       <section className="main-page">
@@ -352,7 +359,7 @@ function Presale_main() {
                         Buy Now
                       </a>
 
-                      <a href="/" className="p1-btn" onClick={buyNFT}>
+                      <a href="/" className="p1-btn" onClick={buyCard}>
                         Buy with Card
                       </a>
 
@@ -397,6 +404,11 @@ function Presale_main() {
         </div>
         <div className="pop-up-sign2">
           {isModal && <PrePop setIsModal={setIsModal} />}
+         
+        </div>
+        <div  className="pop-up-sign2">
+        {isModal2 && <OnRamp setIsModal2={setIsModal2} />}
+        
         </div>
       </section>
     </>
