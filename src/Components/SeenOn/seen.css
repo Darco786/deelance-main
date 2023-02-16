@@ -1,0 +1,18 @@
+.seen-grid{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.seen-grid h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: -5px;
+}
+.seen-grid img{
+    height: 32px;
+    width: auto;
+}

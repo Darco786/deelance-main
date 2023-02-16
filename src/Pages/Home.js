@@ -11,6 +11,7 @@ import Raod from 'Components/Roadmap/Raod'
 import { Helmet } from "react-helmet";
 import CookieConcent from 'Components/CookieConcent'
 import Warning from 'Components/Common/Warning'
+import SeenOn from 'Components/SeenOn/SeenOn'
 
 
 function Home() {
@@ -39,6 +40,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
  </Helmet>
     <Navbar/>
     <Hero/>
+    <SeenOn/>
     <Features/>
     <About/>
    
