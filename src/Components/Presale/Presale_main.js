@@ -340,34 +340,7 @@ function Presale_main() {
                         <h2>{t("presale.bought")}</h2>
                         <span>{deelance} $Dlance</span>
                       </div>
-                      {/* <div class="form-row">
-                      <div class="form-group ">
-                        <label for="inputnumber">Select Currency:</label>
-                       
-                        <select
-                          class="form-control form-select"
-                          ref={tokenElement}
-                        >
-                          <option value="BNB">
-                            Balance: {balances.BNB} BNB
-                          </option>
-                          {TokenList.map((token, index) => (
-                            <option key={index} value={token}>
-                              Balance: {balances[token]} {token}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                      <div class="form-group ">
-                        <label for="inputnum">Enter $Dlance amount:</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          placeholder="1000"
-                          ref={nftAmountElement}
-                        />
-                      </div>
-                    </div> */}
+                     
                     </form>
                   ) : (
                     <div></div>
