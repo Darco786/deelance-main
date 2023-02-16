@@ -13,7 +13,7 @@ function SeenOn() {
     <section className='seenOn'>
         <div className='container'>
             <div className='seen-grid'>
-                <h1>Seen On :</h1>
+                <h1>Seen on:</h1>
                 <img src={Mint} alt="" className='mint'/>
                 <img src={Fina} alt=""/>
                 <img src={Krypto} alt="" className='krypto'/>

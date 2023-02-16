@@ -1,7 +1,6 @@
 .seen-grid{
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
     padding-bottom: 40px;
     align-items: center;
 }
@@ -17,7 +16,7 @@
     width: auto;
 }
 .mint{
-    height: 28px !important;
+    height: 24px !important;
 }
 .krypto{
     height: 20px !important;
