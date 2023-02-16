@@ -84,7 +84,7 @@ function Presale_main() {
     } else {
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-09T00:00:00");
+        const futureDate = new Date("2023-02-19T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -254,7 +254,8 @@ function Presale_main() {
     const started = await contracts.Main.claimStart();
     const have = await contracts.Main.hasClaimed(account);
     if (started == 0) {
-      MySwal.fire(<p>Claim Has Not Started Yet</p>)
+      MySwal.fire(<p>Claim Has Not Started Yet</p>,
+      <p>once the presale has ended.you'll be able to claim your purchased $Dlance Token. </p>)
       return;
     } else {
       if (have) {
