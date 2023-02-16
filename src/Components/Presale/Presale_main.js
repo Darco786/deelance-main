@@ -72,7 +72,7 @@ function Presale_main() {
 
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-09T00:00:00");
+        const futureDate = new Date("2023-02-19T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {

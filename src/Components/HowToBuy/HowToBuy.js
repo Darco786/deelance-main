@@ -42,10 +42,9 @@ function HowToBuy() {
               <p className="p-light ">Step-2</p>
               <h2 className="">Send <span className="green">ETH</span>  to your <span className="green">Wallet</span> </h2>
               <p className="cta-p">
-                You can buy Ethereum (ETH) directly on MetaMask or transfer it
-                to your MetaMask Wallet from exchanges like Coinbase, Binance,
-                etc. Make sure to use the ERC-20 network when transferring
-                ETH.
+              You can buy Ethereum (ETH) directly on MetaMask or transfer it to your MetaMask Wallet from exchanges like Coinbase, Binance, etc. or you can buy Eth directly on our page without leaving to another platform . 
+ Make sure to use the ERC-20 network when transfering ETH.
+
               </p>
               <p className="cta-p">
                 Once you’ve connected your wallet, you’ll be able to purchase
@@ -65,11 +64,12 @@ function HowToBuy() {
             <div className=" cta-new-box-2">
               <div className="cta-details">
                 <p className="p-light ">Step-3</p>
-                <h2 className="">Add $Dlance into Metamask Wallet</h2>
+                <h2 className="">Buy with <span className='green'>Eth / USDT </span> </h2>
                 <p className="cta-p">
-                  Access your $Dlance token in your metamask click on the
-                  custom token and paste the contract address and you will get
-                  $Dlance in your Metamask wallet.
+                Now that you have topped up your wallet with ETH, you can purchase the Dlance token. First, ensure your wallet is connected , then click BUY and select Eth / USDT , now you are directed to exchange window , 
+Type in the amount of $Dlance you wish to purchase and then click“Convert ETH”. Your wallet provider will ask you to confirm the transaction and will also show you the cost of gas fee . 
+
+<br/>Once you are happy with the transaction details, click ‘Confirm’.
                 </p>
               </div>
             </div>
@@ -79,15 +79,12 @@ function HowToBuy() {
           <div className=" cta-new-box-2">
             <div className="cta-details">
               <p className="p-light ">Step-4</p>
-              <h2 className="">Swap ETH for $Dlance</h2>
+              <h2 className="">Add $Dlance into Metamask Wallet</h2>
               <p className="cta-p">
                 You can start swapping as soon as you have ETH available!{" "}
               </p>
               <p className="cta-p">
-                Type in the amount of $Dlance you wish to purchase and then
-                click“Convert ETH”. Your wallet provider will ask you to
-                confirm the transaction and will also show you the cost of gas
-                fee .{" "}
+              Access your $Dlance token in your metamask click on the custom token and paste the contract address and you will get $Dlance in your Metamask wallet.
               </p>
             </div>
           </div>
@@ -95,7 +92,7 @@ function HowToBuy() {
         <div className="col-md-1"></div>
         </div>
       </div>
-      {/* <div className='low-cta'>
+      <div className='low-cta'>
       <div className=" cta-new-box-3">
             <div className="cta-details">
               <h2 className="">How to <span className="green">Claim</span> </h2>
@@ -105,7 +102,7 @@ function HowToBuy() {
               </p>
            
             </div>
-          </div></div> */}
+          </div></div>
      
     </div>
   </section>
