@@ -9,6 +9,8 @@ import OnRamp from './onRamp'
 import { useTranslation } from "react-i18next";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import Fire from '../../assets/fire.webp'
+import Bullet from '../../assets/de.webp'
 
 
 const MySwal = withReactContent(Swal)
@@ -297,13 +299,13 @@ function Presale_main() {
                   style={{ width: `${percantage}%` }}
                 ></div>
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/fire.webp"
+                  src={Fire}
                   alt=""
                   className="fire-1"
                   style={{ left: `${percantage - "5"}%` }}
                 />
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Group_64.png"
+                  src={Bullet}
                   alt=""
                   className="bullet-1"
                   style={{ left: `${percantage}% ` }}
