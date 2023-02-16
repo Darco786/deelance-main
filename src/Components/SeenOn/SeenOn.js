@@ -14,12 +14,12 @@ function SeenOn() {
         <div className='container'>
             <div className='seen-grid'>
                 <h1>Seen On :</h1>
-                <img src={Mint} alt=""/>
+                <img src={Mint} alt="" className='mint'/>
                 <img src={Fina} alt=""/>
-                <img src={Krypto} alt=""/>
+                <img src={Krypto} alt="" className='krypto'/>
                 <img src={Coin} alt=""/>
                 <img src={Bct} alt=""/>
-                <img src={Crypto} alt=""/>
+                <img src={Crypto} alt="" className='crypto'/>
                 <img src={Tet} alt=""/>
 
             </div>
