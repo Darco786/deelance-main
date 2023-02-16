@@ -16,3 +16,14 @@
     height: 32px;
     width: auto;
 }
+
+@media (max-width:768px) {
+
+    .seen-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+}

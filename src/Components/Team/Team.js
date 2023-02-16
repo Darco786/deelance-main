@@ -10,6 +10,7 @@ import Noor from '../../assets/team/noor.png'
 import Jhosi from '../../assets/team/jhosi.png'
 import Jagjeet from '../../assets/team/jagjeet.png'
 import Shoiab from '../../assets/team/suhaib.png'
+import Viki from '../../assets/team/viki.png'
 
 function Team() {
   return (
@@ -291,7 +292,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682440"
+                  src={Viki}
                   alt=""
                 />
                 <h2>VISAKH</h2>
