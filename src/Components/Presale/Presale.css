@@ -43,7 +43,15 @@
     margin-bottom: 0;
     color: #fff;
   }
-  
+  .swal2-show {
+    
+    border: 2px solid rgba(34, 255, 22, 0.658) !important;
+    border-radius: 12px !important;
+ 
+    backdrop-filter: blur(2.1875rem) !important;
+    background-color: #090c26f7 !important;
+    color: #fff !important;
+}
 
   .fill-bar {
     background: linear-gradient(270deg, #00a652 0%, #10ff50 100%);
