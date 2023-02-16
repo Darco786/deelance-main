@@ -116,6 +116,10 @@ box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
   margin: auto;
 
 }
+.dash{
+  width: auto !important;
+  
+}
 @media (max-width:786px) {
   .main-sub-btn{
     margin: auto;

@@ -1,15 +1,15 @@
 import React from 'react'
-
+import Dash from '../../assets/dash.svg'
 function HowToBuy() {
   return (
     <section className="cta">
     <div className="container">
       <div className="text-center cta-head-1">
-        <h2 className=" head-cta">How do you <span className='green'>Claim</span>
+        <h2 className=" head-cta">How do you <span className='green'>Buy</span>
         
         ?</h2>
 
-       <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png" alt="" height='auto' width='auto'/>
+        <img src={Dash} alt="" height='auto' width='auto' className='dash' />
       </div>
       <div className="row justify-content-center align-items-center">
         <div className="col-md-1"></div>
