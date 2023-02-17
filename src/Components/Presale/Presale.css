@@ -417,6 +417,10 @@ label {
 }
 
 @media (max-width: 768px) {
+  .main-page{
+    position: unset;
+    width: 100%;
+  }
   .private-head h3 {
     font-weight: 600;
     font-size: 16px;

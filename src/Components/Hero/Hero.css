@@ -126,6 +126,7 @@
   .hero-ss{
     gap: 24px;
     text-align: center;
+    margin-top: -7%;
   }
   .hero-ss a{
     font-size: 21px;
