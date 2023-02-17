@@ -78,7 +78,7 @@ export default function Raod() {
               </p>
              
               <p>
-                <GoPrimitiveDot /> Metaverse Demo ( Alpha ) {" "}
+                <GoPrimitiveDot /> Metaverse Demo(Alpha) {" "}
               </p>
               <p>
                 <GoPrimitiveDot /> CMC and CG Listing {" "}
@@ -113,7 +113,7 @@ export default function Raod() {
               </p>
              
               <p>
-                <GoPrimitiveDot /> Freelance Platform Launch ( Beta Version )
+                <GoPrimitiveDot /> Freelance Platform Launch(Beta Version)
               </p>
               <p>
                 <GoPrimitiveDot /> Exchanges Listing {" "}
@@ -143,7 +143,7 @@ export default function Raod() {
                 <GoPrimitiveDot /> App Development{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Metaverse Integration ( Beta version ) {" "}
+                <GoPrimitiveDot /> Metaverse Integration(Beta version) {" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Further Development {" "}
