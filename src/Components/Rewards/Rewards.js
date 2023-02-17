@@ -9,6 +9,7 @@ import {
   FaDiscord,
   FaInstagram,
 } from "react-icons/fa";
+import Logogo from '../../assets/main-logo.svg'
 
 function Rewards() {
   return (
@@ -16,7 +17,7 @@ function Rewards() {
       <div className="container">
         <div className="reward-head text-center">
           <img
-            src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/logo-white.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669995470971"
+            src={Logogo}
             alt=""
             className=""
           />
@@ -101,10 +102,7 @@ function Rewards() {
           </div>
           <div className="col-md-6">
             <div className="reward-box">
-              <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Rectangle_173.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671108234911"
-                alt=""
-              />
+              <iframe src="https://gleam.io/Bpw26/deelance-100k-giveaway" frameBorder='0' title="deelance"></iframe>
             </div>
           </div>
         </div>
