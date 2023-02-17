@@ -16,11 +16,7 @@ function Rewards() {
     <section className="reward">
       <div className="container">
         <div className="reward-head text-center">
-          <img
-            src={Logogo}
-            alt=""
-            className=""
-          />
+    
           <div className="social-hero reward-hero d-flex">
             <a
               href="https://twitter.com/deelance_com"
@@ -72,7 +68,7 @@ function Rewards() {
             <h2>Win $100,000</h2>
           </div>
         </div>
-        <div className="row justify-content-center align-items-center">
+        <div className="row justify-content-center ">
           <div className="col-md-6">
             <div className="re-box1">
               <h1>
@@ -102,7 +98,7 @@ function Rewards() {
           </div>
           <div className="col-md-6">
             <div className="reward-box">
-              <iframe src="https://gleam.io/Bpw26/deelance-100k-giveaway" frameBorder='0' title="deelance"></iframe>
+            <iframe src="https://gleam.io/Bpw26/deelance-100k-giveaway" frameBorder="0" allowfullscreen></iframe>
             </div>
           </div>
         </div>

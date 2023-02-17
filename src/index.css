@@ -131,6 +131,7 @@ section {
   width: auto !important;
 }
 @media (max-width: 786px) {
+  iframe{min-height:100%}
   .main-sub-btn {
     margin: auto;
     width: 150px;
@@ -208,3 +209,8 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: #000000;
 }
+
+
+
+
+

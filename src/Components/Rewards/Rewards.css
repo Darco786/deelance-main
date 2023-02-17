@@ -1,6 +1,6 @@
 .reward{
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 0%;
+    padding-bottom: 3%;
 }
 .reward-head img{
     height: 57px;
@@ -64,4 +64,8 @@
 }
 .warning-box{
     background-color: #00000057;
+}
+
+.reward-box{
+    height: 700px;
 }
