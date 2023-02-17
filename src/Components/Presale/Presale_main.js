@@ -68,7 +68,7 @@ function Presale_main() {
 
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-19T00:00:00");
+        const futureDate = new Date("2023-03-18T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -101,7 +101,7 @@ function Presale_main() {
     } else {
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-19T00:00:00");
+        const futureDate = new Date("2023-03-18T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -343,7 +343,7 @@ function Presale_main() {
                       {t("presale.presale")} {round.toString()}
                     </h3>
                     <span className="span-btn">
-                      $1 {t("presale.min")} / $20,000 {t("presale.max")}
+                      $10 {t("presale.min")} / $20,000 {t("presale.max")}
                     </span>
                     <p>{t("presale.official_contract")}</p>
                     <p className="green">
@@ -415,8 +415,8 @@ function Presale_main() {
                   <span className="green">
                     {" "}
                     {round.toString() == "1"
-                      ? "$0,025 /$DLANCE"
-                      : "$0,035 /$DLANCE"}{" "}
+                      ? "$0.040 /$DLANCE"
+                      : "$0.045 /$DLANCE"}{" "}
                   </span>
                 </p>
               </div>
