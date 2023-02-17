@@ -90,9 +90,9 @@ function PrePop({ setIsModal }) {
       let transaction = null;
       const xx = await contracts.Main.salePrice();
       const xxx = ethers.utils.formatEther(xx);
-      console.log(nftAmount * xxx)
-      if ((nftAmount * xxx) < 1) {
-        console.log("Amount is", nftAmount * xxx)
+      console.log(nftAmount * xxx);
+      if (nftAmount * xxx < 1) {
+        console.log("Amount is", nftAmount * xxx);
         alert("Please insert more than 10$ to buy!");
         return;
       }
@@ -156,7 +156,7 @@ function PrePop({ setIsModal }) {
     } else {
       maxa.current.value = Math.max(balances["USDT"]);
     }
-    handleFirstInputChange({target: {value: maxa.current.value}});
+    handleFirstInputChange({ target: { value: maxa.current.value } });
   };
 
   const handleFirstInputChange = async (event) => {
@@ -203,19 +203,22 @@ function PrePop({ setIsModal }) {
                 </h2>
               </header>
               <div className="d-flex pre-step-1">
-                <h3>1. YOU PAY</h3>
-                
-                <div className="select-coin">
-                  <select
-                    id="option"
-                    ref={tokenElement}
-                    style={{ background: "#00e069",height:'24px' }}
-                    onChange={handleTokenChange}
-                  >
-                    <option value="ETH">ETH</option>
-                    <option value="USDT">USDT</option>
-                  </select>
+                <div className="d-flex pre-step-1" style={{ width: "156px" }}>
+                  <h3>1. YOU PAY</h3>
+
+                  <div className="select-coin">
+                    <select
+                      id="option"
+                      ref={tokenElement}
+                      style={{ background: "#00e069", height: "24px" }}
+                      onChange={handleTokenChange}
+                    >
+                      <option value="ETH">ETH</option>
+                      <option value="USDT">USDT</option>
+                    </select>
+                  </div>
                 </div>
+
                 <span className="white">:</span>
                 <div className="d-flex">
                   <form className="dee-bal">
@@ -228,16 +231,20 @@ function PrePop({ setIsModal }) {
                       required
                     />
 
-                    <button onClick={handleMaxClick} className='btn-max'>MAX</button>
+                    <button onClick={handleMaxClick} className="btn-max">
+                      MAX
+                    </button>
                   </form>
                 </div>
               </div>
 
-
               <div className="d-flex pre-step-1">
-                <h3>2. VALUE</h3>
-  
-                <div className="dee-coin green">$</div>
+                <div className="d-flex pre-step-1" style={{ width: "156px" }}>
+                  <h3>2. VALUE</h3>
+
+                  <div className="dee-coin green">$</div>
+                </div>
+
                 <span className="white">:</span>
                 <div className="d-flex">
                   <form className="dee-bal">
@@ -249,16 +256,16 @@ function PrePop({ setIsModal }) {
                       ref={usdAmountElement}
                       required
                     />
-
                   </form>
                 </div>
               </div>
 
-
-
               <div className="d-flex pre-step-1">
-                <h3>3. YOU GET</h3>
-                <div className="dee-coin green">$dlance</div>
+                <div className="d-flex pre-step-1" style={{ width: "156px" }}>
+                  <h3>3. YOU GET</h3>
+                  <div className="dee-coin green">$dlance</div>
+                </div>
+
                 <span className="white">:</span>
 
                 <div className="">
