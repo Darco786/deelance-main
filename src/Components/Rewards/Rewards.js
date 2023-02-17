@@ -98,7 +98,7 @@ function Rewards() {
           </div>
           <div className="col-md-6">
             <div className="reward-box">
-            <iframe src="https://gleam.io/Bpw26/deelance-100k-giveaway" frameBorder="0" allowfullscreen></iframe>
+            <iframe src="https://gleam.io/Bpw26/deelance-100k-giveaway" frameBorder="0" allowfullscreen title="dee"></iframe>
             </div>
           </div>
         </div>
