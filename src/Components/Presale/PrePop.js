@@ -91,7 +91,7 @@ function PrePop({ setIsModal }) {
       const xx = await contracts.Main.salePrice();
       const xxx = ethers.utils.formatEther(xx);
       console.log(nftAmount * xxx);
-      if (nftAmount * xxx < 1) {
+      if (nftAmount * xxx < 9.8) {
         console.log("Amount is", nftAmount * xxx);
         alert("Please insert more than 10$ to buy!");
         return;
