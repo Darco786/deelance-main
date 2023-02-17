@@ -18,7 +18,7 @@ function onRamp({ setIsModal2 }) {
           <div className="formWrapper-2">
           
           <iframe
-    style={{borderRadius: '4px', border: '1px solid #58585f', margin: 'auto',maxWidth: '360px'}}
+    style={{borderRadius: '4px', border: '1px solid #58585f', margin: 'auto',maxWidth: '460px'}}
     src="https://buy.onramper.com"
     height="540px"
     width="360px"
