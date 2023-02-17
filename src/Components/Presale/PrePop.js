@@ -8,14 +8,16 @@ import { TokenList } from "../../Constants/Constants";
 function PrePop({ setIsModal }) {
   const { connectWallet, provider, contracts, account } =
     useContext(UserContext);
-  const [balances, setBalances] = useState({ BNB: 0 });
+  const [balances, setBalances] = useState({ ETH: 0 });
   const [showComp, setShowComp] = useState(false);
   const tokenElement = useRef({ value: "" });
   const nftAmountElement = useRef();
+  const usdAmountElement = useRef();
   const [somestate, setSomeState] = useState(false);
-  const [selectedToken, setSelectedToken] = useState("BNB");
+  const [selectedToken, setSelectedToken] = useState("ETH");
   const maxa = useRef();
   const [secondInputValue, setSecondInputValue] = useState(0);
+  const [thirdInputValue, setThirdInputValue] = useState(0);
   const handleClick = async (e) => {
     e.preventDefault();
     if (!account) {
@@ -30,7 +32,7 @@ function PrePop({ setIsModal }) {
   useEffect(() => {
     if (!account) {
       setBalances({
-        BNB: 0,
+        ETH: 0,
         USDT: 0,
       });
 
@@ -38,7 +40,7 @@ function PrePop({ setIsModal }) {
     } else {
       tokenElement.current = { value: "" };
 
-      const getBNBBalance = async () => {
+      const getETHBalance = async () => {
         const balance = await provider.getBalance(account);
         return ethers.utils.formatEther(balance);
       };
@@ -61,7 +63,7 @@ function PrePop({ setIsModal }) {
       };
 
       const getAllBalances = async () => {
-        const balances = { BNB: await getBNBBalance() };
+        const balances = { ETH: await getETHBalance() };
         for (const token of TokenList) {
           balances[token] = await getTokenBalances(token);
         }
@@ -88,20 +90,21 @@ function PrePop({ setIsModal }) {
       let transaction = null;
       const xx = await contracts.Main.salePrice();
       const xxx = ethers.utils.formatEther(xx);
+      console.log(nftAmount * xxx)
       if ((nftAmount * xxx) < 1) {
         console.log("Amount is", nftAmount * xxx)
-        alert("Please insert more than 1$ to buy!");
+        alert("Please insert more than 10$ to buy!");
         return;
       }
-      if (token == "BNB") {
-        const bnbAmount = await contracts.Main.getBNBAmount(
+      if (token == "ETH") {
+        const ETHAmount = await contracts.Main.getETHAmount(
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
-        console.log(bnbAmount.toString());
-        transaction = await contracts.Main.buyWithBNB(nftAmount, {
+        console.log(ETHAmount.toString());
+        transaction = await contracts.Main.buyWithETH(nftAmount, {
           gasLimit: 130055,
           gasPrice: ethers.utils.parseUnits(gasPrice, "gwei"),
-          value: bnbAmount.toString(),
+          value: ETHAmount.toString(),
         });
       } else {
         const tokenAmount = await contracts.Main.getTokenAmount(
@@ -115,7 +118,7 @@ function PrePop({ setIsModal }) {
 
         if (b <= 0) {
           console.log("sono qui");
-          await contracts["USDT"].approve(
+          transaction = await contracts["USDT"].approve(
             contracts.Main.address,
             "10000000000000000000000000000000000000000000000000000000000"
           );
@@ -128,7 +131,7 @@ function PrePop({ setIsModal }) {
         }
       }
       const tx_result = await transaction.wait();
-      alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`);
+      alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
       console.log("transaction", tx_result.transactionHash);
       setSomeState(!somestate);
     } catch (error) {
@@ -148,8 +151,8 @@ function PrePop({ setIsModal }) {
   const handleMaxClick = async (e) => {
     e.preventDefault();
     console.log("PROVA", selectedToken);
-    if (selectedToken === "BNB") {
-      maxa.current.value = Math.max(balances.BNB);
+    if (selectedToken === "ETH") {
+      maxa.current.value = Math.max(balances.ETH);
     } else {
       maxa.current.value = Math.max(balances["USDT"]);
     }
@@ -161,19 +164,21 @@ function PrePop({ setIsModal }) {
       const inputValue = event.target.value;
       const pri = await contracts.Main.salePrice();
       const prezzo = ethers.utils.formatEther(pri);
-      const priBNB = parseInt(inputValue / prezzo, 10);
-      console.log(priBNB);
-      setSecondInputValue(priBNB);
+      const priETH = parseInt(inputValue / prezzo, 10);
+      console.log(priETH);
+      setSecondInputValue(priETH);
+      setThirdInputValue(inputValue);
     } else {
       const inputValue = event.target.value;
       const pri = await contracts.Main.salePrice();
       const prezzo = ethers.utils.formatEther(pri);
-      const prezzo_BNB = await contracts.Main.getBNBLatestPrice();
-      const prezzo_BNB_formattato = ethers.utils.formatEther(prezzo_BNB);
-      const mio_valore = inputValue * prezzo_BNB_formattato;
+      const prezzo_ETH = await contracts.Main.getETHLatestPrice();
+      const prezzo_ETH_formattato = ethers.utils.formatEther(prezzo_ETH);
+      const mio_valore = inputValue * prezzo_ETH_formattato;
       const finale = parseInt(mio_valore / prezzo, 10);
       console.log(finale);
       setSecondInputValue(finale);
+      setThirdInputValue(mio_valore.toFixed(2));
     }
   };
 
@@ -199,6 +204,7 @@ function PrePop({ setIsModal }) {
               </header>
               <div className="d-flex pre-step-1">
                 <h3>1. YOU PAY</h3>
+                
                 <div className="select-coin">
                   <select
                     id="option"
@@ -206,7 +212,7 @@ function PrePop({ setIsModal }) {
                     style={{ background: "#00e069",height:'24px' }}
                     onChange={handleTokenChange}
                   >
-                    <option value="BNB">BNB</option>
+                    <option value="ETH">ETH</option>
                     <option value="USDT">USDT</option>
                   </select>
                 </div>
@@ -227,8 +233,31 @@ function PrePop({ setIsModal }) {
                 </div>
               </div>
 
+
               <div className="d-flex pre-step-1">
-                <h3>2. YOU GET</h3>
+                <h3>2. VALUE</h3>
+  
+                <div className="dee-coin green">$</div>
+                <span className="white">:</span>
+                <div className="d-flex">
+                  <form className="dee-bal">
+                    <input
+                      type="number"
+                      className="fs-26px  weight-3 in-put-pre"
+                      placeholder="0.00"
+                      value={thirdInputValue}
+                      ref={usdAmountElement}
+                      required
+                    />
+
+                  </form>
+                </div>
+              </div>
+
+
+
+              <div className="d-flex pre-step-1">
+                <h3>3. YOU GET</h3>
                 <div className="dee-coin green">$dlance</div>
                 <span className="white">:</span>
 
