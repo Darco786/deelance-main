@@ -415,6 +415,9 @@ label {
   line-height: 28px;
   color: rgb(219, 219, 219);
 }
+.disabled{
+  background-color: gray !important;
+}
 
 @media (max-width: 768px) {
   .main-page{

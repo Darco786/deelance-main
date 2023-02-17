@@ -372,12 +372,15 @@ function Presale_main() {
                   )}
 
                   {showComp ? (
-                    <div className="text-center align-items-center d-flex jsa ">
-                      <a href="/" className="p1-btn" onClick={handleModal}>
+                    <div className="text-center align-items-center d-flex jsa  ">
+                       <a href="#" className="p1-btn disabled"  disabled>
                         Buy Now
                       </a>
+                      {/* <a href="/" className="p1-btn" onClick={handleModal} >
+                        Buy Now
+                      </a> */}
 
-                      <a href="/" className="p1-btn" onClick={buyCard}>
+                      <a href="/" className="p1-btn" onClick={buyCard} >
                         Buy with Card
                       </a>
 
