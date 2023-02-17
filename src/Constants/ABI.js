@@ -132,7 +132,7 @@ export const BigNFTABI = [
         "type": "uint256"
       }
     ],
-    "name": "buyWithBNB",
+    "name": "buyWithETH",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"
@@ -266,11 +266,11 @@ export const BigNFTABI = [
         "type": "uint256"
       }
     ],
-    "name": "getBNBAmount",
+    "name": "getETHAmount",
     "outputs": [
       {
         "internalType": "uint256",
-        "name": "BNBAmount",
+        "name": "ETHAmount",
         "type": "uint256"
       }
     ],
@@ -279,7 +279,7 @@ export const BigNFTABI = [
   },
   {
     "inputs": [],
-    "name": "getBNBLatestPrice",
+    "name": "getETHLatestPrice",
     "outputs": [
       {
         "internalType": "uint256",
@@ -658,7 +658,7 @@ export const BigNFTABI = [
   },
   {
     "inputs": [],
-    "name": "withdrawBNBs",
+    "name": "withdrawETHs",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
