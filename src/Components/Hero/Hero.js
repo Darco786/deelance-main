@@ -50,7 +50,7 @@ function Hero() {
                 >
                   {t("buttons.sign_up")} <AiOutlineArrowRight />
                 </button>
-                <button className="hero-btn-2">{t("buttons.buy_now")}</button>
+                {/* <button className="hero-btn-2">{t("buttons.buy_now")}</button> */}
               </div>
               <div className="presale-hero-box">
                 <PresaleMain />

@@ -35,7 +35,7 @@ function Find() {
                 </p>
               </div>
               <div className="gp-2">
-                <a href="/" className="demo-btn">
+                <a href="https://demo.corporate-metaverse.com/join" target='_blank'   rel="noreferrer" className="demo-btn">
                   DEMO
                 </a>
               </div>
