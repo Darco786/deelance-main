@@ -39,11 +39,11 @@ function Rewards() {
             >
               <FaMedium />
             </a>
-            <a href="https://t.me/deelancer" target="_blank" rel="noreferrer">
+            <a href="https://t.me/deelance_com" target="_blank" rel="noreferrer">
               <FaTelegramPlane />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/company/deelance/"
               target="_blank"
               rel="noreferrer"
             >

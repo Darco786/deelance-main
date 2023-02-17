@@ -91,7 +91,7 @@ function Hero() {
                   <FaTelegramPlane />
                 </a>
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/deelance"
                   target="_blank"
                   rel="noreferrer"
                 >
