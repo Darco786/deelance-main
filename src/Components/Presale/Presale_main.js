@@ -399,7 +399,7 @@ function Presale_main() {
                     </div>
                   )}
                 </div>
-                <p className="white count-down text-center"> 
+                {/* <p className="white count-down text-center"> 
                   {t("presale.live")}
                   <span className="green"> {countdown.days}</span>{" "}
                   {t("presale.days")} ,{" "}
@@ -409,8 +409,8 @@ function Presale_main() {
                   {t("presale.minutes")} ,{" "}
                   <span className="green">{countdown.seconds}</span>{" "}
                   {t("presale.seconds")}
-                </p>
-                <p className="white count-down text-center"> Next Price: <span className="green"> {round.toString() == "1" ? "$0,025 /$DLANCE" : "$0,035 /$DLANCE"} </span></p>
+                </p> */}
+                <p className="white count-down text-center next-p"> Next Price: <span className="green"> {round.toString() == "1" ? "$0,025 /$DLANCE" : "$0,035 /$DLANCE"} </span></p>
               </div>
               <p className="white count-down text-center">
                 <span className="green">{countdown.days}</span> DAYS,{" "}
