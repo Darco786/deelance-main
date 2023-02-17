@@ -15,6 +15,7 @@ import Lottie from "react-lottie";
 import Hero_lot from "./bg";
 import PresaleMain from "Components/Presale/Presale_main";
 import { useTranslation } from "react-i18next";
+
 function Hero() {
   const [isModal, setIsModal] = useState(false);
   const defaultOptions = {
@@ -27,6 +28,7 @@ function Hero() {
   };
 
   const { t } = useTranslation("common");
+
   return (
     <>
       <section className="hero">

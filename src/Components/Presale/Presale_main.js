@@ -5,18 +5,14 @@ import "./Presale.css";
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
 import PrePop from "./PrePop";
-import OnRamp from './onRamp'
+import OnRamp from "./onRamp";
 import { useTranslation } from "react-i18next";
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-import Fire from '../../assets/fire.webp'
-import Bullet from '../../assets/de.webp'
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import Fire from "../../assets/fire.webp";
+import Bullet from "../../assets/de.webp";
 
-
-const MySwal = withReactContent(Swal)
-
-
-
+const MySwal = withReactContent(Swal);
 
 function Presale_main() {
   const { t } = useTranslation("common");
@@ -275,8 +271,13 @@ function Presale_main() {
     const started = await contracts.Main.claimStart();
     const have = await contracts.Main.hasClaimed(account);
     if (started == 0) {
-      MySwal.fire(<p>Claim Has Not Started Yet</p>,
-      <p>once the presale has ended.you'll be able to claim your purchased $Dlance Token. </p>)
+      MySwal.fire(
+        <p>Claim Has Not Started Yet</p>,
+        <p>
+          once the presale has ended.you'll be able to claim your purchased
+          $Dlance Token.{" "}
+        </p>
+      );
       return;
     } else {
       if (have) {
@@ -365,7 +366,6 @@ function Presale_main() {
                         <h2>{t("presale.bought")}</h2>
                         <span>{deelance} $Dlance</span>
                       </div>
-                     
                     </form>
                   ) : (
                     <div></div>
@@ -410,7 +410,10 @@ function Presale_main() {
                   {t("presale.seconds")}
                 </p>
               </div>
-              <p className="white count-down text-center">
+              <p
+                className="white count-down text-center"
+                style={{ border: "2px solid red" }}
+              >
                 <span className="green">{countdown.days}</span> DAYS,{" "}
                 <span className="green">{countdown.hours}</span> HOURS,{" "}
                 <span className="green">{countdown.minutes}</span> MINUTES,{" "}
@@ -422,11 +425,9 @@ function Presale_main() {
         </div>
         <div className="pop-up-sign2">
           {isModal && <PrePop setIsModal={setIsModal} />}
-         
         </div>
-        <div  className="pop-up-sign2">
-        {isModal2 && <OnRamp setIsModal2={setIsModal2} />}
-        
+        <div className="pop-up-sign2">
+          {isModal2 && <OnRamp setIsModal2={setIsModal2} />}
         </div>
       </section>
     </>

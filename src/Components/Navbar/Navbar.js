@@ -114,7 +114,7 @@ function Navbar() {
               <NavLink to="/academy">{t("header.links.academy")}</NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <select
                 value={lang}
                 onChange={handleChange}
@@ -128,7 +128,7 @@ function Navbar() {
                   );
                 })}
               </select>
-            </li>
+            </li> */}
           </ul>
         </div>
         {/* hamburget menu start  */}
