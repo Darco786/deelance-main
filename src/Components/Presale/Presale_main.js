@@ -26,7 +26,7 @@ function Presale_main() {
   const [isModal2, setIsModal2] = useState(false);
   const { connectWallet, provider, contracts, account } =
     useContext(UserContext);
-  const [balances, setBalances] = useState({ BNB: 0 });
+  const [balances, setBalances] = useState({ ETH: 0 });
   const tokenElement = useRef();
   const nftAmountElement = useRef();
   const [total, setTotal] = useState(0);
@@ -62,7 +62,7 @@ function Presale_main() {
   useEffect(() => {
     if (!account) {
       setBalances({
-        BNB: 0,
+        ETH: 0,
         USDT: 0,
         USDC: 0,
         BUSD: 0,
@@ -86,6 +86,22 @@ function Presale_main() {
           clearInterval(intervalId);
         }
       }, 1000);
+      const getPr = async () => {
+        const pri = await contracts.Main.salePrice();
+        const myString = ethers.utils.formatEther(pri);
+        const a = Number(myString).toFixed(3);
+        const sa = ethers.utils.formatEther(
+          await contracts.Main.inSaleUSDvalue()
+        );
+        const xa = await contracts.Main.hardcapsizeUSD();
+        const round = await contracts.Main.currentStep();
+        setRound(round);
+        setPrices(a);
+        setInSale(sa);
+        setTotal(xa);
+        setPercantage((((xa - sa) / xa) * 100).toFixed(2));
+      };
+      getPr();
     } else {
       const intervalId = setInterval(() => {
         const date = new Date();
@@ -104,7 +120,7 @@ function Presale_main() {
         }
       }, 1000);
 
-      const getBNBBalance = async () => {
+      const getETHBalance = async () => {
         const balance = await provider.getBalance(account);
         return ethers.utils.formatEther(balance);
       };
@@ -168,7 +184,7 @@ function Presale_main() {
       };
 
       const getAllBalances = async () => {
-        const balances = { BNB: await getBNBBalance() };
+        const balances = { ETH: await getETHBalance() };
         for (const token of TokenList) {
           balances[token] = await getTokenBalances(token);
         }
@@ -201,15 +217,15 @@ function Presale_main() {
         alert("Please insert more than 60 $Deelance to buy!");
         return;
       }
-      if (token == "BNB") {
-        const bnbAmount = await contracts.Main.getBNBAmount(
+      if (token == "ETH") {
+        const ETHAmount = await contracts.Main.getETHAmount(
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
-        console.log(bnbAmount.toString());
-        transaction = await contracts.Main.buyWithBNB(nftAmount, {
+        console.log(ETHAmount.toString());
+        transaction = await contracts.Main.buyWithETH(nftAmount, {
           gasLimit: 130055,
           gasPrice: ethers.utils.parseUnits(gasPrice, "gwei"),
-          value: bnbAmount.toString(),
+          value: ETHAmount.toString(),
         });
       } else {
         const tokenAmount = await contracts.Main.getTokenAmount(
