@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.1c5943f0.css",
-    "main.js": "/static/js/main.6f19bfb4.js",
+    "main.css": "/static/css/main.972c1150.css",
+    "main.js": "/static/js/main.427aaf17.js",
     "static/js/787.080e17dd.chunk.js": "/static/js/787.080e17dd.chunk.js",
     "static/media/job.png": "/static/media/job.aa3df8898b3acad71962.png",
     "static/media/nft-bg.png": "/static/media/nft-bg.2db3499a80a12f999273.png",
+    "static/media/fire.webp": "/static/media/fire.d08ead471b31ff491527.webp",
+    "static/media/backline.svg": "/static/media/backline.8b7f1a3a64cb805af5e1eabbd51e19a6.svg",
     "static/media/error.png": "/static/media/error.ec253b69c0649128a287.png",
     "static/media/nft4.png": "/static/media/nft4.7eeff5174a677cc5da24.png",
+    "static/media/viki.png": "/static/media/viki.8138593460634c67aa5c.png",
     "static/media/nft3.png": "/static/media/nft3.17d7a41b27c9cafa0333.png",
     "static/media/nft2.png": "/static/media/nft2.c819292d6b7c0db6f58c.png",
     "static/media/web.png": "/static/media/web.b4521bc6111fe564d972.png",
@@ -21,22 +24,26 @@
     "static/media/noor.png": "/static/media/noor.36e1253aaf57e7e384c2.png",
     "static/media/nft.png": "/static/media/nft.1a2f8753a4f943f2e9aa.png",
     "static/media/main-logo.svg": "/static/media/main-logo.e3457a322c7356eeae8a2560ed77ead4.svg",
+    "static/media/bct.png": "/static/media/bct.0c80cf6ccf44402618fe.png",
+    "static/media/tet.png": "/static/media/tet.cf345a14c7a6bb4ef725.png",
     "static/media/doll.svg": "/static/media/doll.e7c1d2f721edd14560e25b2a65669dca.svg",
     "static/media/card.png": "/static/media/card.7b3dbdbff45bf2ba5961.png",
     "static/media/owner.svg": "/static/media/owner.285989c44c3026d910bab6b1c87a9aac.svg",
     "static/media/trans.svg": "/static/media/trans.511f231d28ed40f481ac9cc222a719fe.svg",
     "static/media/buss.svg": "/static/media/buss.0bc3430fcfb20588716ea7712260d4a8.svg",
     "static/media/token.svg": "/static/media/token.a477b8633d5db954c4804ebc82fab885.svg",
-    "index.html": "/index.html",
     "static/media/pay.svg": "/static/media/pay.8e2336d5e22e304c0b2d9f47a95032db.svg",
+    "index.html": "/index.html",
+    "static/media/de.webp": "/static/media/de.f56d7fd3d7dfd9378d45.webp",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "static/media/dot1.svg": "/static/media/dot1.dd6342a3046c6d38f654ea5edb2dbe36.svg",
     "static/media/dash.svg": "/static/media/dash.8a6ef368ee9ef9b7aa6f361b01ff5d72.svg",
-    "main.1c5943f0.css.map": "/static/css/main.1c5943f0.css.map",
-    "main.6f19bfb4.js.map": "/static/js/main.6f19bfb4.js.map",
+    "main.972c1150.css.map": "/static/css/main.972c1150.css.map",
+    "main.427aaf17.js.map": "/static/js/main.427aaf17.js.map",
     "787.080e17dd.chunk.js.map": "/static/js/787.080e17dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c5943f0.css",
-    "static/js/main.6f19bfb4.js"
+    "static/css/main.972c1150.css",
+    "static/js/main.427aaf17.js"
   ]
 }
