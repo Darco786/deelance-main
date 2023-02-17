@@ -395,7 +395,6 @@ function Presale_main() {
                       <a href="/" className="p1-btn" onClick={handleClick}>
                         {account ? "Presale" : "Connect Wallet"}
                       </a>
-                      
                     </div>
                   )}
                 </div>
@@ -410,12 +409,18 @@ function Presale_main() {
                   <span className="green">{countdown.seconds}</span>{" "}
                   {t("presale.seconds")}
                 </p> */}
-                <p className="white count-down text-center next-p"> Next Price: <span className="green"> {round.toString() == "1" ? "$0,025 /$DLANCE" : "$0,035 /$DLANCE"} </span></p>
+                <p className="white count-down text-center next-p">
+                  {" "}
+                  Next Price:{" "}
+                  <span className="green">
+                    {" "}
+                    {round.toString() == "1"
+                      ? "$0,025 /$DLANCE"
+                      : "$0,035 /$DLANCE"}{" "}
+                  </span>
+                </p>
               </div>
-              <p
-                className="white count-down text-center"
-                style={{ border: "2px solid red" }}
-              >
+              <p className="white count-down text-center">
                 <span className="green">{countdown.days}</span> DAYS,{" "}
                 <span className="green">{countdown.hours}</span> HOURS,{" "}
                 <span className="green">{countdown.minutes}</span> MINUTES,{" "}
