@@ -76,7 +76,7 @@ function Rewards() {
               </h1>
               <p>
                 To celebrate our pre-sale and our rapidly growing community,
-                we’re giving 3 lucky people a chance to split $100,000 worth of
+                we’re giving 4 lucky people a chance to split $100,000 worth of
                 $Dlance.
               </p>
               <p>

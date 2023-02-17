@@ -59,21 +59,21 @@ function RoadMobile() {
             </div>
             
             <div className="rd-b">
-              <p>
+            <p>
                 <GoPrimitiveDot /> PreSale {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Project Launch{" "}
+                <GoPrimitiveDot /> Contract Testing{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Marketing{" "}
+                <GoPrimitiveDot /> Project Prototype {" "}
               </p>
              
               <p>
-                <GoPrimitiveDot /> CMC and CG Listing{" "}
+                <GoPrimitiveDot /> Metaverse Demo ( Alpha ) {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Exchange Listing{" "}
+                <GoPrimitiveDot /> CMC and CG Listing {" "}
               </p>
             </div>
           </div>
