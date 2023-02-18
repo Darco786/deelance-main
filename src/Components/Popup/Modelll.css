@@ -362,6 +362,7 @@
   text-decoration: underline;
   color: #00e069 !important;
   background-color: transparent !important;
+  margin-right: 61px !important;
 }
 @media (max-width: 768px) {
   .modalContainer {

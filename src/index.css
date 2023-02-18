@@ -140,9 +140,9 @@ section {
   width: auto;
 }
 .faq-head h1{
-  font-size: 4rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 100%;
+  font-size: 40px;
   text-transform: uppercase;
 }
 

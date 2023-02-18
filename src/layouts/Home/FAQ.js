@@ -7,7 +7,7 @@ function FAQ() {
       <div className="container">
         <div className="faq-grid">
           <div className="faq-head">
-            <h1 className=" white">FAQ</h1>
+            <h1 className="green">FAQ</h1>
             <div className=" line-g">
               <img src={DashImg} alt="" />
             </div>
