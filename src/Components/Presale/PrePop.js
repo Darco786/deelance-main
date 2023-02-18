@@ -281,7 +281,7 @@ function PrePop({ setIsModal }) {
               </div>
 
               <div className="m-auto text-center">
-                <button type="submit" className="pre-pop-btn" onClick={buyNFT} >
+                <button type="submit" className="pre-pop-btn" onClick={buyNFT}>
                   Buy Now
                 </button>
               </div>
