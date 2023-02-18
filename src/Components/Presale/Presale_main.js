@@ -33,6 +33,7 @@ function Presale_main() {
   const [round, setRound] = useState(0);
   const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
+  const [network, setNetwork] = useState(null);
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
   const [countdown, setCountdown] = useState({
@@ -56,6 +57,18 @@ function Presale_main() {
     setSomeState(!somestate);
   };
   useEffect(() => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    provider.getNetwork().then((network) => {
+      setNetwork(network);
+    });
+
+    const getNet = async () => {
+      if (network.chainId !== 1) {
+      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+      }
+      };
+      
+    getNet();
     if (!account) {
       setBalances({
         ETH: 0,
@@ -66,9 +79,15 @@ function Presale_main() {
       setTotal("0");
       setPercantage("0");
 
+      const getNet = async () => {
+        if (network.chainId !== 1) {
+        alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+        }
+        };
+
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-19T00:00:00");
+        const futureDate = new Date("2023-03-18T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -97,11 +116,19 @@ function Presale_main() {
         setTotal(xa);
         setPercantage((((xa - sa) / xa) * 100).toFixed(2));
       };
+      getNet();
       getPr();
     } else {
+
+      const getNet = async () => {
+      if (network.chainId !== 1) {
+      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+      }
+      };
+
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-02-19T00:00:00");
+        const futureDate = new Date("2023-03-21T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -186,7 +213,7 @@ function Presale_main() {
         }
         setBalances(balances);
       };
-
+      getNet();
       getAllBalances();
       getSaleProgress();
       getDeelance();
@@ -343,9 +370,10 @@ function Presale_main() {
                       {t("presale.presale")} {round.toString()}
                     </h3>
                     <span className="span-btn">
-                      $1 {t("presale.min")} / $20,000 {t("presale.max")}
+                      $10 {t("presale.min")} / $20,000 {t("presale.max")}
                     </span>
-                    <p>{t("presale.official_contract")}</p>
+                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' ><p>{t("presale.official_contract")}</p></a>
+                    
                     <p className="green">
                       {" "}
                       <Link to="/how-to-buy" target="_blank">
@@ -415,8 +443,8 @@ function Presale_main() {
                   <span className="green">
                     {" "}
                     {round.toString() == "1"
-                      ? "$0,025 /$DLANCE"
-                      : "$0,035 /$DLANCE"}{" "}
+                      ? "$0.040 /$DLANCE"
+                      : "$0.045 /$DLANCE"}{" "}
                   </span>
                 </p>
               </div>

@@ -56,7 +56,7 @@
   display: flex;
   float: right;
   gap: 30px;
-  margin-top: 18%;
+  margin-top: 30%;
   z-index: 2;
   position: relative;
 }
@@ -166,6 +166,7 @@
   .hero-ss {
     gap: 24px;
     text-align: center;
+    margin-top: -7%;
   }
   .hero-ss a {
     font-size: 21px;

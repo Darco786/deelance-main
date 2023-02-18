@@ -3,6 +3,7 @@ import { GoPrimitiveDot } from "react-icons/go";
 import "swiper/css";
 import "swiper/css/pagination";
 import {Pagination,Autoplay } from "swiper";
+import DotLine from '../../assets/dot1.svg'
 
 function RoadMobile() {
   return (
@@ -17,7 +18,7 @@ function RoadMobile() {
         <div className="box-road-1">
             <div className="text-center rb-img">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />
@@ -48,7 +49,7 @@ function RoadMobile() {
             <div className="box-road-2">
             <div className="text-center rb-img">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />
@@ -59,21 +60,21 @@ function RoadMobile() {
             </div>
             
             <div className="rd-b">
-              <p>
+            <p>
                 <GoPrimitiveDot /> PreSale {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Project Launch{" "}
+                <GoPrimitiveDot /> Contract Testing{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Marketing{" "}
+                <GoPrimitiveDot /> Project Prototype {" "}
               </p>
              
               <p>
-                <GoPrimitiveDot /> CMC and CG Listing{" "}
+                <GoPrimitiveDot /> Metaverse Demo (Alpha ) {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Exchange Listing{" "}
+                <GoPrimitiveDot /> CMC and CG Listing {" "}
               </p>
             </div>
           </div>
@@ -83,8 +84,8 @@ function RoadMobile() {
             <SwiperSlide>
         <div className="box-road-3">
             <div className="text-center rb-img">
-              <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+            <img
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />
@@ -96,20 +97,24 @@ function RoadMobile() {
             
             <div className="rd-b">
          
-              <p>
-                <GoPrimitiveDot /> NFT Launch{" "}
+            <p>
+                <GoPrimitiveDot /> Token Launch{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> NFT Marketplace{" "}
+                <GoPrimitiveDot /> NFT Launch {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Freelance Platform
-      Development{" "}
+                <GoPrimitiveDot /> NFT MarketPlace {" "}
               </p>
              
               <p>
-                <GoPrimitiveDot /> Metaverse
-      Development{" "}
+                <GoPrimitiveDot /> Freelance Platform Launch(Beta Version)
+              </p>
+              <p>
+                <GoPrimitiveDot /> Exchanges Listing {" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Metaverse Development  {" "}
               </p>
             </div>
           </div>
@@ -118,7 +123,7 @@ function RoadMobile() {
             <div className="box-road-4">
             <div className="text-center rb-img">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                src={DotLine}
                 alt=""
                 style={{width:'auto'}}
               />
@@ -129,16 +134,15 @@ function RoadMobile() {
             </div>
             
             <div className="rd-b">
-              <p>
+            <p>
                 <GoPrimitiveDot /> App Development{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Metaverse Platform Launch{" "}
+                <GoPrimitiveDot /> Metaverse Integration(Beta version) {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Platform Improvements{" "}
+                <GoPrimitiveDot /> Further Development {" "}
               </p>
-             
             </div>
           </div>
             </SwiperSlide>

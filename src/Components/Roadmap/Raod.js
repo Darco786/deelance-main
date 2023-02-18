@@ -71,20 +71,20 @@ export default function Raod() {
                 <GoPrimitiveDot /> PreSale {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Project Launch{" "}
+                <GoPrimitiveDot /> Contract Testing{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Marketing{" "}
+                <GoPrimitiveDot /> Project Prototype {" "}
               </p>
              
               <p>
-                <GoPrimitiveDot /> CMC and CG Listing{" "}
+                <GoPrimitiveDot /> Metaverse Demo(Alpha) {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Exchange Listing{" "}
+                <GoPrimitiveDot /> CMC and CG Listing {" "}
               </p>
             </div>
-          </div>
+          </div>z
 
 
           <div className="box-road-3">
@@ -97,25 +97,29 @@ export default function Raod() {
             </div>
             <div className="text-center">
             <h1>Q2 2023</h1>
-            <p>(March - April)</p>
+            <p>(April - June)</p>
             </div>
             
             <div className="rd-b">
          
               <p>
-                <GoPrimitiveDot /> NFT Launch{" "}
+                <GoPrimitiveDot /> Token Launch{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> NFT Marketplace{" "}
+                <GoPrimitiveDot /> NFT Launch {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Freelance Platform
-      Development{" "}
+                <GoPrimitiveDot /> NFT MarketPlace {" "}
               </p>
              
               <p>
-                <GoPrimitiveDot /> Metaverse
-      Development{" "}
+                <GoPrimitiveDot /> Freelance Platform Launch(Beta Version)
+              </p>
+              <p>
+                <GoPrimitiveDot /> Exchanges Listing {" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Metaverse Development  {" "}
               </p>
             </div>
           </div>
@@ -139,10 +143,10 @@ export default function Raod() {
                 <GoPrimitiveDot /> App Development{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Metaverse Platform Launch{" "}
+                <GoPrimitiveDot /> Metaverse Integration(Beta version) {" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Platform Improvements{" "}
+                <GoPrimitiveDot /> Further Development {" "}
               </p>
              
             </div>

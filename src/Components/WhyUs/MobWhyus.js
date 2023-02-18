@@ -7,6 +7,12 @@ import "swiper/css/pagination";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
 
+import Dash from '../../assets/dash.svg'
+import Dee from '../../assets/main-logo.svg'
+import Fiver from '../../assets/fiver.png'
+import Freelance from '../../assets/freela.png'
+import Upwork from '../../assets/Upwork.png'
+
 import { Pagination } from "swiper";
 function MobWhyus() {
   return (
@@ -16,10 +22,7 @@ function MobWhyus() {
           <h1>
             Why <span className="green">Deelance</span>{" "}
           </h1>
-          <img
-            src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599"
-            alt=""
-          />
+          <img src={Dash} alt=""/>
         </div>
         <div className="why-us-box">
           <div className="row justify-content-center ">
@@ -75,10 +78,10 @@ function MobWhyus() {
                 <div className="col-md-2 col-6">
                   <div className="content-2 text-center">
                     <div className="why-content-img-head">
-                      <img
-                        src="https://ik.imagekit.io/cforcrypto/logo-white_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114579"
-                        alt=""
-                      />
+                    <img
+                      src={Dee}
+                      alt=""
+                    />
                     </div>
                     <div className="">
                       <p>2%</p>
@@ -143,10 +146,10 @@ function MobWhyus() {
                 <div className="col-md-2 col-6">
                   <div className="content-3 text-center">
                     <div className="why-content-img-head">
-                      <img
-                        src="https://ik.imagekit.io/cforcrypto/Asset_10-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114646"
-                        alt=""
-                      />
+                    <img
+                      src={Freelance}
+                      alt=""
+                    />
                     </div>
                     <div className="">
                       <p>3%</p>
@@ -210,10 +213,10 @@ function MobWhyus() {
                 <div className="col-md-2 col-6">
                   <div className="content-4 text-center">
                     <div className="why-content-img-head">
-                      <img
-                        src="https://ik.imagekit.io/cforcrypto/Upwork_logo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114615"
-                        alt=""
-                      />
+                    <img
+                      src={Upwork}
+                      alt=""
+                    />
                     </div>
                     <div className="up-work">
                       <p style={{ marginBottom: "0px" }}>3.5%</p>
@@ -279,10 +282,10 @@ function MobWhyus() {
                 <div className="col-md-2 col-6">
                   <div className="content-5 text-center">
                     <div className="why-content-img-head">
-                      <img
-                        src="https://ik.imagekit.io/cforcrypto/Asset_9-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114686"
-                        alt=""
-                      />
+                    <img
+                      src={Fiver}
+                      alt=""
+                    />
                     </div>
                     <div className="up-work">
                       <p style={{ marginBottom: "0px" }}>3.5%</p>

@@ -55,7 +55,7 @@ function Hero() {
                 >
                   {t("buttons.sign_up")} <AiOutlineArrowRight />
                 </button>
-                <button className="hero-btn-2">{t("buttons.buy_now")}</button>
+                {/* <button className="hero-btn-2">{t("buttons.buy_now")}</button> */}
               </div>
               <div className="presale-hero-box">
                 <PresaleMain />
@@ -97,7 +97,7 @@ function Hero() {
                   <FaTelegramPlane />
                 </a>
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/deelance"
                   target="_blank"
                   rel="noreferrer"
                 >
