@@ -58,23 +58,6 @@ function Presale_main() {
   };
 
   useEffect(() => {
-<<<<<<< HEAD
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    provider.getNetwork().then((network) => {
-      setNetwork(network);
-    });
-
-    const getNet = async () => {
-      if (network.chainId !== 1) {
-        alert(
-          "Sorry you are on the wrong Network - Please switch to ETH chain!"
-        );
-      }
-    };
-
-    getNet();
-=======
->>>>>>> b0cc2d9b24cf3dc18e2db4e4e7d2c0d84e11ab31
     if (!account) {
       setBalances({
         ETH: 0,
@@ -84,18 +67,6 @@ function Presale_main() {
       });
       setTotal("0");
       setPercantage("0");
-<<<<<<< HEAD
-
-      const getNet = async () => {
-        if (network.chainId !== 1) {
-          alert(
-            "Sorry you are on the wrong Network - Please switch to ETH chain!"
-          );
-        }
-      };
-
-=======
->>>>>>> b0cc2d9b24cf3dc18e2db4e4e7d2c0d84e11ab31
       const intervalId = setInterval(() => {
         const date = new Date();
         const futureDate = new Date("2023-03-18T00:00:00");
@@ -129,16 +100,10 @@ function Presale_main() {
       };
       getPr();
     } else {
-<<<<<<< HEAD
-=======
-
-     
       provider.getNetwork().then((network) => {
         setNetwork(network);
       });
 
-
->>>>>>> b0cc2d9b24cf3dc18e2db4e4e7d2c0d84e11ab31
       const getNet = async () => {
         if (network.chainId !== 1) {
           alert(
