@@ -11,7 +11,7 @@ export default function Raod() {
       <section className="roadmap">
         <div className="container">
           <div className="road-head text-center">
-            <h1 className="green">ROADMAP</h1>
+            <h1 className="green">Roadmap</h1>
             <img src={DashImg} alt="" />
           </div>
           <div className="road-slide">
