@@ -136,7 +136,7 @@ section {
   gap: 10rem;
 }
 
-.line-g{
+.line-g img{
   width: auto;
 }
 .faq-head h1{
@@ -153,7 +153,7 @@ section {
     grid-template-columns: repeat(1,auto);
     justify-content: space-between;
     gap:5px;
-    
+
 }
   iframe {
     min-height: 100%;
