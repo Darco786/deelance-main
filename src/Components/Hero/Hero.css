@@ -132,7 +132,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero-homeh1 {
+  .hero-home h1 {
     font-size: 26px;
     line-height: 36px;
   }
