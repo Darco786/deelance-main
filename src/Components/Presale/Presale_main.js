@@ -33,7 +33,7 @@ function Presale_main() {
   const [round, setRound] = useState(0);
   const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
-  const [network, setNetwork] = useState(null);
+  const [network, setNetwork] = useState(0);
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
   const [countdown, setCountdown] = useState({
@@ -57,10 +57,6 @@ function Presale_main() {
     setSomeState(!somestate);
   };
   useEffect(() => {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    provider.getNetwork().then((network) => {
-      setNetwork(network);
-    });
     if (!account) {
       setBalances({
         ETH: 0,
@@ -104,12 +100,12 @@ function Presale_main() {
       getPr();
     } else {
 
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+     
       provider.getNetwork().then((network) => {
         setNetwork(network);
       });
 
-      
+
       const getNet = async () => {
       if (network.chainId !== 1) {
       alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
@@ -362,7 +358,7 @@ function Presale_main() {
                     <span className="span-btn">
                       $10 {t("presale.min")} / $20,000 {t("presale.max")}
                     </span>
-                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' rel="noreferrer" ><p>{t("presale.official_contract")}</p></a>
+                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' ><p>{t("presale.official_contract")}</p></a>
                     
                     <p className="green">
                       {" "}
