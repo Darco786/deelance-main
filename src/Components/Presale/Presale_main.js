@@ -33,6 +33,7 @@ function Presale_main() {
   const [round, setRound] = useState(0);
   const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
+  const [network, setNetwork] = useState(null);
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
   const [countdown, setCountdown] = useState({
@@ -56,6 +57,18 @@ function Presale_main() {
     setSomeState(!somestate);
   };
   useEffect(() => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    provider.getNetwork().then((network) => {
+      setNetwork(network);
+    });
+
+    const getNet = async () => {
+      if (network.chainId !== 1) {
+      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+      }
+      };
+      
+    getNet();
     if (!account) {
       setBalances({
         ETH: 0,
@@ -65,6 +78,12 @@ function Presale_main() {
       });
       setTotal("0");
       setPercantage("0");
+
+      const getNet = async () => {
+        if (network.chainId !== 1) {
+        alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+        }
+        };
 
       const intervalId = setInterval(() => {
         const date = new Date();
@@ -97,8 +116,16 @@ function Presale_main() {
         setTotal(xa);
         setPercantage((((xa - sa) / xa) * 100).toFixed(2));
       };
+      getNet();
       getPr();
     } else {
+
+      const getNet = async () => {
+      if (network.chainId !== 1) {
+      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+      }
+      };
+
       const intervalId = setInterval(() => {
         const date = new Date();
         const futureDate = new Date("2023-03-18T00:00:00");
@@ -186,7 +213,7 @@ function Presale_main() {
         }
         setBalances(balances);
       };
-
+      getNet();
       getAllBalances();
       getSaleProgress();
       getDeelance();
