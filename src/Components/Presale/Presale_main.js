@@ -362,7 +362,7 @@ function Presale_main() {
                     <span className="span-btn">
                       $10 {t("presale.min")} / $20,000 {t("presale.max")}
                     </span>
-                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' ><p>{t("presale.official_contract")}</p></a>
+                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' rel="noreferrer" ><p>{t("presale.official_contract")}</p></a>
                     
                     <p className="green">
                       {" "}

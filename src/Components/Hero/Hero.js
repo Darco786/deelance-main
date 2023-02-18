@@ -52,9 +52,9 @@ function Hero() {
                 </button>
                 {/* <button className="hero-btn-2">{t("buttons.buy_now")}</button> */}
               </div>
-              <div className="presale-hero-box">
+              {/* <div className="presale-hero-box">
                 <PresaleMain />
-              </div>
+              </div> */}
             </div>
             <div className="col-md-6 text-center align-items-center">
               <div className="2nd-img">
