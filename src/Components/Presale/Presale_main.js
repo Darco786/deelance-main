@@ -33,7 +33,7 @@ function Presale_main() {
   const [round, setRound] = useState(0);
   const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
-  const [network, setNetwork] = useState(null);
+  const [network, setNetwork] = useState(0);
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
   const [countdown, setCountdown] = useState({
@@ -58,6 +58,7 @@ function Presale_main() {
   };
 
   useEffect(() => {
+<<<<<<< HEAD
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     provider.getNetwork().then((network) => {
       setNetwork(network);
@@ -72,6 +73,8 @@ function Presale_main() {
     };
 
     getNet();
+=======
+>>>>>>> b0cc2d9b24cf3dc18e2db4e4e7d2c0d84e11ab31
     if (!account) {
       setBalances({
         ETH: 0,
@@ -81,6 +84,7 @@ function Presale_main() {
       });
       setTotal("0");
       setPercantage("0");
+<<<<<<< HEAD
 
       const getNet = async () => {
         if (network.chainId !== 1) {
@@ -90,6 +94,8 @@ function Presale_main() {
         }
       };
 
+=======
+>>>>>>> b0cc2d9b24cf3dc18e2db4e4e7d2c0d84e11ab31
       const intervalId = setInterval(() => {
         const date = new Date();
         const futureDate = new Date("2023-03-18T00:00:00");
@@ -121,9 +127,18 @@ function Presale_main() {
         setTotal(xa);
         setPercantage((((xa - sa) / xa) * 100).toFixed(2));
       };
-      getNet();
       getPr();
     } else {
+<<<<<<< HEAD
+=======
+
+     
+      provider.getNetwork().then((network) => {
+        setNetwork(network);
+      });
+
+
+>>>>>>> b0cc2d9b24cf3dc18e2db4e4e7d2c0d84e11ab31
       const getNet = async () => {
         if (network.chainId !== 1) {
           alert(
