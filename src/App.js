@@ -17,6 +17,7 @@ import Web3Modal from "web3modal";
 import { BEP20ABI, BigNFTABI } from "./Constants/ABI";
 import { ContractAddr, providerOptions, RPCUrl } from "./Constants/Constants";
 import UserContext from "./UserContext";
+import "./App.css";
 
 const web3Modal = new Web3Modal({
   cacheProvider: true, // optional
