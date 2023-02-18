@@ -65,6 +65,13 @@
   color: white;
 }
 
+/* seenOn */
+
+.seenOn {
+  margin-top: 5.6rem;
+  margin-bottom: 7rem;
+}
+
 @media (max-width: 1000px) {
   .accordion button {
     padding: 0.8rem 1.4rem;
@@ -83,5 +90,12 @@
     padding-bottom: 0.6rem;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .seenOn {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
   }
 }
