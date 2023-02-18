@@ -38,7 +38,10 @@ function Hero() {
           {/* <UpperSection setIsModal={setIsModal} />
           <LowerSection /> */}
 
-          <div className="row justify-content-center">
+          <div
+            className="row justify-content-center"
+            style={{ position: "relative" }}
+          >
             <div className="col-md-6">
               <h1>
                 {t("hero.title.creating")}{" "}
@@ -62,8 +65,11 @@ function Hero() {
               </div>
             </div>
 
-            <div className="col-md-6 text-center align-items-center">
-              <div className="2nd-img">
+            <div
+              className="col-md-6 text-center align-items-center"
+              style={{ position: "relative" }}
+            >
+              <div className="second-img">
                 <Lottie options={defaultOptions} className="loti-1" />
               </div>
 
