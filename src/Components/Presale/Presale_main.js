@@ -104,6 +104,12 @@ function Presale_main() {
       getPr();
     } else {
 
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      provider.getNetwork().then((network) => {
+        setNetwork(network);
+      });
+
+      
       const getNet = async () => {
       if (network.chainId !== 1) {
       alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
