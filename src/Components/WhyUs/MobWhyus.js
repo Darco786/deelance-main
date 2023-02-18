@@ -3,7 +3,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
 
@@ -12,7 +11,9 @@ import Dee from "../../assets/main-logo.svg";
 import Fiver from "../../assets/fiver.png";
 import Freelance from "../../assets/freela.png";
 import Upwork from "../../assets/Upwork.png";
-import { Pagination } from "swiper";
+import { Navigation } from "swiper";
+import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
+import { useRef } from "react";
 
 const FullCol = ({ img, items, textAlign = "center" }) => {
   return (
@@ -44,6 +45,9 @@ const FullCol = ({ img, items, textAlign = "center" }) => {
 };
 
 function MobWhyus() {
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
   return (
     <>
       <div className="container-fluid mob-why-swiper">
@@ -53,7 +57,16 @@ function MobWhyus() {
           </h1>
           <img src={Dash} alt="" />
         </div>
-        <div className="why-us-box">
+        <div className="why-us-box" style={{ position: "relative" }}>
+          <div className="navigatoion-buttons">
+            <button ref={navigationPrevRef}>
+              <HiArrowNarrowLeft />
+            </button>
+            <button ref={navigationNextRef}>
+              <HiArrowNarrowRight />
+            </button>
+          </div>
+
           <div className="why-us-box-left">
             <FullCol
               textAlign="left"
@@ -118,9 +131,22 @@ function MobWhyus() {
           </div>
 
           <Swiper
-            pagination={true}
-            modules={[Pagination]}
+            modules={[Navigation]}
             className="why-us-box-right"
+            navigation={{
+              prevEl: navigationPrevRef.current,
+              nextEl: navigationNextRef.current,
+            }}
+            onSwiper={(swiper) => {
+              setTimeout(() => {
+                if (swiper.params) {
+                  swiper.params.navigation.prevEl = navigationPrevRef.current;
+                  swiper.params.navigation.nextEl = navigationNextRef.current;
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                }
+              });
+            }}
           >
             <SwiperSlide>
               <FullCol
