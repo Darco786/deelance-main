@@ -33,7 +33,7 @@ function Presale_main() {
   const [round, setRound] = useState(0);
   const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
-  const [network, setNetwork] = useState(0);
+  const [aa, setNetwork] = useState();
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
   const [countdown, setCountdown] = useState({
@@ -100,13 +100,17 @@ function Presale_main() {
       getPr();
     } else {
       const getPro = async () => {
-        provider.getNetwork().then((network) => {
-          setNetwork(network);
+        provider.getNetwork().then((aa) => {
+          setNetwork(aa);
         });
       };
 
       const getNet = async () => {
-        if (network.chainId !== 1) {
+          provider.getNetwork().then((aa) => {
+          setNetwork(aa);
+        });
+        console.log("VEDIAMO", aa.chainId)
+        if (aa.chainId !== 1) {
           alert(
             "Sorry you are on the wrong Network - Please switch to ETH chain!"
           );
@@ -312,8 +316,30 @@ function Presale_main() {
   };
 
   const handleModal = async (e) => {
+              const getPro = async () => {
+        provider.getNetwork().then((aa) => {
+          setNetwork(aa);
+        });
+      };
+
+      const getNet = async () => {
+          provider.getNetwork().then((aa) => {
+          setNetwork(aa);
+        });
+        console.log("VEDIAMO", aa.chainId)
+        if (aa.chainId !== 1) {
+          alert(
+            "Sorry you are on the wrong Network - Please switch to ETH chain!"
+          );
+
+        } else {
+          setIsModal(true);
+        }
+      };
+    getPro();
+    getNet();
     e.preventDefault();
-    setIsModal(true);
+
   };
   const buyCard = async (e) => {
     e.preventDefault();
