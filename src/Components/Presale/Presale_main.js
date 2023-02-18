@@ -56,7 +56,6 @@ function Presale_main() {
     setAlertShown(true);
     setSomeState(!somestate);
   };
-
   useEffect(() => {
     if (!account) {
       setBalances({
@@ -100,16 +99,17 @@ function Presale_main() {
       };
       getPr();
     } else {
+
+    const getPro = async () => {
       provider.getNetwork().then((network) => {
         setNetwork(network);
       });
+    }
 
       const getNet = async () => {
-        if (network.chainId !== 1) {
-          alert(
-            "Sorry you are on the wrong Network - Please switch to ETH chain!"
-          );
-        }
+      if (network.chainId !== 1) {
+      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+      }
       };
 
       const intervalId = setInterval(() => {
@@ -199,6 +199,7 @@ function Presale_main() {
         }
         setBalances(balances);
       };
+      getPro();
       getNet();
       getAllBalances();
       getSaleProgress();
@@ -358,13 +359,8 @@ function Presale_main() {
                     <span className="span-btn">
                       $10 {t("presale.min")} / $20,000 {t("presale.max")}
                     </span>
-                    <a
-                      href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code"
-                      target="_blank"
-                    >
-                      <p>{t("presale.official_contract")}</p>
-                    </a>
-
+                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' ><p>{t("presale.official_contract")}</p></a>
+                    
                     <p className="green">
                       {" "}
                       <Link to="/how-to-buy" target="_blank">
@@ -439,10 +435,7 @@ function Presale_main() {
                   </span>
                 </p>
               </div>
-              <p
-                className="white count-down text-center"
-                style={{ marginBottom: 0 }}
-              >
+              <p className="white count-down text-center">
                 <span className="green">{countdown.days}</span> DAYS,{" "}
                 <span className="green">{countdown.hours}</span> HOURS,{" "}
                 <span className="green">{countdown.minutes}</span> MINUTES,{" "}
