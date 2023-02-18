@@ -128,7 +128,7 @@ function Presale_main() {
 
       const intervalId = setInterval(() => {
         const date = new Date();
-        const futureDate = new Date("2023-03-18T00:00:00");
+        const futureDate = new Date("2023-03-20T00:00:00");
         const difference = futureDate - date;
 
         if (difference >= 0) {
@@ -372,7 +372,8 @@ function Presale_main() {
                     <span className="span-btn">
                       $10 {t("presale.min")} / $20,000 {t("presale.max")}
                     </span>
-                    <p>{t("presale.official_contract")}</p>
+                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' ><p>{t("presale.official_contract")}</p></a>
+                    
                     <p className="green">
                       {" "}
                       <Link to="/how-to-buy" target="_blank">
