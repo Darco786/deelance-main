@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.972c1150.css",
-    "main.js": "/static/js/main.427aaf17.js",
+    "main.css": "/static/css/main.e1ce5738.css",
+    "main.js": "/static/js/main.ac316e47.js",
     "static/js/787.080e17dd.chunk.js": "/static/js/787.080e17dd.chunk.js",
     "static/media/job.png": "/static/media/job.aa3df8898b3acad71962.png",
     "static/media/nft-bg.png": "/static/media/nft-bg.2db3499a80a12f999273.png",
@@ -38,12 +38,12 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "static/media/dot1.svg": "/static/media/dot1.dd6342a3046c6d38f654ea5edb2dbe36.svg",
     "static/media/dash.svg": "/static/media/dash.8a6ef368ee9ef9b7aa6f361b01ff5d72.svg",
-    "main.972c1150.css.map": "/static/css/main.972c1150.css.map",
-    "main.427aaf17.js.map": "/static/js/main.427aaf17.js.map",
+    "main.e1ce5738.css.map": "/static/css/main.e1ce5738.css.map",
+    "main.ac316e47.js.map": "/static/js/main.ac316e47.js.map",
     "787.080e17dd.chunk.js.map": "/static/js/787.080e17dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.972c1150.css",
-    "static/js/main.427aaf17.js"
+    "static/css/main.e1ce5738.css",
+    "static/js/main.ac316e47.js"
   ]
 }
