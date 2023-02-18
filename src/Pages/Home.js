@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet";
 import CookieConcent from "Components/CookieConcent";
 import Warning from "Components/Common/Warning";
 import SeenOn from "Components/SeenOn/SeenOn";
+import FAQ from "layouts/Home/FAQ";
 
 function Home() {
   return (
@@ -53,6 +54,10 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
       <WhyUs />
       <Tokenomic />
       <Raod />
+
+      <div className="pb-5 mb-5">
+        <FAQ />
+      </div>
 
       <Warning />
       <Footer />
