@@ -39,7 +39,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
 
       <Navbar />
       {/* <Hero /> */}
-      {/* <SeenOn /> */}
+      <SeenOn />
       <Features />
       <About />
 
