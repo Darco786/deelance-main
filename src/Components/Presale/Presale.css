@@ -1,6 +1,8 @@
 .main-page {
-  position: absolute;
-  width: 600px;
+  position: relative;
+  /* max-width: 600px; */
+  width: 100%;
+  z-index: 1000;
 }
 .over-box {
   background: linear-gradient(#000, #000) padding-box,
@@ -62,9 +64,9 @@
 }
 
 .presale-section {
-  margin: auto;
-  padding-top: 8%;
-  padding-bottom: 2%;
+  /* margin: auto; */
+  /* padding-top: 8%;
+  padding-bottom: 2%; */
 }
 
 .over-sub-box p {

@@ -15,6 +15,8 @@ import Lottie from "react-lottie";
 import Hero_lot from "./bg";
 import PresaleMain from "Components/Presale/Presale_main";
 import { useTranslation } from "react-i18next";
+import UpperSection from "./UpperSection";
+import LowerSection from "./LowerSection";
 
 function Hero() {
   const [isModal, setIsModal] = useState(false);
@@ -31,8 +33,11 @@ function Hero() {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero-home">
         <div className="container">
+          {/* <UpperSection setIsModal={setIsModal} />
+          <LowerSection /> */}
+
           <div className="row justify-content-center">
             <div className="col-md-6">
               <h1>
@@ -56,6 +61,7 @@ function Hero() {
                 <PresaleMain />
               </div>
             </div>
+
             <div className="col-md-6 text-center align-items-center">
               <div className="2nd-img">
                 <Lottie options={defaultOptions} className="loti-1" />

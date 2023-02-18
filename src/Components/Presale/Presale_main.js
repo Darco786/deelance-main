@@ -420,7 +420,10 @@ function Presale_main() {
                   </span>
                 </p>
               </div>
-              <p className="white count-down text-center">
+              <p
+                className="white count-down text-center"
+                style={{ marginBottom: 0 }}
+              >
                 <span className="green">{countdown.days}</span> DAYS,{" "}
                 <span className="green">{countdown.hours}</span> HOURS,{" "}
                 <span className="green">{countdown.minutes}</span> MINUTES,{" "}
