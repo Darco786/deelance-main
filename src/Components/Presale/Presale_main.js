@@ -61,14 +61,6 @@ function Presale_main() {
     provider.getNetwork().then((network) => {
       setNetwork(network);
     });
-
-    const getNet = async () => {
-      if (network.chainId !== 1) {
-      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
-      }
-      };
-      
-    getNet();
     if (!account) {
       setBalances({
         ETH: 0,
@@ -78,13 +70,6 @@ function Presale_main() {
       });
       setTotal("0");
       setPercantage("0");
-
-      const getNet = async () => {
-        if (network.chainId !== 1) {
-        alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
-        }
-        };
-
       const intervalId = setInterval(() => {
         const date = new Date();
         const futureDate = new Date("2023-03-18T00:00:00");
@@ -116,7 +101,6 @@ function Presale_main() {
         setTotal(xa);
         setPercantage((((xa - sa) / xa) * 100).toFixed(2));
       };
-      getNet();
       getPr();
     } else {
 
