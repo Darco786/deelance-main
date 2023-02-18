@@ -56,6 +56,7 @@ function Presale_main() {
     setAlertShown(true);
     setSomeState(!somestate);
   };
+
   useEffect(() => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     provider.getNetwork().then((network) => {
@@ -64,10 +65,12 @@ function Presale_main() {
 
     const getNet = async () => {
       if (network.chainId !== 1) {
-      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+        alert(
+          "Sorry you are on the wrong Network - Please switch to ETH chain!"
+        );
       }
-      };
-      
+    };
+
     getNet();
     if (!account) {
       setBalances({
@@ -81,9 +84,11 @@ function Presale_main() {
 
       const getNet = async () => {
         if (network.chainId !== 1) {
-        alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
+          alert(
+            "Sorry you are on the wrong Network - Please switch to ETH chain!"
+          );
         }
-        };
+      };
 
       const intervalId = setInterval(() => {
         const date = new Date();
@@ -119,11 +124,12 @@ function Presale_main() {
       getNet();
       getPr();
     } else {
-
       const getNet = async () => {
-      if (network.chainId !== 1) {
-      alert("Sorry you are on the wrong Network - Please switch to ETH chain!")
-      }
+        if (network.chainId !== 1) {
+          alert(
+            "Sorry you are on the wrong Network - Please switch to ETH chain!"
+          );
+        }
       };
 
       const intervalId = setInterval(() => {
@@ -372,8 +378,13 @@ function Presale_main() {
                     <span className="span-btn">
                       $10 {t("presale.min")} / $20,000 {t("presale.max")}
                     </span>
-                    <a href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code" target='_blank' ><p>{t("presale.official_contract")}</p></a>
-                    
+                    <a
+                      href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code"
+                      target="_blank"
+                    >
+                      <p>{t("presale.official_contract")}</p>
+                    </a>
+
                     <p className="green">
                       {" "}
                       <Link to="/how-to-buy" target="_blank">
