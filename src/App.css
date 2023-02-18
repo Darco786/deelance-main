@@ -9,14 +9,14 @@
 
 .accordion {
   background-color: #050828b8;
-  border-radius: 0.6rem;
+  border-radius: 9px;
   overflow: hidden;
-  border: 2px solid #00e86d;
+  border: 1px solid #00e86d;
 }
 
 .accordion button {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   background-color: transparent;
   border: none;
   outline: none;

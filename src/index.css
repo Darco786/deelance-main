@@ -129,6 +129,22 @@ section {
 .dash {
   width: auto !important;
 }
+.faq-grid{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  justify-content: space-between;
+}
+
+.line-g{
+  width: auto;
+}
+.faq-head h1{
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
 @media (max-width: 786px) {
   iframe {
     min-height: 100%;
