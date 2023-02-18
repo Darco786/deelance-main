@@ -42,17 +42,18 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
 
       <Hero />
 
-      <div className="py-5">
-        <SeenOn />
-      </div>
-      <div className="pt-4">
-        <Features />
-      </div>
+      <SeenOn />
+
+      <Features />
+
       <About />
 
       <Find />
+
       <WhyUs />
+
       <Tokenomic />
+
       <Raod />
 
       <div className="pb-5 mb-5">
@@ -60,7 +61,9 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
       </div>
 
       <Warning />
+
       <Footer />
+
       <CookieConcent />
     </>
   );
