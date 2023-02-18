@@ -133,6 +133,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2,auto);
   justify-content: space-between;
+  gap: 10rem;
 }
 
 .line-g{
@@ -146,6 +147,14 @@ section {
 }
 
 @media (max-width: 786px) {
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    justify-content: space-between;
+    gap:5px;
+    
+}
   iframe {
     min-height: 100%;
   }
