@@ -17,8 +17,8 @@ export const MAINNET_ADDRESSES = {
     IBAT: '0x19cd9B8e42d4EF62c3EA124110D5Cfd283CEaC43',
 }
 
-export const BSCTestRPCUrl = 'https://mainnet.infura.io/v3/'
-export const BSCMainRPCUrl = 'https://mainnet.infura.io/v3/'
+export const BSCTestRPCUrl = 'https://mainnet.infura.io/v3/7b50cd907db34540b993f3209ba55488'
+export const BSCMainRPCUrl = 'https://mainnet.infura.io/v3/7b50cd907db34540b993f3209ba55488'
 
 export const ContractAddr = TEST_MODE ? TESTNET_ADDRESSES : MAINNET_ADDRESSES
 export const RPCUrl = TEST_MODE ? BSCTestRPCUrl : BSCMainRPCUrl
