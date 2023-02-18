@@ -41,7 +41,7 @@ function Feauters() {
       <div className="container desktop-feat">
         <div className="row justify-content-center align-items-center">
           {data.map((item, i) => (
-            <div className="col-md-4">
+            <div key={i} className="col-md-4">
               <div className="feat-box">
                 <div className="feat-img">
                   <img src={item.img} alt="" />
