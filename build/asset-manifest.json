@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1ce5738.css",
-    "main.js": "/static/js/main.ac316e47.js",
+    "main.css": "/static/css/main.8909d7c3.css",
+    "main.js": "/static/js/main.f5e36d0b.js",
     "static/js/787.080e17dd.chunk.js": "/static/js/787.080e17dd.chunk.js",
     "static/media/job.png": "/static/media/job.aa3df8898b3acad71962.png",
     "static/media/nft-bg.png": "/static/media/nft-bg.2db3499a80a12f999273.png",
@@ -32,18 +32,18 @@
     "static/media/trans.svg": "/static/media/trans.511f231d28ed40f481ac9cc222a719fe.svg",
     "static/media/buss.svg": "/static/media/buss.0bc3430fcfb20588716ea7712260d4a8.svg",
     "static/media/token.svg": "/static/media/token.a477b8633d5db954c4804ebc82fab885.svg",
-    "static/media/pay.svg": "/static/media/pay.8e2336d5e22e304c0b2d9f47a95032db.svg",
     "index.html": "/index.html",
+    "static/media/pay.svg": "/static/media/pay.8e2336d5e22e304c0b2d9f47a95032db.svg",
     "static/media/de.webp": "/static/media/de.f56d7fd3d7dfd9378d45.webp",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "static/media/dot1.svg": "/static/media/dot1.dd6342a3046c6d38f654ea5edb2dbe36.svg",
     "static/media/dash.svg": "/static/media/dash.8a6ef368ee9ef9b7aa6f361b01ff5d72.svg",
-    "main.e1ce5738.css.map": "/static/css/main.e1ce5738.css.map",
-    "main.ac316e47.js.map": "/static/js/main.ac316e47.js.map",
+    "main.8909d7c3.css.map": "/static/css/main.8909d7c3.css.map",
+    "main.f5e36d0b.js.map": "/static/js/main.f5e36d0b.js.map",
     "787.080e17dd.chunk.js.map": "/static/js/787.080e17dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1ce5738.css",
-    "static/js/main.ac316e47.js"
+    "static/css/main.8909d7c3.css",
+    "static/js/main.f5e36d0b.js"
   ]
 }
