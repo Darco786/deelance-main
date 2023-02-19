@@ -2,7 +2,7 @@
   position: relative;
   /* max-width: 600px; */
   width: 100%;
-  z-index: 1000;
+  z-index: 2;
 }
 .over-box {
   background: linear-gradient(#000, #000) padding-box,
