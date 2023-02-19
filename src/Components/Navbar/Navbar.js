@@ -113,7 +113,11 @@ function Navbar() {
             <li>
               <NavLink to="/academy">{t("header.links.academy")}</NavLink>
             </li>
-
+            <li>
+            <a href="/" className="p1-btn" onClick={disconnectButt}>
+                        Disconnect
+                      </a>
+            </li>
             {/* <li>
               <select
                 value={lang}
