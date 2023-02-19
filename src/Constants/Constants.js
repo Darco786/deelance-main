@@ -1,3 +1,6 @@
+import WalletConnect from "@walletconnect/web3-provider";
+import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
+
 export const TEST_MODE = false
 
 export const TESTNET_ADDRESSES = {
@@ -23,26 +26,22 @@ export const BSCMainRPCUrl = 'https://mainnet.infura.io/v3/7b50cd907db34540b993f
 export const ContractAddr = TEST_MODE ? TESTNET_ADDRESSES : MAINNET_ADDRESSES
 export const RPCUrl = TEST_MODE ? BSCTestRPCUrl : BSCMainRPCUrl
 
-// import WalletConnect from "@walletconnect/web3-provider"
-// import CoinbaseWalletSDK from "@coinbase/wallet-sdk"
+
 
 export const providerOptions = {
-    binancechainwallet: {
-        package: true,
+     walletconnect: {
+         package: WalletConnect, // required
+        options: {
+            infuraId: "7b50cd907db34540b993f3209ba55488" // required
+        }
     },
-    // walletconnect: {
-    //     package: WalletConnect, // required
-    //     options: {
-    //         infuraId: process.env.INFURA_ID // required
-    //     }
-    // },
-    // coinbasewallet: {
-    //     package: CoinbaseWalletSDK, // Required
-    //     options: {
-    //         appName: "Coinbase", // Required
-    //         infuraId: process.env.INFURA_ID, // Required
-    //     }
-    // }
+     coinbasewallet: {
+        package: CoinbaseWalletSDK, // Required
+       options: {
+           appName: "Coinbase", // Required
+             infuraId: "7b50cd907db34540b993f3209ba55488", // Required
+        }
+    }
 }
 
 export const TestnetChainID = 1

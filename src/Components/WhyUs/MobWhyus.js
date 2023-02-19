@@ -2,7 +2,9 @@ import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "swiper/css";
+
+import 'swiper/swiper.min.css'
+
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
 

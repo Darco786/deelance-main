@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GoPrimitiveDot } from "react-icons/go";
-import "swiper/css";
-import "swiper/css/pagination";
+
+import 'swiper/swiper.min.css'
+import 'swiper/modules/pagination/pagination.min.css'
 import {Pagination,Autoplay } from "swiper";
 import DotLine from '../../assets/dot1.svg'
 

@@ -20,7 +20,7 @@ import UserContext from "./UserContext";
 import "./App.css";
 
 const web3Modal = new Web3Modal({
-  cacheProvider: true, // optional
+  cacheProvider: false, // optional
   providerOptions, // required
 });
 

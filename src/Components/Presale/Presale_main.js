@@ -12,6 +12,7 @@ import withReactContent from "sweetalert2-react-content";
 import Fire from "../../assets/fire.webp";
 import Bullet from "../../assets/de.webp";
 
+
 const MySwal = withReactContent(Swal);
 
 function Presale_main() {
@@ -20,7 +21,7 @@ function Presale_main() {
   const [showComp, setShowComp] = useState(false);
   const [isModal, setIsModal] = useState(false);
   const [isModal2, setIsModal2] = useState(false);
-  const { connectWallet, provider, contracts, account } =
+  const { connectWallet, disconnectWallet,  provider, contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ ETH: 0 });
   const tokenElement = useRef();
@@ -43,19 +44,34 @@ function Presale_main() {
     seconds: 0,
   });
 
-  const handleClick = async (e) => {
+  
+const disconnectButt = async (e) => {
+  e.preventDefault();
+  const disc = await disconnectWallet();
+    setShowComp(false);
+}
+
+
+ const handleClick = async (e) => {
     e.preventDefault();
-    if (!account) {
-      const success = await connectWallet();
-      if (!success) {
-        alert("please connect to wallet");
-      }
+   try {
+
+     const success = await connectWallet();
+     if (success) {
+      setClaimDisabled(true);
+      setShowComp(!showComp);
+      setAlertShown(true);
+      setSomeState(!somestate);
+     }
+    } catch (error) {
+      console.error(error);
+      alert("Something wrong, did you have any wallet?", error)
+      return;
     }
-    setClaimDisabled(true);
-    setShowComp(!showComp);
-    setAlertShown(true);
-    setSomeState(!somestate);
-  };
+  
+  }
+
+
   useEffect(() => {
     if (!account) {
       setBalances({
@@ -99,24 +115,6 @@ function Presale_main() {
       };
       getPr();
     } else {
-      const getPro = async () => {
-        provider.getNetwork().then((aa) => {
-          setNetwork(aa);
-        });
-      };
-
-      const getNet = async () => {
-          provider.getNetwork().then((aa) => {
-          setNetwork(aa);
-        });
-        console.log("VEDIAMO", aa.chainId)
-        if (aa.chainId !== 1) {
-          alert(
-            "Sorry you are on the wrong Network - Please switch to ETH chain!"
-          );
-        }
-      };
-
       const intervalId = setInterval(() => {
         const date = new Date();
         const futureDate = new Date("2023-03-21T00:00:00");
@@ -204,8 +202,6 @@ function Presale_main() {
         }
         setBalances(balances);
       };
-      getPro();
-      getNet();
       getAllBalances();
       getSaleProgress();
       getDeelance();
@@ -316,31 +312,30 @@ function Presale_main() {
   };
 
   const handleModal = async (e) => {
-              const getPro = async () => {
-        provider.getNetwork().then((aa) => {
-          setNetwork(aa);
-        });
-      };
-
-      const getNet = async () => {
-          provider.getNetwork().then((aa) => {
-          setNetwork(aa);
-        });
-        console.log("VEDIAMO", aa.chainId)
-        if (aa.chainId !== 1) {
-          alert(
-            "Sorry you are on the wrong Network - Please switch to ETH chain!"
-          );
-
+    e.preventDefault();
+  
+    const getNet = async () => {
+      try {
+        const providera = new ethers.providers.Web3Provider(window.ethereum);
+        const networka = await providera.getNetwork();
+        console.log("VEDIAMO", networka.chainId);
+        if (networka.chainId !== 1) {
+          alert("Sorry you are on the wrong Network - Please switch to ETH chain!");
+          return;
         } else {
+          setNetwork(networka);
           setIsModal(true);
         }
-      };
-    getPro();
+      } catch (error) {
+        console.error(error);
+        alert("Error", error)
+        return;
+      }
+    };
+  
     getNet();
-    e.preventDefault();
-
   };
+
   const buyCard = async (e) => {
     e.preventDefault();
     setIsModal2(true);
@@ -435,6 +430,10 @@ function Presale_main() {
                         disabled={claimDisabled ? true : false}
                       >
                         Claim
+                      </a>
+
+                      <a href="/" className="p1-btn" onClick={disconnectButt}>
+                        Disconnect
                       </a>
                     </div>
                   ) : (
