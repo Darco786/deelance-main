@@ -75,10 +75,15 @@ function Hero() {
 
               <div className="hero-links-and-verified-wrapper">
                 <div className="contract-verification-banner">
-                  <img src="images/coinsult-logo.svg" alt="" />
-                  <p className="verification-banner-title font-inter text-white mb-0">
-                    Audit and KYC | 100% Secured and Verified
-                  </p>
+                  <div className="audit-kyc">
+                    <p className="verification-banner-title font-inter text-white mb-0">
+                      Audit and KYC | 100% Secured and Verified
+                    </p>
+                  </div>
+                  <div className="audit-images">
+                    <img src="images/logo1.png" alt="" />
+                    <img src="images/coinsult-logo.svg" alt="" />
+                  </div>
                 </div>
 
                 <div className="hero-ss">

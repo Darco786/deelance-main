@@ -63,38 +63,42 @@
   width: 100%;
 }
 
-.hero-links-and-verified-wrapper > *:not(:last-child) {
-  margin-bottom: 1.8rem;
+.contract-verification-banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  margin-bottom: 5rem;
 }
 
-.contract-verification-banner {
+.audit-images {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.audit-images img {
+  height: 1.8rem;
+}
+.audit-images > *:not(:last-child) {
+  margin-right: 1.4rem;
+}
+
+.audit-kyc {
+  width: fit-content;
   border: 1px solid #9d9a9a;
   padding: 1rem 1.2rem;
   border-radius: 1rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.contract-verification-banner > img {
-  width: 100px;
-  display: block;
 }
 
 .verification-banner-title {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
   width: 100%;
   display: block;
   flex: unset;
   width: unset;
-}
-
-.contract-verification-banner > *:not(:last-child) {
-  margin-right: 1rem;
 }
 
 .hero-ss {
@@ -225,7 +229,7 @@
   .hero-ss {
     position: static;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   .hero-ss a {
     font-size: 1.4rem;
@@ -237,22 +241,6 @@
     width: 100%;
   }
 
-  .contract-verification-banner {
-    padding: 1rem 1rem;
-    flex-direction: column;
-    margin-top: 2rem;
-  }
-
-  .contract-verification-banner > *:not(:last-child) {
-    margin-right: 0rem;
-    margin-bottom: 1rem;
-  }
-
-  .contract-verification-banner > img {
-    width: 100px;
-    display: block;
-  }
-
   .verification-banner-title {
     font-size: 0.8rem;
     font-weight: bold;
@@ -260,5 +248,20 @@
     display: block;
     flex: unset;
     width: unset;
+  }
+
+  /*  */
+
+  .contract-verification-banner {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .audit-kyc {
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.4rem;
+  }
+  .audit-images img {
+    height: 1.7rem;
   }
 }

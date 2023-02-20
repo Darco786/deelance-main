@@ -63,13 +63,13 @@ function App() {
       }
       setContracts(contracts);
       setProvider(provider);
- 
+
       const accounts = await provider.listAccounts();
       if (accounts) setAccount(accounts[0]);
       return true;
     } catch (error) {
       if (error !== "Modal closed by user") {
-        alert(error)
+        alert(error);
         setConnectError(error);
       }
       return false;
