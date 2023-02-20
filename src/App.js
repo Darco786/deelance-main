@@ -47,7 +47,7 @@ function App() {
     try {
       let provider;
       try {
-        provider = await web3Modal.connect();
+        const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : new ethers.providers.JsonRpcProvider(RPCUrl));
       } catch (error) {
         return false;
       }
