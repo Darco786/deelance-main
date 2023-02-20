@@ -82,6 +82,12 @@ function Hero() {
                   </div>
                   <div className="audit-images">
                     <img src="images/logo1.png" alt="" />
+                    <div
+                      style={{
+                        height: "20px",
+                        border: "1px solid rgba(255,255,255,.3)",
+                      }}
+                    ></div>
                     <img src="images/coinsult-logo.svg" alt="" />
                   </div>
                 </div>
