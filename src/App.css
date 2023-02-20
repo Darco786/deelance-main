@@ -69,8 +69,8 @@
 /* seenOn */
 
 .seenOn {
-  margin-top: 0.6rem;
-  margin-bottom: 2.6rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 1000px) {
