@@ -158,11 +158,11 @@ const [showComp, setShowComp] = useState(false);
               <NavLink to="/academy">{t("header.links.academy")}</NavLink>
             </li>
             {account ? (
-            <li>
-              <a href="/" className="p1-btn" onClick={disconnectButt}>
-                Disconnect
-              </a>
-            </li> ) : (
+  <li>
+  <a href="/" className="p1-btn" onClick={disconnectButt}>
+    {`${account.substring(0, 6)}...${account.substring(account.length - 4)}`}
+  </a>
+</li> ) : (
 
             <li>
             <a href="/" className="p1-btn" onClick={handleClick}>
