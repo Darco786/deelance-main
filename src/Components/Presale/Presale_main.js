@@ -54,8 +54,14 @@ const disconnectButt = async (e) => {
 
  const handleClick = async (e) => {
     e.preventDefault();
-   try {
-
+    const providera = new ethers.providers.Web3Provider(window.ethereum);
+    const networka = await providera.getNetwork();
+    console.log("CIAOOO", networka.chainId)
+    if (networka.chainId !== 1) {
+        alert("Sorry wrong ChainID, switch to ETH chain!")
+        return false;
+      } else {
+      try {
      const success = await connectWallet();
      if (success) {
       setClaimDisabled(true);
@@ -68,7 +74,7 @@ const disconnectButt = async (e) => {
       alert("Something wrong, did you have any wallet?", error)
       return;
     }
-  
+ }
   }
 
 

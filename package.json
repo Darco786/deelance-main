@@ -47,6 +47,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "resolution": {
+  "react-error-overlay": "6.0.9"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
