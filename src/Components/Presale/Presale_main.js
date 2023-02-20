@@ -44,13 +44,6 @@ function Presale_main() {
     seconds: 0,
   });
 
-  
-const disconnectButt = async (e) => {
-  e.preventDefault();
-  const disc = await disconnectWallet();
-    setShowComp(false);
-}
-
 
  const handleClick = async (e) => {
     e.preventDefault();
@@ -426,7 +419,7 @@ const disconnectButt = async (e) => {
                     <div></div>
                   )}
 
-                  {showComp ? (
+                  {account ? (
                     <div className="text-center align-items-center d-flex jsa ">
                       <a href="/" className="p1-btn" onClick={handleModal}>
                         Buy Now

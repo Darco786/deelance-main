@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { ethers } from "ethers";
 import UserContext from "../../UserContext";
 
+
 const languages = [
   { value: "en", text: "english" },
   { value: "en", text: "English" },
@@ -28,7 +29,10 @@ const [showComp, setShowComp] = useState(false);
   const disconnectButt = async (e) => {
     e.preventDefault();
     const disc = await disconnectWallet();
-      setShowComp(false);
+    if (disc) {
+      setShowComp(!showComp);
+    }
+
   }
   
   
@@ -44,6 +48,7 @@ const [showComp, setShowComp] = useState(false);
         try {
        const success = await connectWallet();
        if (success) {
+        console.log("ACC", account)
         setShowComp(!showComp);
 
        }
