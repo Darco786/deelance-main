@@ -66,63 +66,72 @@ function Hero() {
             </div>
 
             <div
-              className="col-md-6 text-center align-items-center"
+              className="col-md-6 text-center align-items-center hero-gif-and-links"
               style={{ position: "relative" }}
             >
               <div className="second-img">
                 <Lottie options={defaultOptions} className="loti-1" />
               </div>
 
-              <div className="hero-ss">
-                <a
-                  href="https://twitter.com/deelance_com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTwitter />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100087266006183"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaFacebookSquare />
-                </a>
-                <a
-                  href="https://medium.com/@deeLance"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaMedium />
-                </a>
-                <a
-                  href="https://t.me/deelance_com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTelegramPlane />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/deelance"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://discord.gg/vhH3Sbt9NQ"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaDiscord />
-                </a>
-                <a
-                  href="https://www.instagram.com/deelanceofficial/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaInstagram />
-                </a>
+              <div className="hero-links-and-verified-wrapper">
+                <div className="contract-verification-banner">
+                  <img src="images/coinsult-logo.svg" alt="" />
+                  <p className="verification-banner-title font-inter text-white mb-0">
+                    Audit and KYC | 100% Secured and Verified
+                  </p>
+                </div>
+
+                <div className="hero-ss">
+                  <a
+                    href="https://twitter.com/deelance_com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaTwitter />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100087266006183"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaFacebookSquare />
+                  </a>
+                  <a
+                    href="https://medium.com/@deeLance"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaMedium />
+                  </a>
+                  <a
+                    href="https://t.me/deelance_com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaTelegramPlane />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/deelance"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="https://discord.gg/vhH3Sbt9NQ"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaDiscord />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/deelanceofficial/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaInstagram />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
