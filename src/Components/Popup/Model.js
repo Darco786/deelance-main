@@ -12,14 +12,20 @@ function Model({ setIsModal }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_2gb6skl', 'template_62uujcv', form.current, 'B9w0v-pm5DquLkrPw')
-    // emailjs
-    //   .sendForm(
-    //     "service_zeapxa2",
-    //     "template_0dm8dnd",
-    //     form.current,
-    //     "Jjh1PVkv4mQ9dUVXf"
-    //   )
+    emailjs
+      .sendForm(
+        "service_2gb6skl",
+        "template_62uujcv",
+        form.current,
+        "B9w0v-pm5DquLkrPw"
+      )
+      // emailjs
+      //   .sendForm(
+      //     "service_zeapxa2",
+      //     "template_0dm8dnd",
+      //     form.current,
+      //     "Jjh1PVkv4mQ9dUVXf"
+      //   )
       .then(
         (result) => {
           e.preventDefault();
@@ -100,7 +106,7 @@ function Model({ setIsModal }) {
                     Freelance
                   </option>
                   <option value="employer" id="employer" name="employer">
-                  <input
+                    <input
                       type="text"
                       className="fs-26px  weight-3"
                       placeholder="Employer"
@@ -110,7 +116,7 @@ function Model({ setIsModal }) {
                     Employer
                   </option>
                   <option value="Jobseeker" name="Jobseeker">
-                  <input
+                    <input
                       type="text"
                       className="fs-26px  weight-3"
                       placeholder="Jobseeker"

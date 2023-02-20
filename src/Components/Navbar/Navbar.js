@@ -114,9 +114,9 @@ function Navbar() {
               <NavLink to="/academy">{t("header.links.academy")}</NavLink>
             </li>
             <li>
-            <a href="/" className="p1-btn" >
-                        Disconnect
-                      </a>
+              <a href="/" className="p1-btn">
+                Disconnect
+              </a>
             </li>
             {/* <li>
               <select
