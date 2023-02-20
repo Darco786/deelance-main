@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,6 +7,8 @@ import OutsideClickDetector from "hooks/OutsideClickDetector";
 import useMediaQuery from "hooks/useMediaQuery";
 import NavLogo from "../../assets/main-logo.svg";
 import { useTranslation } from "react-i18next";
+import { ethers } from "ethers";
+import UserContext from "../../UserContext";
 
 const languages = [
   { value: "en", text: "english" },
@@ -17,6 +19,43 @@ const languages = [
 ];
 
 function Navbar() {
+  
+const { connectWallet, disconnectWallet,  provider, contracts, account } =
+useContext(UserContext);
+const [showComp, setShowComp] = useState(false);
+
+
+  const disconnectButt = async (e) => {
+    e.preventDefault();
+    const disc = await disconnectWallet();
+      setShowComp(false);
+  }
+  
+  
+   const handleClick = async (e) => {
+      e.preventDefault();
+      const providera = new ethers.providers.Web3Provider(window.ethereum);
+      const networka = await providera.getNetwork();
+      console.log("CIAOOO", networka.chainId)
+      if (networka.chainId !== 1) {
+          alert("Sorry wrong ChainID, switch to ETH chain!")
+          return false;
+        } else {
+        try {
+       const success = await connectWallet();
+       if (success) {
+        setShowComp(!showComp);
+
+       }
+      } catch (error) {
+        console.error(error);
+        alert("Something wrong, did you have any wallet?", error)
+        return;
+      }
+   }
+    }
+  
+  
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   // const [isOpen, setIsOpen] =useState(false)
 
@@ -113,11 +152,19 @@ function Navbar() {
             <li>
               <NavLink to="/academy">{t("header.links.academy")}</NavLink>
             </li>
+            {account ? (
             <li>
-              <a href="/" className="p1-btn">
+              <a href="/" className="p1-btn" onClick={disconnectButt}>
                 Disconnect
               </a>
+            </li> ) : (
+
+            <li>
+            <a href="/" className="p1-btn" onClick={handleClick}>
+            Connect
+            </a>
             </li>
+            )}
             {/* <li>
               <select
                 value={lang}

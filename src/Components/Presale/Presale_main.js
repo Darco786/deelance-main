@@ -61,6 +61,12 @@ const disconnectButt = async (e) => {
         alert("Sorry wrong ChainID, switch to ETH chain!")
         return false;
       } else {
+      if (account) {
+        setClaimDisabled(true);
+        setShowComp(!showComp);
+        setAlertShown(true);
+        setSomeState(!somestate); 
+      } else {
       try {
      const success = await connectWallet();
      if (success) {
@@ -75,6 +81,7 @@ const disconnectButt = async (e) => {
       return;
     }
  }
+}
   }
 
 
@@ -438,9 +445,7 @@ const disconnectButt = async (e) => {
                         Claim
                       </a>
 
-                      <a href="/" className="p1-btn" onClick={disconnectButt}>
-                        Disconnect
-                      </a>
+                
                     </div>
                   ) : (
                     <div className="text-center align-items-center d-flex jsa ">
