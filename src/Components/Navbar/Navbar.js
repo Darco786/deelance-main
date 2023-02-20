@@ -133,7 +133,7 @@ const [showComp, setShowComp] = useState(false);
 
                 <li>
                   <a
-                    href="https://docs.dework.live/"
+                    href="https://docs.deelance.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
