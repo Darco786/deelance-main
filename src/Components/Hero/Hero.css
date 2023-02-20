@@ -52,8 +52,53 @@
 .hero-img {
   width: auto;
 }
+
+.hero-gif-and-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-links-and-verified-wrapper {
+  width: 100%;
+}
+
+.hero-links-and-verified-wrapper > *:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+.contract-verification-banner {
+  border: 1px solid #9d9a9a;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.contract-verification-banner > img {
+  width: 100px;
+  display: block;
+}
+
+.verification-banner-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  flex: unset;
+  width: unset;
+}
+
+.contract-verification-banner > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
 .hero-ss {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   display: flex;
@@ -133,11 +178,11 @@
 }
 
 .second-img {
-  position: absolute;
-  top: 50%;
+  /* position: absolute; */
+  /* top: 50%; */
   right: 0;
-  transform: translateY(-50%);
-  width: 96%;
+  /* transform: translateY(-50%); */
+  width: 100%;
   /* border: 2px solid red; */
 }
 .loti-1 {
