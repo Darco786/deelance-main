@@ -236,4 +236,29 @@
     transform: translateY(0%);
     width: 100%;
   }
+
+  .contract-verification-banner {
+    padding: 1rem 1rem;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .contract-verification-banner > *:not(:last-child) {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .contract-verification-banner > img {
+    width: 100px;
+    display: block;
+  }
+
+  .verification-banner-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    flex: unset;
+    width: unset;
+  }
 }
