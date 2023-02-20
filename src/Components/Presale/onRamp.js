@@ -23,7 +23,7 @@ function onRamp({ setIsModal2 }) {
                   margin: "auto",
                   maxWidth: "460px",
                 }}
-                src="https://buy.onramper.com"
+                src="https://global.transak.com/"
                 height="540px"
                 width="360px"
                 title="Onramper widget"
