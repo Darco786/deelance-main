@@ -97,7 +97,8 @@ a:hover {
   font-size: 1.3rem;
 }
 
-.menu-link ul li a {
+.menu-link ul li a,
+.menu-link ul li .a-link {
   transition: 0.5s;
   font-style: normal;
   font-weight: 500;
@@ -106,7 +107,8 @@ a:hover {
   text-transform: uppercase;
   color: #ffffff;
 }
-.menu-link ul li:hover > a {
+.menu-link ul li:hover > a,
+.menu-link ul li:hover > .a-link {
   transform-origin: left;
   color: #00e86d;
   text-decoration: wavy;

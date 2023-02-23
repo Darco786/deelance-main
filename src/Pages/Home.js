@@ -46,7 +46,9 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
 
       <Features />
 
-      <About />
+      <div id="about-us">
+        <About />
+      </div>
 
       <Find />
 
