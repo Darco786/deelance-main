@@ -57,6 +57,7 @@ function Navbar() {
 
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   // const [isOpen, setIsOpen] =useState(false)
+  const mobileMenueRef = OutsideClickDetector(() => setShowMediaIcons(false));
 
   const [isHover, setIsHover] = useState(false);
 
@@ -92,6 +93,7 @@ function Navbar() {
           </div>
         </div>
         <div
+          ref={mobileMenueRef}
           className={
             showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
           }
@@ -121,6 +123,7 @@ function Navbar() {
                     to="about-us"
                     style={{ cursor: "pointer" }}
                     className="a-link"
+                    onClick={() => setShowMediaIcons(false)}
                   >
                     {t("header.links.about_us_menu.1")}
                   </ScrollLink>
