@@ -194,7 +194,7 @@ a:hover {
     height: 3rem;
     grid-template-columns: unset;
     justify-content: space-between;
-    width: 100% !important;
+    /* width: 100% !important; */
   }
   .dropdown-active {
     visibility: visible;

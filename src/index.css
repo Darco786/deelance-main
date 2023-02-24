@@ -15,6 +15,12 @@
   font-family: "Inter", sans-serif;
 }
 
+:root {
+  --green-dark: #00a652;
+  --green-light: #00e86d;
+  --green-text: #00e069;
+}
+
 body {
   background-color: #111827 !important;
   font-family: "Avenir Next LT Pro", sans-serif !important;
@@ -238,4 +244,13 @@ section {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #000000;
+}
+
+.cut-text {
+  --width: 100%;
+
+  display: block;
+  max-width: var(--width);
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }

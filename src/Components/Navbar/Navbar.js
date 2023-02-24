@@ -12,7 +12,6 @@ import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
 
 const languages = [
-  { value: "en", text: "english" },
   { value: "en", text: "English" },
   { value: "ar", text: "Arabic" },
   { value: "ru", text: "russian" },
@@ -83,123 +82,133 @@ function Navbar() {
 
   return (
     <>
-      <nav className="container main-nav">
-        <div className="logo">
-          {" "}
-          <div className="d-flex foot-logo">
-            <NavLink to="/">
-              <img src={NavLogo} alt="" className="" />
-            </NavLink>
+      <div className="container">
+        <nav className="main-nav">
+          <div className="logo">
+            {" "}
+            <div className="d-flex foot-logo">
+              <NavLink to="/">
+                <img src={NavLogo} alt="" className="" />
+              </NavLink>
+            </div>
           </div>
-        </div>
-        <div
-          ref={mobileMenueRef}
-          className={
-            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }
-        >
-          <ul>
-            <li>
-              <NavLink to="/">{t("header.links.home")}</NavLink>
-            </li>
-            <li className="drop-btn" ref={dropdownRef}>
-              <a
-                href="#drop"
-                className="dp"
-                onMouseEnter={() => (isBellow1024px ? null : setIsHover(true))}
-                onMouseLeave={() => (isBellow1024px ? null : setIsHover(false))}
-                onClick={() => dropdownToggler()}
-              >
-                {t("header.links.about")}
-                <FaAngleDown />
-              </a>
-              <div
-                className={isHover ? "dropdown-active" : "dropdown"}
-                onMouseEnter={() => (isBellow1024px ? null : setIsHover(true))}
-                onMouseLeave={() => (isBellow1024px ? null : setIsHover(false))}
-              >
-                <li>
-                  <ScrollLink
-                    to="about-us"
-                    style={{ cursor: "pointer" }}
-                    className="a-link"
-                    onClick={() => setShowMediaIcons(false)}
-                  >
-                    {t("header.links.about_us_menu.1")}
-                  </ScrollLink>
-                </li>
+          <div
+            ref={mobileMenueRef}
+            className={
+              showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+            }
+          >
+            <ul>
+              <li>
+                <NavLink to="/">{t("header.links.home")}</NavLink>
+              </li>
+              <li className="drop-btn" ref={dropdownRef}>
+                <a
+                  href="#drop"
+                  className="dp"
+                  onMouseEnter={() =>
+                    isBellow1024px ? null : setIsHover(true)
+                  }
+                  onMouseLeave={() =>
+                    isBellow1024px ? null : setIsHover(false)
+                  }
+                  onClick={() => dropdownToggler()}
+                >
+                  {t("header.links.about")}
+                  <FaAngleDown />
+                </a>
+                <div
+                  className={isHover ? "dropdown-active" : "dropdown"}
+                  onMouseEnter={() =>
+                    isBellow1024px ? null : setIsHover(true)
+                  }
+                  onMouseLeave={() =>
+                    isBellow1024px ? null : setIsHover(false)
+                  }
+                >
+                  <li>
+                    <ScrollLink
+                      to="about-us"
+                      style={{ cursor: "pointer" }}
+                      className="a-link"
+                      onClick={() => setShowMediaIcons(false)}
+                    >
+                      {t("header.links.about_us_menu.1")}
+                    </ScrollLink>
+                  </li>
 
-                <li>
-                  <NavLink to="/team">
-                    {t("header.links.about_us_menu.2")}
-                  </NavLink>
-                </li>
+                  <li>
+                    <NavLink to="/team">
+                      {t("header.links.about_us_menu.2")}
+                    </NavLink>
+                  </li>
 
+                  <li>
+                    <a
+                      href="https://docs.deelance.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {t("header.links.about_us_menu.3")}
+                    </a>
+                  </li>
+                </div>
+              </li>
+
+              <li>
+                <NavLink to="/rewards">{t("header.links.win")}</NavLink>
+              </li>
+              <li>
+                <NavLink to="/nft-market">
+                  {t("header.links.nft_marketplace")}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/job-portal">{t("header.links.find_job")}</NavLink>
+              </li>
+              <li>
+                <NavLink to="/academy">{t("header.links.academy")}</NavLink>
+              </li>
+              {account ? (
                 <li>
-                  <a
-                    href="https://docs.deelance.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t("header.links.about_us_menu.3")}
+                  <a href="/" className="p1-btn" onClick={disconnectButt}>
+                    {`${account.substring(0, 6)}...${account.substring(
+                      account.length - 4
+                    )}`}
                   </a>
                 </li>
-              </div>
-            </li>
-
-            <li>
-              <NavLink to="/rewards">{t("header.links.win")}</NavLink>
-            </li>
-            <li>
-              <NavLink to="/nft-market">
-                {t("header.links.nft_marketplace")}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/job-portal">{t("header.links.find_job")}</NavLink>
-            </li>
-            <li>
-              <NavLink to="/academy">{t("header.links.academy")}</NavLink>
-            </li>
-            {account ? (
+              ) : (
+                <li>
+                  <a href="/" className="p1-btn" onClick={handleClick}>
+                    Connect
+                  </a>
+                </li>
+              )}
               <li>
-                <a href="/" className="p1-btn" onClick={disconnectButt}>
-                  {`${account.substring(0, 6)}...${account.substring(
-                    account.length - 4
-                  )}`}
-                </a>
+                <select
+                  value={lang}
+                  onChange={handleChange}
+                  className="explore-btn"
+                >
+                  {languages.map((item) => {
+                    return (
+                      <option key={item.value} value={item.value}>
+                        {item.text}
+                      </option>
+                    );
+                  })}
+                </select>
               </li>
-            ) : (
-              <li>
-                <a href="/" className="p1-btn" onClick={handleClick}>
-                  Connect
-                </a>
-              </li>
-            )}
-            {/* <li>
-              <select
-                value={lang}
-                onChange={handleChange}
-                className="explore-btn"
-              >
-                {languages.map((item) => {
-                  return (
-                    <option key={item.value} value={item.value}>
-                      {item.text}
-                    </option>
-                  );
-                })}
-              </select>
-            </li> */}
-          </ul>
-        </div>
-        {/* hamburget menu start  */}
-        <div className="hamburger-menu">
-          <a href="#home" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-            <GiHamburgerMenu />
-          </a>
-        </div>
-      </nav>
+            </ul>
+          </div>
+          {/* hamburget menu start  */}
+          <div className="hamburger-menu">
+            <a href="#home" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+              <GiHamburgerMenu />
+            </a>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }
