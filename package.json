@@ -19,6 +19,7 @@
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.1.1",
+    "locize-cli": "^7.13.2",
     "lottie-react": "^2.3.1",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
@@ -46,7 +47,8 @@
     "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sync": "yarn locize sync --path ./src/translations --api-key 0ea79762-ac74-48b0-9a09-5fb530cf5d5c --project-id a6ad41b6-ac0f-4312-9b7a-7dbcd306fa2e --reference-language-only false"
   },
   "resolution": {
     "react-error-overlay": "6.0.9"
