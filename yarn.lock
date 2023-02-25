@@ -9343,6 +9343,13 @@ locize-cli@^7.13.2:
     xliff "6.1.0"
     xlsx "0.18.5"
 
+locize-lastused@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/locize-lastused/-/locize-lastused-3.1.1.tgz#9df4929fea917195bbb95e2119ae7c66819d76f7"
+  integrity sha512-U7LTQChfeAC6lq148WlH88AGCvcx1CP8W794lpsSQD95JOhzayeinSYtAjQa22tumh17inkokSra1hJSv53lXw==
+  dependencies:
+    cross-fetch "3.1.5"
+
 locize@^2.4.5:
   version "2.4.5"
   resolved "https://registry.yarnpkg.com/locize/-/locize-2.4.5.tgz#66ecdb0e9b807b1d793d6db46b72ce85d80f444e"
