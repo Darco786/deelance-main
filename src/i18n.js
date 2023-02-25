@@ -5,18 +5,21 @@ import { initReactI18next } from "react-i18next";
 import common_en from "./translations/en/common.json";
 import Backend from "i18next-locize-backend";
 import { locizePlugin } from "locize";
+import LastUsed from "locize-lastused";
 
 // const apiKey = "LQyWQlXFALWsD2KTScTa1Q";
 // const loadPath = `https://api.i18nexus.com/project_resources/translations/{{lng}}/{{ns}}.json?api_key=${apiKey}`;
 
 i18next
   .use(locizePlugin)
+  .use(LastUsed)
   .use(LanguageDetector)
   .use(initReactI18next)
   .use(Backend)
   .init({
     debug: true,
     fallbackLng: "en",
+    defaultNS: "en",
     saveMissing: true,
     backend: {
       projectId: "a6ad41b6-ac0f-4312-9b7a-7dbcd306fa2e",
