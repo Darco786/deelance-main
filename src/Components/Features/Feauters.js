@@ -31,13 +31,14 @@ function Feauters() {
       <div className="container text-center">
         <div className="feat-header">
           <h1>
-            {t("key_features.key")}{" "}
-            <span className="green">{t("key_features.features")}</span>
+            {t("Key")} <span className="green">{t("Features")}</span>
           </h1>
           <img src={Dash} alt="" />
         </div>
       </div>
-      <MobFeauters />
+
+      <MobFeauters data={data} />
+
       <div className="container desktop-feat">
         <div className="row justify-content-center align-items-center">
           {data.map((item, i) => (

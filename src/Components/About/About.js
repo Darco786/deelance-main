@@ -38,8 +38,7 @@ function About() {
             <div className="col-md-6">
               <div className="head-about-txt">
                 <h1>
-                  {t("about_us.about")}{" "}
-                  <span className="green">{t("about_us.us")}</span>
+                  {t("About")} <span className="green">{t("Us")}</span>
                 </h1>
               </div>
               <div className="about-details">

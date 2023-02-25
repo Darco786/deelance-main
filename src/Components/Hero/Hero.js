@@ -44,10 +44,10 @@ function Hero() {
           >
             <div className="col-md-6">
               <h1>
-                {t("hero.title.creating")}{" "}
-                <span className="green"> {t("hero.title.web3_space")} </span>
-                {t("hero.title.For_Better")}{" "}
-                <span className="green">{t("hero.title.work_together")}</span>
+                {t("Creating")}{" "}
+                <span className="green"> {t("Web3 Space")} </span>
+                {t("For Better World to")}{" "}
+                <span className="green">{t("Work Together")}</span>
               </h1>
               <p className="hero-sp-p">{t("hero.hero_details")}</p>
               <div className="hero-btn">
@@ -56,8 +56,9 @@ function Hero() {
                   className="hero-btn-1"
                   onClick={() => setIsModal(true)}
                 >
-                  {t("buttons.sign_up")} <AiOutlineArrowRight />
+                  {t("Sign Up")} <AiOutlineArrowRight />
                 </button>
+
                 {/* <button className="hero-btn-2">{t("buttons.buy_now")}</button> */}
               </div>
               <div className="presale-hero-box">
@@ -77,7 +78,7 @@ function Hero() {
                 <div className="contract-verification-banner">
                   <div className="audit-kyc">
                     <p className="verification-banner-title font-inter text-white mb-0">
-                      Audit and KYC | 100% Secured and Verified
+                      {t("Audit and KYC | 100% Secured and Verified")}
                     </p>
                   </div>
                   <div className="audit-images">

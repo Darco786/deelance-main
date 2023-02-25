@@ -12,7 +12,6 @@ import withReactContent from "sweetalert2-react-content";
 import Fire from "../../assets/fire.webp";
 import Bullet from "../../assets/de.webp";
 
-
 const MySwal = withReactContent(Swal);
 
 function Presale_main() {
@@ -21,7 +20,7 @@ function Presale_main() {
   const [showComp, setShowComp] = useState(false);
   const [isModal, setIsModal] = useState(false);
   const [isModal2, setIsModal2] = useState(false);
-  const { connectWallet, disconnectWallet,  provider, contracts, account } =
+  const { connectWallet, disconnectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ ETH: 0 });
   const tokenElement = useRef();
@@ -44,39 +43,37 @@ function Presale_main() {
     seconds: 0,
   });
 
-
- const handleClick = async (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
     const providera = new ethers.providers.Web3Provider(window.ethereum);
     const networka = await providera.getNetwork();
-    console.log("CIAOOO", networka.chainId)
+    console.log("CIAOOO", networka.chainId);
     if (networka.chainId !== 1) {
-        alert("Sorry wrong ChainID, switch to ETH chain!")
-        return false;
-      } else {
+      alert("Sorry wrong ChainID, switch to ETH chain!");
+      return false;
+    } else {
       if (account) {
         setClaimDisabled(true);
         setShowComp(!showComp);
         setAlertShown(true);
-        setSomeState(!somestate); 
+        setSomeState(!somestate);
       } else {
-      try {
-     const success = await connectWallet();
-     if (success) {
-      setClaimDisabled(true);
-      setShowComp(!showComp);
-      setAlertShown(true);
-      setSomeState(!somestate);
-     }
-    } catch (error) {
-      console.error(error);
-      alert("Something wrong, did you have any wallet?", error)
-      return;
+        try {
+          const success = await connectWallet();
+          if (success) {
+            setClaimDisabled(true);
+            setShowComp(!showComp);
+            setAlertShown(true);
+            setSomeState(!somestate);
+          }
+        } catch (error) {
+          console.error(error);
+          alert("Something wrong, did you have any wallet?", error);
+          return;
+        }
+      }
     }
- }
-}
-  }
-
+  };
 
   useEffect(() => {
     if (!account) {
@@ -319,14 +316,16 @@ function Presale_main() {
 
   const handleModal = async (e) => {
     e.preventDefault();
-  
+
     const getNet = async () => {
       try {
         const providera = new ethers.providers.Web3Provider(window.ethereum);
         const networka = await providera.getNetwork();
         console.log("VEDIAMO", networka.chainId);
         if (networka.chainId !== 1) {
-          alert("Sorry you are on the wrong Network - Please switch to ETH chain!");
+          alert(
+            "Sorry you are on the wrong Network - Please switch to ETH chain!"
+          );
           return;
         } else {
           setNetwork(networka);
@@ -334,11 +333,11 @@ function Presale_main() {
         }
       } catch (error) {
         console.error(error);
-        alert("Error", error)
+        alert("Error", error);
         return;
       }
     };
-  
+
     getNet();
   };
 
@@ -371,7 +370,7 @@ function Presale_main() {
                 />
               </div>
               <p className="bar-info">
-                {t("presale.progress")} {percantage}% (
+                {t("Progress")} {percantage}% (
                 <span className="green">
                   {" "}
                   $ {(total - inSale).toLocaleString("en-US")}{" "}
@@ -382,22 +381,22 @@ function Presale_main() {
                 <div className="pre-box-2">
                   <div className="head-title text-center">
                     <h3>
-                      {t("presale.presale")} {round.toString()}
+                      {t("PreSale - Round")} {round.toString()}
                     </h3>
                     <span className="span-btn">
-                      $10 {t("presale.min")} / $20,000 {t("presale.max")}
+                      $10 {t("Min")} / $20,000 {t("Max")}
                     </span>
                     <a
                       href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code"
                       target="_blank"
                     >
-                      <p>{t("presale.official_contract")}</p>
+                      <p>{t("Deelance Official Contracts")}</p>
                     </a>
 
                     <p className="green">
                       {" "}
                       <Link to="/how-to-buy" target="_blank">
-                        {t("presale.buy")}
+                        {t("How To Buy")}
                       </Link>{" "}
                     </p>
                   </div>
@@ -437,13 +436,11 @@ function Presale_main() {
                       >
                         Claim
                       </a>
-
-                
                     </div>
                   ) : (
                     <div className="text-center align-items-center d-flex jsa ">
                       <a href="/" className="p1-btn" onClick={handleClick}>
-                        {account ? "Presale" : "Connect Wallet"}
+                        {account ? t("Presale") : t("Connect Wallet")}
                       </a>
                     </div>
                   )}
@@ -461,7 +458,7 @@ function Presale_main() {
                 </p> */}
                 <p className="white count-down text-center next-p">
                   {" "}
-                  Next Price:{" "}
+                  {t("Next Price:")}{" "}
                   <span className="green">
                     {" "}
                     {round.toString() == "1"

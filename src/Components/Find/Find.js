@@ -2,8 +2,10 @@ import React from "react";
 import "./Find.css";
 import Lottie from "react-lottie";
 import Meta from "./metav.json";
+import { useTranslation } from "react-i18next";
 
 function Find() {
+  const { t } = useTranslation("common");
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -20,23 +22,31 @@ function Find() {
             <div className="col-md-6">
               <div className="meta-1">
                 <h1>
-                  Find Freelancer In <span className="green">Metaverse</span>{" "}
+                  {t("Find Freelancer In")}{" "}
+                  <span className="green">{t("Metaverse")}</span>{" "}
                 </h1>
                 <p>
-                  Deelance ” is a project that creates unique contents on
-                  Metaverse technology that is a huge trend around the world.
-                  Its aim is to move people to another dimension within the
-                  digital universe.{" "}
+                  {t(
+                    "find.description_1",
+                    "Deelance ” is a project that creates unique contents on Metaverse technology that is a huge trend around the world. Its aim is to move people to another dimension within the digital universe."
+                  )}
                 </p>
                 <p>
                   {" "}
-                  Metaverse - where buyers can interact with freelancers in the
-                  office space and have a discussion
+                  {t(
+                    "find.description_2",
+                    "Metaverse - where buyers can interact with freelancers in the office space and  a discussion"
+                  )}
                 </p>
               </div>
               <div className="gp-2">
-                <a href="https://demo.corporate-metaverse.com/join" target='_blank'   rel="noreferrer" className="demo-btn">
-                  DEMO
+                <a
+                  href="https://demo.corporate-metaverse.com/join"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="demo-btn"
+                >
+                  {t("buttons.demo", "DEMO")}
                 </a>
               </div>
             </div>

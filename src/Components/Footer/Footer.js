@@ -10,8 +10,12 @@ import {
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
-import NavLogo from '../../assets/main-logo.svg'
+import NavLogo from "../../assets/main-logo.svg";
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <footer className="footer">
@@ -20,36 +24,34 @@ function Footer() {
             <div className="col-md-4 col-6">
               <div className="footer-logo">
                 <NavLink to="/">
-                  <img
-                    src={NavLogo}
-                    alt="foot-logo"
-                  />
+                  <img src={NavLogo} alt="foot-logo" />
                 </NavLink>
               </div>
-             
+
               <div className="foot-p">
                 <p>
-                  Deelance is a freelancing and Recruitment platform based on
-                  Web3 platform that is redefining how freelancers connect with
-                  potential employers and buyers.
+                  {t(
+                    "footer.subtitle",
+                    "Deelance is a freelancing and Recruitment platform based on Web3 platform that is redefining how freelancers connect with potential employers and buyers."
+                  )}
                 </p>
               </div>
             </div>
 
             <div className="col-md-2 col-6">
-            <div className="foot-link">
+              <div className="foot-link">
                 <NavLink to="/privacy-policy" target="_blank">
-                  <p>Privacy</p>
+                  <p>{t("Privacy")}</p>
                 </NavLink>
                 <NavLink to="/risk" target="_blank">
-                  <p>Risk Warning</p>
+                  <p>{t("Risk Warning")}</p>
                 </NavLink>
                 <a href="/">
-                  <p>Announcements</p>
+                  <p>{t("Announcements")}</p>
                 </a>
 
                 <NavLink href="/privacy-policy" target="_blank">
-                  <p>Cookie Preferences</p>
+                  <p>{t("Cookie Preferences")}</p>
                 </NavLink>
               </div>
             </div>
@@ -57,25 +59,24 @@ function Footer() {
             <div className="col-md-2 col-6">
               <div className="foot-link2">
                 <a href="/">
-                  <p>About</p>
+                  <p>{t("About")}</p>
                 </a>
                 <a href="/">
-                  <p>Careers</p>
+                  <p>{t("Careers")}</p>
                 </a>
 
                 <a href="/">
-                  <p>Community</p>
+                  <p>{t("Community")}</p>
                 </a>
 
                 <NavLink to="/terms" target="_blank">
-                  <p>Terms</p>
+                  <p>{t("Terms")}</p>
                 </NavLink>
               </div>
             </div>
 
             <div className="col-md-4 col-6">
-        
-              <p className="sc-1">Conect With The Community</p>
+              <p className="sc-1">{t("Conect With The Community")}</p>
               <div className="foot-social">
                 <a
                   href="https://twitter.com/deelance_com"
@@ -130,10 +131,9 @@ function Footer() {
             </div>
           </div>
           <p className="foot-bottom-text">
-          2022© Deelance Inc. | All Rights Reserved{" "}
-        </p>
+            {t("2022© Deelance Inc. | All Rights Reserved")}
+          </p>
         </div>
-      
       </footer>
     </>
   );

@@ -8,16 +8,32 @@ import Fiver from "../../assets/fiver.png";
 import Freelance from "../../assets/freela.png";
 import Upwork from "../../assets/Upwork.png";
 import "./Why.css";
+import { useTranslation } from "react-i18next";
 
 function WhyUs() {
+  const { t } = useTranslation("common");
+
+  const keys = [
+    t("table.key1", "Client Fee"),
+    t("table.key2", "Freelancer Fee"),
+    t("table.key3", "Withdrawal Fee"),
+    t("table.key4", "Decentralized"),
+    t("table.key5", "Content Ownership"),
+    t("table.key6", "Efficient Escrow"),
+    t("table.key7", "No Limit on task size"),
+    t("table.key8", "scalable dispute system"),
+    t("table.key9", "NFT / Metaverse"),
+    t("table.key10", "Staff Recruitment"),
+  ];
+
   return (
     <section className="why-us">
-      <MobWhyus />
+      <MobWhyus keys={keys} />
 
       <div className="container desktop-box-why">
         <div className="why-us-head text-center">
           <h1>
-            Why <span className="green">Deelance</span>{" "}
+            {t("Why")} <span className="green">{t("Deelance")}</span>{" "}
           </h1>
           <img src={Dash} alt="" />
         </div>
@@ -58,7 +74,7 @@ function WhyUs() {
             <tbody>
               <tr className="bg-blue">
                 <th scope="row " className="b-right">
-                  <p className="t-head">Client Fee</p>
+                  <p className="t-head">{keys[0]}</p>
                 </th>
                 <td className="text-center b-right t-head">2%</td>
                 <td className="text-center t-head">3%</td>
@@ -67,7 +83,7 @@ function WhyUs() {
               </tr>
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head">Freelancer Fee</p>{" "}
+                  <p className="t-head">{keys[1]}</p>{" "}
                 </th>
                 <td className="text-center b-right t-head">10%</td>
                 <td className="text-center t-head">10%</td>
@@ -76,7 +92,7 @@ function WhyUs() {
               </tr>
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p className="t-head">Withdrawal Fee</p>
+                  <p className="t-head">{keys[2]}</p>
                 </th>
                 <td className="text-center b-right t-head-2">Crypto/Instant</td>
                 <td className="text-center t-head-2">
@@ -97,7 +113,7 @@ function WhyUs() {
               </tr>
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head">Decentralized</p>
+                  <p className="t-head">{keys[3]}</p>
                 </th>
                 <td className="green text-center b-right">
                   <AiOutlineCheckCircle />
@@ -114,7 +130,7 @@ function WhyUs() {
               </tr>
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p className="t-head">Content Ownership</p>
+                  <p className="t-head">{keys[4]}</p>
                 </th>
                 <td className="green text-center b-right">
                   <AiOutlineCheckCircle />
@@ -131,7 +147,7 @@ function WhyUs() {
               </tr>
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head"> Efficient Escrow</p>
+                  <p className="t-head"> {keys[5]}</p>
                 </th>
                 <td className="text-center b-right t-head">Yes</td>
                 <td className="text-center t-head">No/Partial</td>
@@ -141,7 +157,7 @@ function WhyUs() {
 
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p className="t-head">No Limit On Task Size</p>
+                  <p className="t-head">{keys[6]}</p>
                 </th>
                 <td className="green text-center b-right">
                   <AiOutlineCheckCircle />
@@ -159,7 +175,7 @@ function WhyUs() {
 
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head">Scalable Dispute System</p>
+                  <p className="t-head">{keys[7]}</p>
                 </th>
                 <td className="green text-center b-right">
                   <AiOutlineCheckCircle />
@@ -177,7 +193,7 @@ function WhyUs() {
 
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p className="t-head">NFT / Metaverse</p>
+                  <p className="t-head">{keys[8]}</p>
                 </th>
                 <td className="green text-center b-right">
                   <AiOutlineCheckCircle />
@@ -194,7 +210,7 @@ function WhyUs() {
               </tr>
               <tr>
                 <th scope="row" className="b-right">
-                  <p className="t-head">Staff Recruitment</p>
+                  <p className="t-head">{keys[9]}</p>
                 </th>
                 <td className="green text-center b-right">
                   <AiOutlineCheckCircle />

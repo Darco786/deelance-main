@@ -12,6 +12,7 @@ import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
 
 const languages = [
+  { value: "0", text: "Select" },
   { value: "en", text: "English" },
   { value: "ar", text: "Arabic" },
   { value: "ru", text: "russian" },
@@ -68,17 +69,29 @@ function Navbar() {
   const dropdownToggler = () => {
     setIsHover((val) => !val);
   };
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   const [lang, setLang] = useState("en");
+  const selectRef = useRef();
 
   // This function put query that helps to
   // change the language
-  const handleChange = (e) => {
+  function handleChange(e) {
     setLang(e.target.value);
-    let loc = "/";
-    window.location.replace(loc + "?lng=" + e.target.value);
-  };
+
+    const value = selectRef.current.value;
+
+    if (value == "0") return;
+
+    i18n.changeLanguage(value);
+
+    // if (value == "0") return;
+
+    // console.log(value);
+
+    // let loc = "/";
+    // window.location.replace(value == "en" ? loc : loc + "?lng=" + value);
+  }
 
   return (
     <>
@@ -100,7 +113,7 @@ function Navbar() {
           >
             <ul>
               <li>
-                <NavLink to="/">{t("header.links.home")}</NavLink>
+                <NavLink to="/">{t("Home")}</NavLink>
               </li>
               <li className="drop-btn" ref={dropdownRef}>
                 <a
@@ -114,7 +127,7 @@ function Navbar() {
                   }
                   onClick={() => dropdownToggler()}
                 >
-                  {t("header.links.about")}
+                  {t("About")}
                   <FaAngleDown />
                 </a>
                 <div
@@ -133,14 +146,12 @@ function Navbar() {
                       className="a-link"
                       onClick={() => setShowMediaIcons(false)}
                     >
-                      {t("header.links.about_us_menu.1")}
+                      {t("About")}
                     </ScrollLink>
                   </li>
 
                   <li>
-                    <NavLink to="/team">
-                      {t("header.links.about_us_menu.2")}
-                    </NavLink>
+                    <NavLink to="/team">{t("Team")}</NavLink>
                   </li>
 
                   <li>
@@ -149,7 +160,7 @@ function Navbar() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {t("header.links.about_us_menu.3")}
+                      {t("Whitepaper")}
                     </a>
                   </li>
                 </div>
@@ -159,15 +170,13 @@ function Navbar() {
                 <NavLink to="/rewards">{t("header.links.win")}</NavLink>
               </li>
               <li>
-                <NavLink to="/nft-market">
-                  {t("header.links.nft_marketplace")}
-                </NavLink>
+                <NavLink to="/nft-market">{t("Nft Marketplace")}</NavLink>
               </li>
               <li>
-                <NavLink to="/job-portal">{t("header.links.find_job")}</NavLink>
+                <NavLink to="/job-portal">{t("find job")}</NavLink>
               </li>
               <li>
-                <NavLink to="/academy">{t("header.links.academy")}</NavLink>
+                <NavLink to="/academy">{t("Academy")}</NavLink>
               </li>
               {account ? (
                 <li>
@@ -180,19 +189,20 @@ function Navbar() {
               ) : (
                 <li>
                   <a href="/" className="p1-btn" onClick={handleClick}>
-                    Connect
+                    {t("Connect")}
                   </a>
                 </li>
               )}
               <li>
                 <select
+                  ref={selectRef}
                   value={lang}
                   onChange={handleChange}
                   className="explore-btn"
                 >
-                  {languages.map((item) => {
+                  {languages.map((item, i) => {
                     return (
-                      <option key={item.value} value={item.value}>
+                      <option key={i} value={item.value}>
                         {item.text}
                       </option>
                     );

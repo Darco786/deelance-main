@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 
-import 'swiper/swiper.min.css'
+import "swiper/swiper.min.css";
 
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
@@ -16,6 +16,7 @@ import Upwork from "../../assets/Upwork.png";
 import { Navigation } from "swiper";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const FullCol = ({ img, items, textAlign = "center" }) => {
   return (
@@ -46,16 +47,17 @@ const FullCol = ({ img, items, textAlign = "center" }) => {
   );
 };
 
-function MobWhyus() {
+function MobWhyus({ keys }) {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
+  const { t } = useTranslation("common");
 
   return (
     <>
       <div className="container-fluid mob-why-swiper">
         <div className="why-us-head text-center">
           <h1>
-            Why <span className="green">Deelance</span>{" "}
+            {t("Why")} <span className="green">{t("Deelance")}</span>{" "}
           </h1>
           <img src={Dash} alt="" />
         </div>
@@ -70,21 +72,7 @@ function MobWhyus() {
           </div>
 
           <div className="why-us-box-left">
-            <FullCol
-              textAlign="left"
-              items={[
-                "Client Fee",
-                "Freelancer Fee",
-                "Withdrawal Fee",
-                "Decentralized",
-                "Content Ownership",
-                "Efficient Escrow",
-                "No Limit on task size",
-                "scalable dispute system",
-                "NFT / Metaverse",
-                "Staff Recruitment",
-              ]}
-            />
+            <FullCol textAlign="left" items={keys} />
 
             {/* <div className="">
               <div className="content">

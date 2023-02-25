@@ -7659,6 +7659,13 @@ i18next-http-backend@^2.1.1:
   dependencies:
     cross-fetch "3.1.5"
 
+i18next-locize-backend@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/i18next-locize-backend/-/i18next-locize-backend-6.2.1.tgz#0104a1e562e77eebb9b312c3dfe9653434e1f4d0"
+  integrity sha512-ZNo5jEZDQfMM+tS9y5gdwnjFcUHWHmZe8BXyVoD0VtxpqfSzdh/2vZ6f83N0dQPF5JCvLUevkWls5MGS2H7wlA==
+  dependencies:
+    cross-fetch "3.1.5"
+
 i18next@^22.4.9:
   version "22.4.10"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-22.4.10.tgz#cfbfc412c6bc83e3c16564f47e6a5c145255960e"
@@ -9335,6 +9342,11 @@ locize-cli@^7.13.2:
     tmexchange "2.0.4"
     xliff "6.1.0"
     xlsx "0.18.5"
+
+locize@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/locize/-/locize-2.4.5.tgz#66ecdb0e9b807b1d793d6db46b72ce85d80f444e"
+  integrity sha512-05OVfX93y1STOEq8Ef5ewN7IqMcdaC3NxqWkt56liSbxqY+FhitO7NO7gLnB5jnryWmrKO7OMkLgdSIE6uOEVw==
 
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"

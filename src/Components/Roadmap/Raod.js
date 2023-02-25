@@ -4,126 +4,180 @@ import DashImg from "../../assets/dash.svg";
 import RoadMobile from "./RoadMobile";
 import RoadLine from "../../assets/backline.svg";
 import DotLine from "../../assets/dot1.svg";
+import { useTranslation } from "react-i18next";
+
+const data = [
+  {
+    className: "box-road-1",
+    question: "Q4 2022",
+    duration: "Nov - Dec",
+    points: [
+      "Initial Project Plan",
+      "Website Design",
+      "Website Live",
+      "Initial Smart-contracts Deployment",
+    ],
+  },
+  {
+    className: "box-road-2",
+    question: "Q1 2023",
+    duration: "Jan - Mar",
+    points: [
+      "PreSale",
+      "Contract Testing",
+      "Project Prototype",
+      "Metaverse Demo(Alpha)",
+      "CMC and CG Listing",
+    ],
+  },
+  {
+    className: "box-road-3",
+    question: "Q2 2023",
+    duration: "April - June",
+    points: [
+      "Token Launch",
+      "NFT Launch",
+      "NFT MarketPlace",
+      "Freelance Platform Launch(Beta Version)",
+      "Exchanges Listing",
+      "Metaverse Development",
+    ],
+  },
+  {
+    className: "box-road-4",
+    question: "Q3 2023",
+    duration: "May - June",
+    points: [
+      "App Development",
+      "Metaverse Integration(Beta version)",
+      "Further Development",
+    ],
+  },
+];
 
 export default function Raod() {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <section className="roadmap">
         <div className="container">
           <div className="road-head text-center">
-            <h1 className="green">Roadmap</h1>
+            <h1 className="green">{t("Roadmap")}</h1>
             <img src={DashImg} alt="" />
           </div>
+
           <div className="road-slide">
             <img src={RoadLine} alt="" />
           </div>
+
           <div className="grid-road">
-            <div className="box-road-1">
+            {data.map((item, i) => (
+              <div className={item.className} key={i}>
+                <div className="text-center rb-img">
+                  <img src={DotLine} alt="" style={{ width: "auto" }} />
+                </div>
+                <div className="text-center">
+                  <h1>{t(item.question)}</h1>
+                  <p>({t(item.duration)})</p>
+                </div>
+
+                <div className="rd-b">
+                  {item.points.map((point, i) => (
+                    <p key={i}>
+                      <GoPrimitiveDot /> {t(point)}{" "}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            {/* <div className="box-road-2">
               <div className="text-center rb-img">
                 <img src={DotLine} alt="" style={{ width: "auto" }} />
               </div>
               <div className="text-center">
-                <h1>Q4 2022</h1>
-                <p>(Nov - Dec)</p>
+                <h1>{t("Q1 2023")}</h1>
+                <p>({t("Jan - Mar")})</p>
               </div>
 
               <div className="rd-b">
                 <p>
-                  <GoPrimitiveDot /> Initial Project Plan{" "}
+                  <GoPrimitiveDot /> {t("PreSale")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> Website Design{" "}
+                  <GoPrimitiveDot /> {t("Contract Testing")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> Website Live{" "}
-                </p>
-                <p>
-                  <GoPrimitiveDot /> Initial Smart-contracts Deployment{" "}
-                </p>
-              </div>
-            </div>
-            <div className="box-road-2">
-              <div className="text-center rb-img">
-                <img src={DotLine} alt="" style={{ width: "auto" }} />
-              </div>
-              <div className="text-center">
-                <h1>Q1 2023</h1>
-                <p>(Jan - Mar)</p>
-              </div>
-
-              <div className="rd-b">
-                <p>
-                  <GoPrimitiveDot /> PreSale{" "}
-                </p>
-                <p>
-                  <GoPrimitiveDot /> Contract Testing{" "}
-                </p>
-                <p>
-                  <GoPrimitiveDot /> Project Prototype{" "}
+                  <GoPrimitiveDot /> {t("Project Prototype")}{" "}
                 </p>
 
                 <p>
-                  <GoPrimitiveDot /> Metaverse Demo(Alpha){" "}
+                  <GoPrimitiveDot /> {t("Metaverse Demo(Alpha)")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> CMC and CG Listing{" "}
+                  <GoPrimitiveDot /> {t("CMC and CG Listing")}{" "}
                 </p>
               </div>
             </div>
+
             <div className="box-road-3">
               <div className="text-center rb-img">
                 <img src={DotLine} alt="" style={{ width: "auto" }} />
               </div>
               <div className="text-center">
-                <h1>Q2 2023</h1>
-                <p>(April - June)</p>
+                <h1>{t("Q2 2023")}</h1>
+                <p>({t("April - June")})</p>
               </div>
 
               <div className="rd-b">
                 <p>
-                  <GoPrimitiveDot /> Token Launch{" "}
+                  <GoPrimitiveDot /> {t("Token Launch")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> NFT Launch{" "}
+                  <GoPrimitiveDot /> {t("NFT Launch")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> NFT MarketPlace{" "}
+                  <GoPrimitiveDot /> {t("NFT MarketPlace")}{" "}
                 </p>
 
                 <p>
-                  <GoPrimitiveDot /> Freelance Platform Launch(Beta Version)
+                  <GoPrimitiveDot />{" "}
+                  {t("Freelance Platform Launch(Beta Version)")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> Exchanges Listing{" "}
+                  <GoPrimitiveDot /> {t("Exchanges Listing")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> Metaverse Development{" "}
+                  <GoPrimitiveDot /> {t("Metaverse Development")}{" "}
                 </p>
               </div>
             </div>
+
             <div className="box-road-4">
               <div className="text-center rb-img">
                 <img src={DotLine} alt="" style={{ width: "auto" }} />
               </div>
               <div className="text-center">
-                <h1>Q3 2023</h1>
-                <p>(May - June)</p>
+                <h1>{t("Q3 2023")}</h1>
+                <p>({t("May - June")})</p>
               </div>
 
               <div className="rd-b">
                 <p>
-                  <GoPrimitiveDot /> App Development{" "}
+                  <GoPrimitiveDot /> {t("App Development")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> Metaverse Integration(Beta version){" "}
+                  <GoPrimitiveDot /> {t("Metaverse Integration(Beta version)")}{" "}
                 </p>
                 <p>
-                  <GoPrimitiveDot /> Further Development{" "}
+                  <GoPrimitiveDot /> {t("Further Development")}{" "}
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
-          <RoadMobile />
+
+          <RoadMobile data={data} />
         </div>
       </section>
     </>
