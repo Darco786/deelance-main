@@ -11,12 +11,24 @@ import { ethers } from "ethers";
 import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
 
-const languages = [
-  { value: "0", text: "Select" },
-  { value: "en", text: "English" },
-  { value: "ar", text: "Arabic" },
-  { value: "ru", text: "russian" },
-  { value: "ja", text: "japan" },
+const allLanguages = [
+  { text: "Select", value: "0" },
+  { text: "English", value: "en" },
+  { text: "German", value: "de" },
+  { text: "Italian", value: "it" },
+  { text: "Thai", value: "th" },
+  { text: "Turkish", value: "tr" },
+  { text: "Chinese", value: "zh" },
+  { text: "Romanian", value: "ro" },
+  { text: "Arabic", value: "ar" },
+  { text: "Russian", value: "ru" },
+  { text: "Spanish", value: "es" },
+  { text: "Vietnamese", value: "vi" },
+  { text: "Indonesian", value: "id" },
+  { text: "Korean", value: "ko" },
+  { text: "French", value: "fr" },
+  { text: "Hindi", value: "hi" },
+  { text: "Japanese", value: "ja" },
 ];
 
 function Navbar() {
@@ -200,7 +212,7 @@ function Navbar() {
                   onChange={handleChange}
                   className="explore-btn"
                 >
-                  {languages.map((item, i) => {
+                  {allLanguages.map((item, i) => {
                     return (
                       <option key={i} value={item.value}>
                         {item.text}
