@@ -3,9 +3,9 @@ import "./Tokenomic.css";
 import Dash from "../../assets/dash.svg";
 import DeelanceContract from "layouts/Home/DeelanceContract";
 import { useTranslation } from "react-i18next";
-import LottieToken from "./LottieToken";
-import animationData from './Token.json'
-// import Test from "./testd";
+// import LottieToken from "./LottieToken";
+// import animationData from './Token.json'
+import Test from "./testd";
 
 function Tokenomic() {
   const { t } = useTranslation("common");
@@ -22,8 +22,8 @@ function Tokenomic() {
       
 
           <div className="" >
-            <LottieToken   />
-            {/* <Test/> */}
+            {/* <LottieToken   /> */}
+            <Test/>
            
           </div>
 

@@ -27,7 +27,7 @@ const LottieScrollPlayer = () => {
   }, []);
 
   const defaultOptions = {
-    loop: true,
+    loop: false,
     autoplay: false,
     animationData: animationData,
     rendererSettings: {
