@@ -389,6 +389,7 @@ function Presale_main() {
                     <a
                       href="https://etherscan.io/address/0xbc720e21c0c06b3df0c10ebdf93d8a930c42288a#code"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <p>{t("Deelance Official Contracts")}</p>
                     </a>
