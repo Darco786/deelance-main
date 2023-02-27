@@ -369,18 +369,22 @@ function Presale_main() {
                   style={{ left: `${percantage}% ` }}
                 />
               </div>
-              <p className="bar-info">
-                <span>{t("Progress")}</span>{" "}
-                <span>
+              <div className="-presale-progress">
+                <p className="bar-info">
+                  <span>
+                    {t("Progress")} {percantage}%
+                  </span>{" "}
+                </p>
+                <span className="white">
                   {" "}
-                  {percantage}% (
+                  (
                   <span className="green">
                     {" "}
                     $ {(total - inSale).toLocaleString("en-US")}{" "}
                   </span>{" "}
                   / $ {total.toLocaleString("en-US")} ){" "}
                 </span>
-              </p>
+              </div>
               <div className="pre-box-1">
                 <div className="pre-box-2">
                   <div className="head-title text-center">

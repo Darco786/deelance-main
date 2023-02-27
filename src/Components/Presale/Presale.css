@@ -41,6 +41,18 @@
   height: 0.4rem;
   margin-bottom: 10px;
 }
+
+.-presale-progress {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 0.6rem;
+}
+
+.-presale-progress > *:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
 .bar-info {
   text-align: right;
   margin-bottom: 0;
