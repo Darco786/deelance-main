@@ -19,6 +19,10 @@
   --green-dark: #00a652;
   --green-light: #00e86d;
   --green-text: #00e069;
+
+  --main-1: #111827;
+  --main-2: #242a38;
+  --main-2: rgba(5, 8, 40);
 }
 
 body {

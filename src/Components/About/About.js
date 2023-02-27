@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 function About() {
   const { t } = useTranslation("common");
+
   const defaultOptions = {
     loop: true,
     autoplay: true,

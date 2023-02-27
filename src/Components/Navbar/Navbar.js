@@ -10,26 +10,7 @@ import { useTranslation } from "react-i18next";
 import { ethers } from "ethers";
 import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
-
-const allLanguages = [
-  { text: "Select", value: "0" },
-  { text: "English", value: "en" },
-  { text: "German", value: "de" },
-  { text: "Italian", value: "it" },
-  { text: "Thai", value: "th" },
-  { text: "Turkish", value: "tr" },
-  { text: "Chinese", value: "zh" },
-  { text: "Romanian", value: "ro" },
-  { text: "Arabic", value: "ar" },
-  { text: "Russian", value: "ru" },
-  { text: "Spanish", value: "es" },
-  { text: "Vietnamese", value: "vi" },
-  { text: "Indonesian", value: "id" },
-  { text: "Korean", value: "ko" },
-  { text: "French", value: "fr" },
-  { text: "Hindi", value: "hi" },
-  { text: "Japanese", value: "ja" },
-];
+import LanguageSelector from "Components/LanguageSelector";
 
 function Navbar() {
   const { connectWallet, disconnectWallet, provider, contracts, account } =
@@ -82,28 +63,6 @@ function Navbar() {
     setIsHover((val) => !val);
   };
   const { t, i18n } = useTranslation("common");
-
-  const [lang, setLang] = useState("en");
-  const selectRef = useRef();
-
-  // This function put query that helps to
-  // change the language
-  function handleChange(e) {
-    setLang(e.target.value);
-
-    const value = selectRef.current.value;
-
-    if (value == "0") return;
-
-    i18n.changeLanguage(value);
-
-    // if (value == "0") return;
-
-    // console.log(value);
-
-    // let loc = "/";
-    // window.location.replace(value == "en" ? loc : loc + "?lng=" + value);
-  }
 
   return (
     <>
@@ -206,20 +165,7 @@ function Navbar() {
                 </li>
               )}
               <li>
-                <select
-                  ref={selectRef}
-                  value={lang}
-                  onChange={handleChange}
-                  className="explore-btn"
-                >
-                  {allLanguages.map((item, i) => {
-                    return (
-                      <option key={i} value={item.value}>
-                        {item.text}
-                      </option>
-                    );
-                  })}
-                </select>
+                <LanguageSelector />
               </li>
             </ul>
           </div>
