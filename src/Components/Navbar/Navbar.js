@@ -11,11 +11,13 @@ import { ethers } from "ethers";
 import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
 import LanguageSelector from "Components/LanguageSelector";
+import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
   const { connectWallet, disconnectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [showComp, setShowComp] = useState(false);
+  const isBelow1080px = useMediaQuery("(max-width : 1080px)");
 
   const disconnectButt = async (e) => {
     e.preventDefault();
@@ -78,10 +80,25 @@ function Navbar() {
           </div>
           <div
             ref={mobileMenueRef}
-            className={
-              showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-            }
+            className={`menu-link mobile-menu-link ${showMediaIcons && "open"}`}
           >
+            {isBelow1080px && (
+              <div className="-navbar-mobile-header">
+                <img src={NavLogo} alt="" className="-navbar-mobile-logo" />
+
+                <div className="-navbar-lang-close-btn">
+                  <LanguageSelector />
+
+                  <button
+                    className="-navbar-close-btn"
+                    onClick={() => setShowMediaIcons(false)}
+                  >
+                    <IoMdClose />
+                  </button>
+                </div>
+              </div>
+            )}
+
             <ul>
               <li>
                 <NavLink to="/">{t("Home")}</NavLink>
@@ -164,17 +181,28 @@ function Navbar() {
                   </a>
                 </li>
               )}
-              <li>
-                <LanguageSelector />
-              </li>
+              {!isBelow1080px && (
+                <li>
+                  <LanguageSelector />
+                </li>
+              )}
             </ul>
           </div>
-          {/* hamburget menu start  */}
-          <div className="hamburger-menu">
-            <a href="#home" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
-            </a>
-          </div>
+
+          {isBelow1080px && (
+            <div className={`black-screen ${showMediaIcons && "show"}`}></div>
+          )}
+
+          {isBelow1080px && (
+            <div className="hamburger-menu">
+              <a
+                href="#home"
+                onClick={() => setShowMediaIcons(!showMediaIcons)}
+              >
+                <GiHamburgerMenu />
+              </a>
+            </div>
+          )}
         </nav>
       </div>
     </>
