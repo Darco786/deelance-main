@@ -1,5 +1,5 @@
 import useIntersectionObserver from "hooks/useIntersectionObserver";
-import React, { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import Lottie from "react-lottie";
 import animationData from "./Token.json";
 
@@ -17,7 +17,7 @@ const LottieScrollPlayer = () => {
   };
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className="-tokenmics-chart-wrapper">
       <Lottie
         options={defaultOptions}
         height="auto"

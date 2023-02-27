@@ -1,3 +1,9 @@
+.-tokenmics-chart-wrapper {
+  max-width: 56rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .token-head {
   text-align: center;
 }
@@ -53,18 +59,18 @@
   height: auto;
   width: auto;
 }
-.to-3{
+.to-3 {
   display: none;
 }
-.to-3 img{
+.to-3 img {
   height: auto;
   width: auto;
 }
 @media (max-width: 768px) {
-  .to-2{
+  .to-2 {
     display: none;
   }
-  .to-3{
+  .to-3 {
     display: block;
     margin-top: 2%;
   }
@@ -72,7 +78,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-    text-align: center
+    text-align: center;
   }
 
   .to-3 {
@@ -118,14 +124,14 @@
     height: 100%;
     padding: 0px;
   }
-  .ml-6{
+  .ml-6 {
     margin-left: 6px;
   }
 
-  .ml-8{
-    margin-left: 8px
+  .ml-8 {
+    margin-left: 8px;
   }
-  .ml-48{
+  .ml-48 {
     margin-left: 43px;
   }
 }
