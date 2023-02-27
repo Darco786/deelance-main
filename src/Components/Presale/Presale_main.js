@@ -370,12 +370,16 @@ function Presale_main() {
                 />
               </div>
               <p className="bar-info">
-                {t("Progress")} {percantage}% (
-                <span className="green">
+                <span>{t("Progress")}</span>{" "}
+                <span>
                   {" "}
-                  $ {(total - inSale).toLocaleString("en-US")}{" "}
-                </span>{" "}
-                / $ {total.toLocaleString("en-US")} )
+                  {percantage}% (
+                  <span className="green">
+                    {" "}
+                    $ {(total - inSale).toLocaleString("en-US")}{" "}
+                  </span>{" "}
+                  / $ {total.toLocaleString("en-US")} ){" "}
+                </span>
               </p>
               <div className="pre-box-1">
                 <div className="pre-box-2">

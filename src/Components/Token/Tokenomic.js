@@ -10,7 +10,6 @@ import Test from "./testd";
 function Tokenomic() {
   const { t } = useTranslation("common");
 
-
   return (
     <section className="token">
       <div className="container justify-content-center text-center">
@@ -19,15 +18,10 @@ function Tokenomic() {
           <img src={Dash} alt="" />
         </div>
         <div className="row align-items-center">
-      
-
-          <div className="" >
+          <div className="">
             {/* <LottieToken   /> */}
-            <Test/>
-           
+            <Test />
           </div>
-
-       
         </div>
       </div>
 

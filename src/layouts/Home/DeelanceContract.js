@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "CSS/DeelanceContract.module.css";
 import { useTranslation } from "react-i18next";
+import { FaCopy, FaRegCopy } from "react-icons/fa";
 
 const Box = ({ title, children }) => {
   return (
@@ -14,18 +15,35 @@ const Box = ({ title, children }) => {
 
 function DeelanceContract() {
   const { t } = useTranslation("common");
+  const [isCopied, setCopied] = useState(true);
   const [text, setText] = useState(
-    "0xbC720e21c0c06b3df0C10Ebdf93D8A930C42288A"
+    "0x7D60dE2E7D92Cb5C863bC82f8d59b37C59fC0A7A"
   );
 
   async function handleCopy() {
     try {
       await navigator.clipboard.writeText(text);
       console.log("Text copied to clipboard");
+      setCopied(true);
     } catch (err) {
       console.error("Failed to copy text: ", err);
+      setCopied(false);
     }
   }
+
+  useEffect(() => {
+    let timeOut;
+    if (isCopied == true) {
+      new Promise((resolve) => {
+        timeOut = setTimeout(() => {
+          resolve();
+        }, 2000);
+      }).then(() => {
+        clearTimeout(timeOut);
+        setCopied(false);
+      });
+    }
+  }, [isCopied]);
 
   return (
     <div className={styles.wrapper}>
@@ -57,8 +75,12 @@ function DeelanceContract() {
                   {text}
                 </p>
               </div>
-              <button onClick={handleCopy} className={styles.copyTextBtn}>
-                Copy
+              <button
+                onClick={handleCopy}
+                className={styles.copyTextBtn}
+                disabled={isCopied}
+              >
+                {isCopied ? <FaCopy /> : <FaRegCopy />}
               </button>
             </div>
 
