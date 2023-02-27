@@ -20,7 +20,6 @@ function LanguageSelector() {
   const [langCode, setLangCode] = useState("en");
 
   function changeLanguage(value) {
-    setLangCode(value);
     i18n.changeLanguage(value);
 
     // if (value == "0") return;
@@ -33,7 +32,7 @@ function LanguageSelector() {
 
   useEffect(() => {
     setLangCode(i18n?.language);
-  }, []);
+  }, [i18n?.language]);
 
   console.log(i18n?.language);
 

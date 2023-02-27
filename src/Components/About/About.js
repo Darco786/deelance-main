@@ -47,12 +47,12 @@ function About() {
               </div>
               <div className="list-box">
                 {new Array(3).fill("").map((_, i) => (
-                  <>
+                  <div key={i}>
                     <h3 className="green">
                       <AiOutlineCheckCircle /> {t(`about_us.points.${i}.title`)}
                     </h3>
                     <p>{t(`about_us.points.${i}.description`)}</p>
-                  </>
+                  </div>
                 ))}
 
                 {/* <h3 className="green">

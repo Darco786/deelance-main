@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 
-
 function Toast({ title, state, stateSetter, toastRef }) {
-
-
   useEffect(() => {
     if (state) {
       stateSetter(true);
@@ -19,19 +16,13 @@ function Toast({ title, state, stateSetter, toastRef }) {
   }, [state]);
 
   return (
-    <div
-      className={` ${state ? 'active-tost' : "tost"}`}
-      ref={toastRef}
-    >
-      <p className=''>
-        {title}
-      </p>
+    <div className={` ${state ? "active-tost" : "tost"}`} ref={toastRef}>
+      <p className="">{title}</p>
 
       {/* <button onClick={() => stateSetter(false)}>
         <IoClose color="white" />
       </button> */}
     </div>
-   
   );
 }
 

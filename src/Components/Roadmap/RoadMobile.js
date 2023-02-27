@@ -22,8 +22,8 @@ function RoadMobile({ data }) {
         className="mySwiper"
       >
         {data.map((item, i) => (
-          <SwiperSlide>
-            <div className={item.className} key={i}>
+          <SwiperSlide key={i}>
+            <div className={item.className}>
               <div className="text-center rb-img">
                 <img src={DotLine} alt="" style={{ width: "auto" }} />
               </div>
@@ -33,8 +33,8 @@ function RoadMobile({ data }) {
               </div>
 
               <div className="rd-b">
-                {item.points.map((point, i) => (
-                  <p key={i}>
+                {item.points.map((point, i2) => (
+                  <p key={i2}>
                     <GoPrimitiveDot /> {t(point)}{" "}
                   </p>
                 ))}

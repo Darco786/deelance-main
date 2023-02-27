@@ -64,7 +64,7 @@ function Navbar() {
   const dropdownToggler = () => {
     setIsHover((val) => !val);
   };
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -103,7 +103,7 @@ function Navbar() {
               <li>
                 <NavLink to="/">{t("Home")}</NavLink>
               </li>
-              <li className="drop-btn" ref={dropdownRef}>
+              <div className="drop-btn" ref={dropdownRef}>
                 <a
                   href="#drop"
                   className="dp"
@@ -152,7 +152,7 @@ function Navbar() {
                     </a>
                   </li>
                 </div>
-              </li>
+              </div>
 
               <li>
                 <NavLink to="/rewards">{t("header.links.win")}</NavLink>
@@ -181,11 +181,7 @@ function Navbar() {
                   </a>
                 </li>
               )}
-              {!isBelow1080px && (
-                <li>
-                  <LanguageSelector />
-                </li>
-              )}
+              {!isBelow1080px && <LanguageSelector />}
             </ul>
           </div>
 
