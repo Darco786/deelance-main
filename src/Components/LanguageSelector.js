@@ -7,6 +7,7 @@ import { AiFillCaretDown } from "react-icons/ai";
 const allLanguages = [
   { text: "English", value: "en" },
   { text: "German", value: "de" },
+  { text: "Spanish", value: "es-419" },
   { text: "Chinese", value: "zh" },
   { text: "Arabic", value: "ar" },
   { text: "Russian", value: "ru" },
@@ -33,6 +34,8 @@ function LanguageSelector() {
   useEffect(() => {
     setLangCode(i18n?.language);
   }, []);
+
+  console.log(i18n?.language);
 
   return (
     <div className={styles.languageDetectorWrapper}>
