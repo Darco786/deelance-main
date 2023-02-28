@@ -47,7 +47,6 @@
 .hero-home {
   padding-top: 4%;
   min-height: 100vh;
-  scroll-snap-align: center;
 }
 .hero-img {
   width: auto;

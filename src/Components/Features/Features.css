@@ -1,7 +1,5 @@
 .features {
-
   padding-bottom: 5%;
-  scroll-snap-align: center;
 }
 .feat-header {
   padding-bottom: 3%;
@@ -29,7 +27,7 @@
 }
 
 .feat-box {
-  --radius : 8px;
+  --radius: 8px;
 
   background: transparent;
   border-radius: var(--radius);
@@ -39,11 +37,11 @@
   padding-bottom: 2%;
   height: 275px;
   cursor: pointer;
-  transition: all .2s ease; 
+  transition: all 0.2s ease;
   position: relative;
   z-index: 1;
 }
-.feat-box::before{
+.feat-box::before {
   content: "";
   position: absolute;
   top: 0;
@@ -51,14 +49,14 @@
   width: 100%;
   height: 100%;
   border-radius: var(--radius);
-  background:  #050828;
-  transition: all .8s  cubic-bezier(0.68, -0.55, 0.27, 1.55); 
-  transform: scale(.5);
+  background: #050828;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform: scale(0.5);
   opacity: 0;
   transition-delay: 0.1s;
   z-index: -1;
 }
-.feat-box::after{
+.feat-box::after {
   content: "";
   position: absolute;
   top: 0;
@@ -67,16 +65,14 @@
   height: 100%;
   border-radius: var(--radius);
   background: #242a38;
-  transition: all .8s  cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   z-index: -2;
 }
 
-
-.feat-box:hover::after{
+.feat-box:hover::after {
   transform: scale(1.07);
-
 }
-.feat-box:hover::before{
+.feat-box:hover::before {
   opacity: 1;
   transform: scale(1.07);
   border: 1px solid rgb(255, 255, 255);
@@ -98,7 +94,7 @@
   font-weight: 300;
   font-size: 13px;
   line-height: 24px;
- 
+
   color: #ffffff;
   padding-left: 10%;
   padding-right: 10%;
@@ -123,7 +119,6 @@
   display: none;
 }
 @media (max-width: 768px) {
-
   .desktop-feat {
     display: none;
   }

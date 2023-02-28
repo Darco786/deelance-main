@@ -50,9 +50,6 @@ body {
 img {
   width: 100%;
 }
-section {
-  scroll-snap-align: center;
-}
 
 /*academy*/
 
