@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import NotFound from "./Pages/404Page";
 import { ethers } from "ethers";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
 import { BEP20ABI, BigNFTABI } from "./Constants/ABI";
 import { ContractAddr, providerOptions, RPCUrl } from "./Constants/Constants";
@@ -25,6 +25,7 @@ const web3Modal = new Web3Modal({
 });
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const defaultProvider = new ethers.providers.JsonRpcProvider(RPCUrl);
   const readContract = new ethers.Contract(
     ContractAddr.Main,
@@ -81,6 +82,25 @@ function App() {
     setAccount();
     setConnectError("");
   };
+
+  useEffect(() => {
+    // if (loading === true) {
+    //   new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       resolve();
+    //     }, 10000);
+    //   }).then(() => {
+    //     setLoading(false);
+    //   });
+    // }
+
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return <img src="images/loader.gif" className="-app-loader" alt="" />;
+  }
+
   return (
     <>
       <UserContext.Provider
