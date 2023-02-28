@@ -8,10 +8,6 @@
   overflow: hidden;
 }
 
-#root:empty {
-  border: 2px solid red;
-}
-
 @import url("https://fonts.cdnfonts.com/css/avenir-next-lt-pro?styles=15221,29972,29973,15219,29976,15212,15213,15207");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
@@ -36,6 +32,15 @@ body {
   scroll-snap-type: y mandatory !important;
   overflow-x: hidden;
 }
+
+.-app-loader {
+  max-width: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .side-about {
   position: absolute;
   right: 0;
