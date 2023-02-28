@@ -34,7 +34,6 @@ body {
 }
 
 .-app-loader {
-  max-width: 8rem;
   position: absolute;
   top: 50%;
   left: 50%;

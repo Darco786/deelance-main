@@ -18,6 +18,7 @@ import { BEP20ABI, BigNFTABI } from "./Constants/ABI";
 import { ContractAddr, providerOptions, RPCUrl } from "./Constants/Constants";
 import UserContext from "./UserContext";
 import "./App.css";
+import { CirclesWithBar } from "react-loader-spinner";
 
 const web3Modal = new Web3Modal({
   cacheProvider: false, // optional
@@ -98,7 +99,20 @@ function App() {
   }, []);
 
   if (loading) {
-    return <img src="images/loader.gif" className="-app-loader" alt="" />;
+    return (
+      <div className="-app-loader">
+        <CirclesWithBar
+          height="100"
+          width="100"
+          color="#00e069"
+          visible={true}
+          outerCircleColor="#00a652"
+          innerCircleColor=""
+          barColor=""
+          ariaLabel="circles-with-bar-loading"
+        />
+      </div>
+    );
   }
 
   return (
