@@ -13,7 +13,6 @@ import CookieConcent from "Components/CookieConcent";
 import Warning from "Components/Common/Warning";
 import SeenOn from "Components/SeenOn/SeenOn";
 import FAQ from "layouts/Home/FAQ";
-import NavbarNew from "Components/Navbar/NavbarNew";
 
 function Home() {
   return (
