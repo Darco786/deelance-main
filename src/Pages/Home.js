@@ -16,7 +16,7 @@ import FAQ from "layouts/Home/FAQ";
 
 function Home() {
   return (
-    <div style={{ border: "4px solid green" }}>
+    <div>
       <Helmet>
         <meta
           name="title"
