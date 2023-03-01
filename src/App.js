@@ -18,7 +18,7 @@ import { BEP20ABI, BigNFTABI } from "./Constants/ABI";
 import { ContractAddr, providerOptions, RPCUrl } from "./Constants/Constants";
 import UserContext from "./UserContext";
 import "./App.css";
-import Circles from "react-loader-spinner/dist/loader/Circles";
+// import Circles from "react-loader-spinner/dist/loader/Circles";
 
 const web3Modal = new Web3Modal({
   cacheProvider: false, // optional
@@ -26,7 +26,7 @@ const web3Modal = new Web3Modal({
 });
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const defaultProvider = new ethers.providers.JsonRpcProvider(RPCUrl);
   const readContract = new ethers.Contract(
     ContractAddr.Main,
@@ -84,31 +84,31 @@ function App() {
     setConnectError("");
   };
 
-  useEffect(() => {
-    // if (loading === true) {
-    //   new Promise((resolve) => {
-    //     setTimeout(() => {
-    //       resolve();
-    //     }, 10000);
-    //   }).then(() => {
-    //     setLoading(false);
-    //   });
-    // }
+  // useEffect(() => {
+  //   // if (loading === true) {
+  //   //   new Promise((resolve) => {
+  //   //     setTimeout(() => {
+  //   //       resolve();
+  //   //     }, 10000);
+  //   //   }).then(() => {
+  //   //     setLoading(false);
+  //   //   });
+  //   // }
 
-    setLoading(false);
-  }, []);
+  //   setLoading(false);
+  // }, []);
 
-  if (loading) {
-    return (
-      <div className="-app-loader">
-        <Circles height="80" width="80" color="#00a652" />
-        <h2 className="green">Deelance</h2>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="-app-loader">
+  //       <Circles height="80" width="80" color="#00a652" />
+  //       <h2 className="green">Deelance</h2>
+  //     </div>
+  //   );
+  // }
 
   return (
-    <>
+    <div>
       <UserContext.Provider
         value={{
           provider,
@@ -135,7 +135,7 @@ function App() {
           </Routes>
         </Router>
       </UserContext.Provider>
-    </>
+    </div>
   );
 }
 

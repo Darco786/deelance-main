@@ -16,7 +16,7 @@ import FAQ from "layouts/Home/FAQ";
 
 function Home() {
   return (
-    <>
+    <div>
       <Helmet>
         <meta
           name="title"
@@ -39,7 +39,6 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
       </Helmet>
 
       <Navbar />
-      {/* <NavbarNew /> */}
 
       <Hero />
 
@@ -67,8 +66,8 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
 
       <Footer />
 
-      <CookieConcent />
-    </>
+      {/* <CookieConcent /> */}
+    </div>
   );
 }
 
