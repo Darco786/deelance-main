@@ -23,13 +23,14 @@
   --main-1: #111827;
   --main-2: #242a38;
   --main-2: rgba(5, 8, 40);
+
+  scroll-behavior: smooth !important;
 }
 
 body {
   background-color: #111827 !important;
   font-family: "Avenir Next LT Pro", sans-serif !important;
-  scroll-behavior: smooth !important;
-  scroll-snap-type: y mandatory !important;
+  /* scroll-snap-type: y mandatory !important; */
   overflow-x: hidden;
 }
 
