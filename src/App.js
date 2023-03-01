@@ -53,8 +53,14 @@ function App() {
         provider = await web3Modal.connect();
       } catch (error) {
         const provider = await detectEthereumProvider()
+        console.log("ERRORE", error)
       }
+      try {
       provider = new ethers.providers.Web3Provider(provider);
+      } catch(error) {
+        const provider = await detectEthereumProvider()
+        console.log("ERRORE2", error)
+      }
 
       const contracts = {};
       for (const [token, address] of Object.entries(ContractAddr)) {
