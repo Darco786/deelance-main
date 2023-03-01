@@ -19,6 +19,7 @@ import { ContractAddr, providerOptions, RPCUrl } from "./Constants/Constants";
 import UserContext from "./UserContext";
 import "./App.css";
 // import Circles from "react-loader-spinner/dist/loader/Circles";
+import detectEthereumProvider from "@metamask/detect-provider";
 
 const web3Modal = new Web3Modal({
   cacheProvider: false, // optional
@@ -51,9 +52,15 @@ function App() {
       try {
         provider = await web3Modal.connect();
       } catch (error) {
-        return false;
+        const provider = await detectEthereumProvider();
+        console.log("ERRORE", error);
       }
-      provider = new ethers.providers.Web3Provider(provider);
+      try {
+        provider = new ethers.providers.Web3Provider(provider);
+      } catch (error) {
+        const provider = await detectEthereumProvider();
+        console.log("ERRORE2", error);
+      }
 
       const contracts = {};
       for (const [token, address] of Object.entries(ContractAddr)) {

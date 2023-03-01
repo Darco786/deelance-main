@@ -7,6 +7,7 @@
     "@emailjs/browser": "^3.10.0",
     "@lottiefiles/lottie-interactivity": "^1.6.2",
     "@lottiefiles/lottie-player": "^1.7.1",
+    "@metamask/detect-provider": "^2.0.0",
     "@react-three/drei": "^9.46.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
