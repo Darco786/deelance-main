@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaAngleDown } from "react-icons/fa";
@@ -12,12 +12,14 @@ import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
 import LanguageSelector from "Components/LanguageSelector";
 import { IoMdClose } from "react-icons/io";
+import LinkScroller from "Components/LinkScroller";
 
 function Navbar() {
   const { connectWallet, disconnectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [showComp, setShowComp] = useState(false);
   const isBelow1080px = useMediaQuery("(max-width : 1080px)");
+  const location = useLocation();
 
   const disconnectButt = async (e) => {
     e.preventDefault();
@@ -128,14 +130,26 @@ function Navbar() {
                   }
                 >
                   <li>
-                    <ScrollLink
+                    {/* <ScrollLink
                       to="about-us"
                       style={{ cursor: "pointer" }}
                       className="a-link"
                       onClick={() => setShowMediaIcons(false)}
                     >
                       {t("About")}
-                    </ScrollLink>
+                    </ScrollLink> */}
+
+                    <LinkScroller
+                      id="about-us"
+                      to="/"
+                      wait={location.pathname === "/" ? 0 : 100}
+                      onClick={() => setShowMediaIcons(false)}
+                      scrollerOptions={{
+                        offset: -20,
+                      }}
+                    >
+                      About
+                    </LinkScroller>
                   </li>
 
                   <li>
