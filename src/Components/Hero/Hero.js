@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Hero.css";
 import {
   FaTwitter,
@@ -17,6 +17,7 @@ import PresaleMain from "Components/Presale/Presale_main";
 import { useTranslation } from "react-i18next";
 import UpperSection from "./UpperSection";
 import LowerSection from "./LowerSection";
+import { IoClose } from "react-icons/io5";
 
 function Hero() {
   const [isModal, setIsModal] = useState(false);
@@ -30,6 +31,16 @@ function Hero() {
   };
 
   const { t } = useTranslation("common");
+
+  useEffect(() => {
+    if (isModal) {
+      document.body.classList.add("stop-scrolling");
+      console.log("running if");
+    } else {
+      document.body.classList.remove("stop-scrolling");
+      console.log("running else");
+    }
+  }, [isModal]);
 
   return (
     <>
@@ -150,7 +161,33 @@ function Hero() {
         </div>
 
         <div className="pop-up-sign">
-          {isModal && <Model setIsModal={setIsModal} />}
+          {/* {isModal && <Model setIsModal={setIsModal} />} */}
+          {isModal && (
+            <div>
+              <iframe
+                width="540"
+                height="305"
+                src="https://a83cf220.sibforms.com/serve/MUIEAHsYtyXnp-P1ZZgWLkU-hoJ-yYDWNUUCZjbpduGIBe8_MFUlSt3NBcsQbI6b-IQoxpMwd-YYx4-ca11lD_qaZpUJbFY-qt1OiMM5-kFfEozmU7I2XjMkdIGao-Agt45gbigkvImql6-Bzlj6I1pxfdmXeE-M-EdmMQwOY2j-kRk6gacfT_zIufgD4MLVR-gu009GI8G2rcyw"
+                style={{
+                  position: "fixed",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,-50%)",
+                  zIndex: 1000,
+                  height: "100vh",
+                  width: "100%",
+                  backgroundColor: "rgba(0,0,0,.8)",
+                }}
+              ></iframe>
+
+              <button
+                className="sign-up-close-btn"
+                onClick={() => setIsModal(false)}
+              >
+                <IoClose />
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>

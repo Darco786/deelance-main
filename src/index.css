@@ -27,11 +27,28 @@
   scroll-behavior: smooth !important;
 }
 
+.stop-scrolling {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 body {
   background-color: #111827 !important;
   font-family: "Avenir Next LT Pro", sans-serif !important;
+<<<<<<< Updated upstream
   /* scroll-snap-type: y mandatory !important; */
   overflow-x: hidden;
+=======
+  scroll-behavior: smooth !important;
+  /* scroll-snap-type: y mandatory !important; */
+>>>>>>> Stashed changes
 }
 
 .-app-loader {

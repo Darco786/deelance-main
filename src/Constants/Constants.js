@@ -1,5 +1,5 @@
-import WalletConnect from "@walletconnect/web3-provider";
-import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
+// import WalletConnect from "@walletconnect/web3-provider";
+// import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
 
 export const TEST_MODE = false;
 
@@ -28,21 +28,21 @@ export const BSCMainRPCUrl =
 export const ContractAddr = TEST_MODE ? TESTNET_ADDRESSES : MAINNET_ADDRESSES;
 export const RPCUrl = TEST_MODE ? BSCTestRPCUrl : BSCMainRPCUrl;
 
-export const providerOptions = {
-  walletconnect: {
-    package: WalletConnect, // required
-    options: {
-      infuraId: "7b50cd907db34540b993f3209ba55488", // required
-    },
-  },
-  coinbasewallet: {
-    package: CoinbaseWalletSDK, // Required
-    options: {
-      appName: "Coinbase", // Required
-      infuraId: "7b50cd907db34540b993f3209ba55488", // Required
-    },
-  },
-};
+// export const providerOptions = {
+//   walletconnect: {
+//     package: WalletConnect, // required
+//     options: {
+//       infuraId: "7b50cd907db34540b993f3209ba55488", // required
+//     },
+//   },
+//   coinbasewallet: {
+//     package: CoinbaseWalletSDK, // Required
+//     options: {
+//       appName: "Coinbase", // Required
+//       infuraId: "7b50cd907db34540b993f3209ba55488", // Required
+//     },
+//   },
+// };
 
 export const TestnetChainID = 1;
 export const MainnetChainID = 1;

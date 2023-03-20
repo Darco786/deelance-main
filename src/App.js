@@ -13,119 +13,75 @@ import Home from "./Pages/Home";
 import NotFound from "./Pages/404Page";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
-import Web3Modal from "web3modal";
 import { BEP20ABI, BigNFTABI } from "./Constants/ABI";
-import { ContractAddr, providerOptions, RPCUrl } from "./Constants/Constants";
+import { ContractAddr, RPCUrl } from "./Constants/Constants";
 import UserContext from "./UserContext";
 import "./App.css";
-// import Circles from "react-loader-spinner/dist/loader/Circles";
-import detectEthereumProvider from "@metamask/detect-provider";
-
-const web3Modal = new Web3Modal({
-  cacheProvider: false, // optional
-  providerOptions, // required
-});
+import { Circles } from "react-loader-spinner";
+import { useProvider, useAccount, useSigner } from "wagmi";
+import { useWeb3Modal } from "@web3modal/react";
+import { getProvider } from '@wagmi/core'
 
 function App() {
-  // const [loading, setLoading] = useState(true);
+  const { open } = useWeb3Modal();
+  const [loading, setLoading] = useState(true);
   const defaultProvider = new ethers.providers.JsonRpcProvider(RPCUrl);
-  const readContract = new ethers.Contract(
-    ContractAddr.Main,
-    BigNFTABI,
-    defaultProvider
-  );
+  const { data: signer, isError, isLoading } = useSigner();
+  const myProvider = useProvider();
+  const provider = getProvider();
+  const { address: account } = useAccount();
+  const [contracts, setContracts] = useState({});
 
-  const [provider, setProvider] = useState(defaultProvider);
-  const [account, setAccount] = useState();
-  const [contracts, setContracts] = useState({
-    Main: readContract,
-  });
-  const [connectError, setConnectError] = useState("");
 
-  const connectWallet = async () => {
-    if (account) {
-      return;
+  useEffect(() => {
+    if (!signer?.provider) return;
+    const contracts = {};
+
+    for (const [token, address] of Object.entries(ContractAddr)) {
+      contracts[token] = new ethers.Contract(
+        address,
+        token === "Main" ? BigNFTABI : BEP20ABI,
+        signer
+      );
     }
+    setContracts(contracts);
+  }, [signer]);
 
-    try {
-      let provider;
-      try {
-        provider = await web3Modal.connect();
-      } catch (error) {
-        const provider = await detectEthereumProvider();
-        console.log("ERRORE", error);
-      }
-      try {
-        provider = new ethers.providers.Web3Provider(provider);
-      } catch (error) {
-        const provider = await detectEthereumProvider();
-        console.log("ERRORE2", error);
-      }
+  if (account) {
+    contracts.Main = new ethers.Contract(ContractAddr.Main, BigNFTABI, signer);
+  } else {
+    contracts.Main = new ethers.Contract(
+      ContractAddr.Main,
+      BigNFTABI,
+      provider
+    );
+  }
 
-      const contracts = {};
-      for (const [token, address] of Object.entries(ContractAddr)) {
-        contracts[token] = new ethers.Contract(
-          address,
-          token === "Main" ? BigNFTABI : BEP20ABI,
-          provider.getSigner()
-        );
-      }
-      setContracts(contracts);
-      setProvider(provider);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
-      const accounts = await provider.listAccounts();
-      if (accounts) setAccount(accounts[0]);
-      return true;
-    } catch (error) {
-      if (error !== "Modal closed by user") {
-        alert(error);
-        setConnectError(error);
-      }
-      return false;
-    }
-  };
-
-  const disconnectWallet = () => {
-    web3Modal.clearCachedProvider();
-    setAccount();
-    setConnectError("");
-  };
-
-  // useEffect(() => {
-  //   // if (loading === true) {
-  //   //   new Promise((resolve) => {
-  //   //     setTimeout(() => {
-  //   //       resolve();
-  //   //     }, 10000);
-  //   //   }).then(() => {
-  //   //     setLoading(false);
-  //   //   });
-  //   // }
-
-  //   setLoading(false);
-  // }, []);
-
-  // if (loading) {
-  //   return (
-  //     <div className="-app-loader">
-  //       <Circles height="80" width="80" color="#00a652" />
-  //       <h2 className="green">Deelance</h2>
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+      <div className="-app-loader">
+        <Circles height="80" width="80" color="#00a652" />
+        <h2 className="green">Deelance</h2>
+      </div>
+    );
+  }
 
   return (
-    <div>
+    <>
       <UserContext.Provider
         value={{
           provider,
           account,
           contracts,
-          connectError,
-          connectWallet,
-          disconnectWallet,
+          connectWallet: open,
+          disconnectWallet: open,
         }}
       >
+        {/* <Router basename="/Deelance-WalletConnect-v2"> */}
         <Router>
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -142,7 +98,7 @@ function App() {
           </Routes>
         </Router>
       </UserContext.Provider>
-    </div>
+    </>
   );
 }
 

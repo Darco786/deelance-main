@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { ethers } from "ethers";
 import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
+import { Web3Button } from "@web3modal/react";
 
 const languages = [
   { value: "en", text: "english" },
@@ -162,9 +163,10 @@ function NavbarNew() {
                   </li>
                 ) : (
                   <li>
-                    <button className={styles.btn} onClick={handleClick}>
+                    {/* <button className={styles.btn} onClick={handleClick}>
                       Connect
-                    </button>
+                    </button> */}
+                    <Web3Button icon={false} />
                   </li>
                 )}
                 {/* <li>

@@ -103,7 +103,7 @@
   background: #00e86d;
 
   border-radius: 5px;
-  padding: 2.2%;
+  padding: 0.2rem 1rem;
   color: #000;
   font-weight: 700;
   font-size: 16px;
@@ -199,6 +199,21 @@
   right: 48%;
   width: auto;
 }
+
+.pre-head-2 {
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.presale-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .pre-head-2 h2 {
   font-size: 16px;
   line-height: 12px;
@@ -433,6 +448,13 @@ label {
   background-color: gray !important;
 }
 
+.equal-label {
+  /* border: 2px solid red; */
+  display: inline-block;
+  width: 8.4em;
+  text-align: left;
+}
+
 @media (max-width: 768px) {
   .main-page {
     position: unset;
@@ -504,5 +526,14 @@ label {
     text-align: center;
     text-transform: capitalize;
     padding-top: 8px;
+  }
+
+  .presale-buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .presale-buttons > *:first-child {
+    grid-column: 1/-1;
   }
 }

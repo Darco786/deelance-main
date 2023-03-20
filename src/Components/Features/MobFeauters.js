@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 
 import "swiper/swiper.min.css";
-import "swiper/modules/pagination/pagination.min.css";
+// import "swiper/modules/pagination/pagination.min.css";
 import { Pagination, Autoplay } from "swiper";
 import { useTranslation } from "react-i18next";
 

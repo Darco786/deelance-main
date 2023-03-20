@@ -4,9 +4,11 @@ import UserContext from "../../UserContext";
 import "./Presale.css";
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
+import { getProvider } from '@wagmi/core'
 
-function PrePop({ setIsModal }) {
-  const { connectWallet, provider, contracts, account } =
+
+function PrePop({ setIsModal, onClose }) {
+  const { connectWallet,contracts, account } =
     useContext(UserContext);
   const [balances, setBalances] = useState({ ETH: 0 });
   const [showComp, setShowComp] = useState(false);
@@ -18,6 +20,7 @@ function PrePop({ setIsModal }) {
   const maxa = useRef();
   const [secondInputValue, setSecondInputValue] = useState(0);
   const [thirdInputValue, setThirdInputValue] = useState(0);
+
   const handleClick = async (e) => {
     e.preventDefault();
     if (!account) {
@@ -29,6 +32,7 @@ function PrePop({ setIsModal }) {
     setShowComp(!showComp);
     setSomeState(!somestate);
   };
+
   useEffect(() => {
     if (!account) {
       setBalances({
@@ -41,6 +45,7 @@ function PrePop({ setIsModal }) {
       tokenElement.current = { value: "" };
 
       const getETHBalance = async () => {
+        const provider = getProvider();
         const balance = await provider.getBalance(account);
         return ethers.utils.formatEther(balance);
       };
@@ -86,7 +91,6 @@ function PrePop({ setIsModal }) {
     const nftAmount = nftAmountElement.current.value;
 
     try {
-      const gasPrice = "12";
       let transaction = null;
       const xx = await contracts.Main.salePrice();
       const xxx = ethers.utils.formatEther(xx);
@@ -101,9 +105,8 @@ function PrePop({ setIsModal }) {
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
         console.log(ETHAmount.toString());
+        
         transaction = await contracts.Main.buyWithETH(nftAmount, {
-          gasLimit: 130055,
-          gasPrice: ethers.utils.parseUnits(gasPrice, "gwei"),
           value: ETHAmount.toString(),
         });
       } else {
@@ -134,6 +137,7 @@ function PrePop({ setIsModal }) {
       alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
       console.log("transaction", tx_result.transactionHash);
       setSomeState(!somestate);
+      chiudi();
     } catch (error) {
       alert(
         "Error occured during transaction. Please check the browser console.\n" +
@@ -141,6 +145,7 @@ function PrePop({ setIsModal }) {
       );
       console.error("Transaction Error:", error.reason);
       setSomeState(!somestate);
+      chiudi();
     }
   };
 
@@ -181,14 +186,17 @@ function PrePop({ setIsModal }) {
       setThirdInputValue(mio_valore.toFixed(2));
     }
   };
-
+  const chiudi = (e) => {
+    setIsModal(false);
+    onClose();
+  }
   return (
     <div className="modalBackground">
       <div className="modalContainer-2">
         <div className="titleCloseBtn">
           <button
             onClick={() => {
-              setIsModal(false);
+              chiudi();
             }}
           >
             X

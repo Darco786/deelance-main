@@ -3,6 +3,20 @@
   margin-bottom: 4rem;
 }
 
+.sign-up-close-btn {
+  position: fixed;
+  top: 1.6rem;
+  right: 2rem;
+  color: white;
+  z-index: 100000;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
+
 .hero-upper-section-left {
   width: 50%;
 }
@@ -262,5 +276,13 @@
   }
   .audit-images img {
     height: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-up-close-btn {
+    top: 0.4rem;
+    right: 2rem;
+    font-size: 2rem;
   }
 }
