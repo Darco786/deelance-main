@@ -16,11 +16,7 @@ import FAQ from "layouts/Home/FAQ";
 
 function Home() {
   return (
-<<<<<<< Updated upstream
-    <div>
-=======
     <>
->>>>>>> Stashed changes
       <Helmet>
         <meta
           name="title"

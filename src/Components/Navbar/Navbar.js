@@ -12,21 +12,16 @@ import UserContext from "../../UserContext";
 import { Link as ScrollLink } from "react-scroll";
 import LanguageSelector from "Components/LanguageSelector";
 import { IoMdClose } from "react-icons/io";
-<<<<<<< Updated upstream
-import LinkScroller from "Components/LinkScroller";
-=======
 import { useWeb3Modal, Web3Button, Web3Modal } from "@web3modal/react";
 import LinkScroller from "Components/LinkScroller";
 import { useAccount } from "wagmi";
 import ConnectWalletBtn from "Components/ConnectWalletBtn";
->>>>>>> Stashed changes
 
 function Navbar() {
   const { connectWallet, disconnectWallet, provider, contracts, account } =
     useContext(UserContext);
   const [showComp, setShowComp] = useState(false);
   const isBelow1080px = useMediaQuery("(max-width : 1080px)");
-  const location = useLocation();
 
   const disconnectButt = async (e) => {
     e.preventDefault();
@@ -119,22 +114,6 @@ function Navbar() {
                   {t("About")}
                   <FaAngleDown />
                 </a>
-<<<<<<< Updated upstream
-                <div
-                  className={isHover ? "dropdown-active" : "dropdown"}
-                  onMouseEnter={() =>
-                    isBellow1024px ? null : setIsHover(true)
-                  }
-                  onMouseLeave={() =>
-                    isBellow1024px ? null : setIsHover(false)
-                  }
-                >
-                  <li>
-                    {/* <ScrollLink
-                      to="about-us"
-                      style={{ cursor: "pointer" }}
-                      className="a-link"
-=======
 
                 <div className="nav-about-dropdown-wrapper">
                   <div className="nav-about-dropdown-content">
@@ -143,20 +122,6 @@ function Navbar() {
                       to="/"
                       className="-nav-anchor"
                       wait={location.pathname === "/" ? 0 : 100}
->>>>>>> Stashed changes
-                      onClick={() => setShowMediaIcons(false)}
-                      scrollerOptions={{
-                        offset: -20,
-                      }}
-                    >
-<<<<<<< Updated upstream
-                      {t("About")}
-                    </ScrollLink> */}
-
-                    <LinkScroller
-                      id="about-us"
-                      to="/"
-                      wait={location.pathname === "/" ? 0 : 100}
                       onClick={() => setShowMediaIcons(false)}
                       scrollerOptions={{
                         offset: -20,
@@ -164,11 +129,6 @@ function Navbar() {
                     >
                       About
                     </LinkScroller>
-                  </li>
-=======
-                      About
-                    </LinkScroller>
->>>>>>> Stashed changes
 
                     <NavLink className="-nav-anchor" to="/team">
                       {t("Team")}

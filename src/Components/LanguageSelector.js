@@ -32,7 +32,6 @@ function LanguageSelector() {
 
   useEffect(() => {
     setLangCode(i18n?.language);
-    console.log(i18n?.language);
   }, [i18n?.language]);
 
   return (
