@@ -13,6 +13,7 @@ import CookieConcent from "Components/CookieConcent";
 import Warning from "Components/Common/Warning";
 import SeenOn from "Components/SeenOn/SeenOn";
 import FAQ from "layouts/Home/FAQ";
+import DisclaimerHeader from "Components/DisclaimerHeader";
 
 function Home() {
   return (
@@ -37,37 +38,38 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
         />
         <title>Home</title>
       </Helmet>
+      <div>
+        <Navbar />
+        {/* <NavbarNew /> */}
 
-      <Navbar />
-      {/* <NavbarNew /> */}
+        <Hero />
 
-      <Hero />
+        <SeenOn />
 
-      <SeenOn />
+        <Features />
 
-      <Features />
+        <div id="about-us">
+          <About />
+        </div>
 
-      <div id="about-us">
-        <About />
+        <Find />
+
+        <WhyUs />
+
+        <Tokenomic />
+
+        <Raod />
+
+        <div className="pb-5 mb-5">
+          <FAQ />
+        </div>
+
+        <Warning />
+
+        <Footer />
+
+        <CookieConcent />
       </div>
-
-      <Find />
-
-      <WhyUs />
-
-      <Tokenomic />
-
-      <Raod />
-
-      <div className="pb-5 mb-5">
-        <FAQ />
-      </div>
-
-      <Warning />
-
-      <Footer />
-
-      <CookieConcent />
     </>
   );
 }

@@ -104,6 +104,19 @@ function Hero() {
                   </div>
                 </div>
 
+                <div className="disclaimer">
+                  <p className="text-center white">
+                    ⚠️Beware of any other website or social media account
+                    claiming to represent us is fraudulent and unauthorized. We
+                    take no responsibility for any misinformation or harm caused
+                    by such impersonation.
+                  </p>
+
+                  <p className="text-center white">
+                    Follow our verified accounts to stay updated.
+                  </p>
+                </div>
+
                 <div className="hero-ss">
                   <a
                     href="https://twitter.com/deelance_com"

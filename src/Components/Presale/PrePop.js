@@ -4,12 +4,10 @@ import UserContext from "../../UserContext";
 import "./Presale.css";
 import { ethers } from "ethers";
 import { TokenList } from "../../Constants/Constants";
-import { getProvider } from '@wagmi/core'
-
+import { getProvider } from "@wagmi/core";
 
 function PrePop({ setIsModal, onClose }) {
-  const { connectWallet,contracts, account } =
-    useContext(UserContext);
+  const { connectWallet, contracts, account } = useContext(UserContext);
   const [balances, setBalances] = useState({ ETH: 0 });
   const [showComp, setShowComp] = useState(false);
   const tokenElement = useRef({ value: "" });
@@ -105,7 +103,7 @@ function PrePop({ setIsModal, onClose }) {
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
         console.log(ETHAmount.toString());
-        
+
         transaction = await contracts.Main.buyWithETH(nftAmount, {
           value: ETHAmount.toString(),
         });
@@ -189,7 +187,7 @@ function PrePop({ setIsModal, onClose }) {
   const chiudi = (e) => {
     setIsModal(false);
     onClose();
-  }
+  };
   return (
     <div className="modalBackground">
       <div className="modalContainer-2">

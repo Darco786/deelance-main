@@ -1,10 +1,3 @@
-.logo img {
-  height: 40px;
-}
-.logo {
-  align-items: center;
-}
-
 a {
   color: white;
   transition: all 0.3s ease;
@@ -20,25 +13,57 @@ a:hover {
   
   /* navbar style start  */
 
-.main-nav {
+.navbar-wrapper-main {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #111827;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1.5%;
+  z-index: 10000;
 }
 
-.logo {
-  display: grid;
-  /* background-color: #3b5998; */
-  grid-column: 2/3;
-  justify-content: start;
+.navbar-wrapper {
+  height: var(--navbar-height); /* variable in index.css */
+  display: flex;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  background-color: #111827;
+  width: 100%;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar-wrapper-main.scrolled .navbar-wrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  height: calc(var(--navbar-height) - 1.6rem);
+}
+
+.main-nav {
+  width: 100%;
+  /* background-color: #111827; */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.menu-link {
-  grid-column: 3/4;
-  padding-top: 0.5%;
+.logo {
+  position: relative;
+  bottom: 0.3em;
+  height: 2.44em;
+  font-size: 100%;
+  transition: all 0.2s ease;
+}
+
+.navbar-wrapper-main {
+  transition: all 0.2s ease;
+  background-color: #111827;
+}
+
+.navbar-wrapper-main.scrolled .logo {
+  font-size: 80%;
+}
+
+.navbar-wrapper-main.scrollHide {
+  transform: translateY(calc(1.6rem - var(--navbar-height)));
 }
 
 .-nav-links {
@@ -116,7 +141,7 @@ a:hover {
 }
 .hamburger {
   display: flex;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   background-color: transparent;
   border: none;
   outline: none;
@@ -203,14 +228,12 @@ a:hover {
     display: none;
   }
 
-  .logo img {
-    height: 2rem;
+  .logo {
+    font-size: 90%;
   }
 
-  .logo {
-    height: auto !important;
-    position: relative;
-    bottom: 0.26rem;
+  .navbar-wrapper-main.scrolled .logo {
+    font-size: 70%;
   }
 
   .mobile-menu-link {
@@ -284,12 +307,16 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .main-nav {
-    height: 5.6rem;
+  .logo {
+    font-size: 78%;
+  }
+
+  .navbar-wrapper-main.scrolled .logo {
+    font-size: 60%;
   }
 
   .hamburger {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
