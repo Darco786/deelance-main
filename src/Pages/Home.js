@@ -14,6 +14,7 @@ import Warning from "Components/Common/Warning";
 import SeenOn from "Components/SeenOn/SeenOn";
 import FAQ from "layouts/Home/FAQ";
 import DisclaimerHeader from "Components/DisclaimerHeader";
+import PageLayout from "layouts/PageLayout";
 
 function Home() {
   return (
@@ -39,36 +40,29 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
         <title>Home</title>
       </Helmet>
       <div>
-        <Navbar />
-        {/* <NavbarNew /> */}
+        <PageLayout>
+          <Hero />
 
-        <Hero />
+          <SeenOn />
 
-        <SeenOn />
+          <Features />
 
-        <Features />
+          <div id="about-us">
+            <About />
+          </div>
 
-        <div id="about-us">
-          <About />
-        </div>
+          <Find />
 
-        <Find />
+          <WhyUs />
 
-        <WhyUs />
+          <Tokenomic />
 
-        <Tokenomic />
+          <Raod />
 
-        <Raod />
-
-        <div className="pb-5 mb-5">
-          <FAQ />
-        </div>
-
-        <Warning />
-
-        <Footer />
-
-        <CookieConcent />
+          <div className="pb-5 mb-5">
+            <FAQ />
+          </div>
+        </PageLayout>
       </div>
     </>
   );

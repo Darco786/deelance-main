@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Footer from "Components/Footer/Footer";
 import Navbar from "Components/Navbar/Navbar";
 import React from "react";
+import PageLayout from "layouts/PageLayout";
 
 function Academy() {
   return (
@@ -23,10 +24,10 @@ function Academy() {
         />
         <title>Academy</title>
       </Helmet>
-      <Navbar />
-      <AcademyPage />
-<Warning/>
-     <Footer/>
+
+      <PageLayout>
+        <AcademyPage />
+      </PageLayout>
     </>
   );
 }

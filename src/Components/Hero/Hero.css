@@ -60,7 +60,7 @@
 
 .hero-home {
   min-height: 100vh;
-  padding-top: calc(var(--navbar-height) + 2rem);
+  padding-top: 2rem;
 }
 .hero-img {
   width: auto;
@@ -206,12 +206,6 @@
   width: 700px; */
 }
 
-@media (max-width: 1080px) {
-  .hero-home {
-    padding-top: calc(var(--navbar-height) + 1rem);
-  }
-}
-
 @media (max-width: 768px) {
   .second-img {
     margin-top: 0%;
@@ -236,7 +230,7 @@
   .hero-home {
     height: auto;
     padding-bottom: 1rem;
-    padding-top: calc(var(--navbar-height) + 0.8rem);
+    padding-top: 1rem;
   }
 
   .hero-btn-1 {

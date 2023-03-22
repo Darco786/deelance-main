@@ -20,7 +20,8 @@ import "./App.css";
 import { Circles } from "react-loader-spinner";
 import { useProvider, useAccount, useSigner } from "wagmi";
 import { useWeb3Modal } from "@web3modal/react";
-import { getProvider } from '@wagmi/core'
+import { getProvider } from "@wagmi/core";
+import CookieConcent from "Components/CookieConcent";
 
 function App() {
   const { open } = useWeb3Modal();
@@ -31,7 +32,6 @@ function App() {
   const provider = getProvider();
   const { address: account } = useAccount();
   const [contracts, setContracts] = useState({});
-
 
   useEffect(() => {
     if (!signer?.provider) return;
@@ -96,6 +96,8 @@ function App() {
             <Route exact path="/how-to-buy" element={<HowBuy />} />
             <Route exact path="*" element={<NotFound />} />
           </Routes>
+
+          <CookieConcent />
         </Router>
       </UserContext.Provider>
     </>

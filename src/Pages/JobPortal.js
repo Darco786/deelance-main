@@ -1,14 +1,15 @@
-import Warning from 'Components/Common/Warning'
-import Footer from 'Components/Footer/Footer'
-import Jobs from 'Components/Jobs/Jobs'
-import Navbar from 'Components/Navbar/Navbar'
+import Warning from "Components/Common/Warning";
+import Footer from "Components/Footer/Footer";
+import Jobs from "Components/Jobs/Jobs";
+import Navbar from "Components/Navbar/Navbar";
 import { Helmet } from "react-helmet";
-import React from 'react'
+import React from "react";
+import PageLayout from "layouts/PageLayout";
 
 function JobPortal() {
   return (
     <>
-  <Helmet>
+      <Helmet>
         <meta
           name="Job portal"
           content="Explore exclusive NFT’s by the most in-demand creators, trade with other collectors in the Marketplace, and mint your own NFTs all in one place."
@@ -23,14 +24,12 @@ function JobPortal() {
         />
         <title>Job Portal</title>
       </Helmet>
-        
-        <Navbar/>
-        <Jobs/>
-       
- <Warning/>
-    <Footer/>
+
+      <PageLayout>
+        <Jobs />
+      </PageLayout>
     </>
-  )
+  );
 }
 
-export default JobPortal
+export default JobPortal;

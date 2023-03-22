@@ -6,11 +6,11 @@ import Navbar from "Components/Navbar/Navbar";
 import Footer from "Components/Footer/Footer";
 import Warning from "Components/Common/Warning";
 import { Helmet } from "react-helmet";
+import PageLayout from "layouts/PageLayout";
 function NftMarket() {
   return (
     <>
-      
-<Helmet>
+      <Helmet>
         <meta
           name="NFT Marketplace"
           content="Explore exclusive NFT’s by the most in-demand creators, trade with other collectors in the Marketplace, and mint your own NFTs all in one place."
@@ -25,15 +25,12 @@ function NftMarket() {
         />
         <title>NFT Marketplace</title>
       </Helmet>
-        
-       
-       <Navbar/>
+
+      <PageLayout>
         <NFT />
         <NFTPopCat />
         <NFTTrending />
-      <Warning/>
-      <Footer/>
-      
+      </PageLayout>
     </>
   );
 }

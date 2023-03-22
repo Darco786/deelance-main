@@ -1,21 +1,12 @@
-import Warning from 'Components/Common/Warning'
-import CookieConcent from 'Components/CookieConcent'
-import Footer from 'Components/Footer/Footer'
-import HowToBuy from 'Components/HowToBuy/HowToBuy'
-import Navbar from 'Components/Navbar/Navbar'
+import HowToBuy from "Components/HowToBuy/HowToBuy";
+import PageLayout from "layouts/PageLayout";
 
 function HowBuy() {
   return (
-    <>
-
- 
-    <Navbar/>
-    <HowToBuy/>
-    <Warning/>
-    <Footer/>
-    <CookieConcent/>
-   </>
-  )
+    <PageLayout>
+      <HowToBuy />
+    </PageLayout>
+  );
 }
 
-export default HowBuy
+export default HowBuy;

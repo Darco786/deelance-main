@@ -2,14 +2,14 @@ import Warning from "Components/Common/Warning";
 import Footer from "Components/Footer/Footer";
 import Navbar from "Components/Navbar/Navbar";
 import Rewards from "Components/Rewards/Rewards";
+import PageLayout from "layouts/PageLayout";
 import React from "react";
 import { Helmet } from "react-helmet";
 
 function Reward() {
   return (
     <>
-
-<Helmet>
+      <Helmet>
         <meta
           name="Win100k"
           content="Participate in giveaway and win $100,000  worth of $Dlance"
@@ -29,11 +29,10 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
         />
         <title>Win100k</title>
       </Helmet>
-      <Navbar />
-      <Rewards />
 
-      <Warning />
-      <Footer />
+      <PageLayout>
+        <Rewards />
+      </PageLayout>
     </>
   );
 }

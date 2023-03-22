@@ -131,7 +131,7 @@ function Footer() {
             </div>
           </div>
           <p className="foot-bottom-text">
-            {t("2022© Deelance Inc. | All Rights Reserved")}
+            {t("2023© Deelance Inc. | All Rights Reserved")}
           </p>
         </div>
       </footer>
